@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noita 魔杖全量穷举查询器</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Noita Wand Analytics</h1>
+            <p class="subtitle">7.68 Million Combinations • High Performance Search</p>
+        </header>
+
+        <main>
+            <div class="search-box">
+                <input type="number" id="targetCount" placeholder="输入目标 FLY_DOWNWARDS 数量 (例如: 54)" min="0">
+                <button id="searchBtn">查询最简组合</button>
+            </div>
+
+            <div id="status" class="status-msg"></div>
+
+            <div class="results-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>法杖组合 (Wand Combination)</th>
+                            <th>法术数量</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                        <!-- 动态插入 -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <p>基于 <a href="https://github.com/NathanSnail/wand_eval_tree" target="_blank" style="color: var(--accent-color); text-decoration: none;">NathanSnail/wand_eval_tree</a> 模拟引擎暴力枚举产出</p>
+            <p>高性能分布式分片技术 • 开源协议: GPL-3.0</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
