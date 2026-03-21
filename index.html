@@ -11,13 +11,14 @@
     <div class="app-container">
         <!-- Sidebar for Advanced Filters -->
         <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h2>Advanced Filter</h2>
+            <div class="sidebar-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 data-i18n="filter_title">Advanced Filter</h2>
+                <button id="langToggle" style="background: rgba(255,255,255,0.1); border: 1px solid var(--border-color); color: var(--accent-color); padding: 4px 8px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">EN / ZH</button>
             </div>
             
             <div class="filter-section">
                 <div class="filter-group">
-                    <span class="filter-label">魔杖槽位 (Wand Slots)</span>
+                    <span class="filter-label" data-i18n="slots_label">Wand Slots</span>
                     <div style="display: flex; gap: 10px; align-items: center;">
                         <input type="number" id="minSlots" placeholder="Min" min="1" max="8" style="padding: 8px;">
                         <span style="color: var(--text-secondary)">-</span>
@@ -26,7 +27,7 @@
                 </div>
 
                 <div class="filter-group">
-                    <span class="filter-label">法术筛选 (Spells Filter)</span>
+                    <span class="filter-label" data-i18n="spells_label">Spells Filter</span>
                     <div id="spellFilters" class="spell-filters-list">
                         <!-- Spells will be injected by JS -->
                     </div>
@@ -34,7 +35,7 @@
             </div>
 
             <div class="sidebar-footer" style="margin-top: 20px; font-size: 0.8rem; color: var(--text-secondary);">
-                <p>点击“查询”应用筛选条件</p>
+                <p data-i18n="sidebar_footer">Click 'Search' to apply filters</p>
             </div>
         </aside>
 
@@ -42,24 +43,24 @@
         <main>
             <div class="container-main">
                 <header>
-                    <h1>Noita Wand Analytics</h1>
-                    <p class="subtitle">7.68 Million Combinations • High Performance Filtering</p>
+                    <h1 data-i18n="nav_title">Noita Wand Analytics</h1>
+                    <p class="subtitle" data-i18n="nav_subtitle">7.68 Million Combinations • High Performance Filtering</p>
                 </header>
 
                 <div class="search-box">
-                    <input type="number" id="targetCount" placeholder="输入目标 FLY_DOWNWARDS 数量 (例如: 54)" min="0">
-                    <button id="searchBtn">查询最简组合</button>
+                    <input type="number" id="targetCount" placeholder="Target FLY_DOWNWARDS count (e.g. 54)" data-i18n-placeholder="search_placeholder" min="0">
+                    <button id="searchBtn" data-i18n="search_btn">Search Combinations</button>
                 </div>
 
-                <div id="status" class="status-msg">已准备就绪</div>
+                <div id="status" class="status-msg" data-i18n="status_ready">Ready</div>
 
                 <div class="results-container" id="resultsContainer">
                     <div class="table-wrapper">
                         <table id="resultsTable">
                             <thead>
                                 <tr>
-                                    <th>最简魔杖序列 (Wand Sequence)</th>
-                                    <th>槽位 (Slots)</th>
+                                    <th data-i18n="table_seq">Wand Sequence</th>
+                                    <th data-i18n="table_slots">Slots</th>
                                 </tr>
                             </thead>
                             <tbody id="resultsBody">
@@ -70,8 +71,8 @@
                 </div>
 
                 <footer style="text-align: left; margin-top: 80px;">
-                    <p style="color: var(--text-secondary); margin-bottom: 5px;">基于 <a href="https://github.com/NathanSnail/wand_eval_tree" target="_blank" style="color: var(--accent-color); text-decoration: none;">NathanSnail/wand_eval_tree</a> 模拟引擎</p>
-                    <p style="color: #4b5563;">在线查询地址: <a href="https://asmallhamis.github.io/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/" style="color: inherit;">GitHub Pages</a></p>
+                    <p style="color: var(--text-secondary); margin-bottom: 5px;">Based on <a href="https://github.com/NathanSnail/wand_eval_tree" target="_blank" style="color: var(--accent-color); text-decoration: none;">NathanSnail/wand_eval_tree</a></p>
+                    <p style="color: #4b5563;">Online: <a href="https://asmallhamis.github.io/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/" style="color: inherit;">GitHub Pages</a></p>
                 </footer>
             </div>
         </main>

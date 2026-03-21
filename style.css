@@ -82,13 +82,15 @@ body {
 /* Spell Filter Item */
 .spell-filter-item {
     display: flex;
+    flex-direction: row;
     align-items: center;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
-    padding: 8px 12px;
-    margin-bottom: 8px;
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin-bottom: 6px;
     border: 1px solid transparent;
     transition: 0.2s;
+    gap: 8px;
 }
 
 .spell-filter-item:hover {
@@ -97,35 +99,38 @@ body {
 }
 
 .spell-icon-sm {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
+    width: 28px;
+    height: 28px;
     image-rendering: pixelated;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
 }
 
-.spell-name-sm {
-    flex: 1;
-    font-size: 0.9rem;
-    color: var(--text-primary);
-}
-
-.spell-controls {
+.limit-box {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 6px;
+    border-radius: 6px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.limit-lbl {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
 }
 
 .counter {
     display: flex;
     align-items: center;
-    background: #000;
-    border-radius: 6px;
-    padding: 2px;
+    gap: 2px;
 }
 
 .count-btn {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     background: transparent;
     border: none;
     color: var(--text-secondary);
@@ -133,43 +138,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0;
 }
 
 .count-btn:hover {
     color: var(--accent-color);
-    box-shadow: none;
     transform: none;
+    box-shadow: none;
 }
 
 .count-val {
-    min-width: 18px;
+    min-width: 16px;
     text-align: center;
     font-size: 0.85rem;
     font-weight: 600;
 }
 
-.exclude-btn {
-    width: 24px;
-    height: 24px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 0, 0, 0.2);
-    background: transparent;
-    color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    padding: 0;
+.count-val.infinity {
+    font-size: 1rem;
+    line-height: 0.85rem;
 }
 
-.exclude-btn.active {
-    background: var(--error-color);
-    border-color: var(--error-color);
-    color: #fff;
-}
 
 /* Main Content */
 main {
