@@ -1,4 +1,5 @@
 # Noita Wand Exhaustion Analytics
+🔗 **[在线查询工具 (Live Tool)](https://asmallhamis.github.io/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/)**
 
 本项目是一个针对游戏 *Noita*（女巫）中特定法术排列组合的全量穷举与查询工具。通过模拟引擎，我们计算了数百万种可能的魔杖配置与其产出的法术总量。
 
@@ -24,10 +25,12 @@
 
 ## 部署说明
 本项目设计初衷即为适配 GitHub Pages 等静态托管平台。只需将全量文件上传，即可零成本运行。
+您也可以直接访问：[在线查询地址](https://asmallhamis.github.io/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/)
 
 ---
 
 # Noita Wand Exhaustion Analytics (EN)
+🔗 **[Live Tool (在线查询工具)](https://asmallhamis.github.io/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/)**
 
 This project is an exhaustive enumeration and query tool for specific wand spell combinations in the game *Noita*. Using an emulation engine, we have calculated millions of potential wand configurations and their total spell output.
 
@@ -53,6 +56,7 @@ Configurations featuring `BURST_8` may utilize the **Spell Wrap** mechanism.
 
 ## Deployment
 This project is designed for static hosting platforms like GitHub Pages. Simply upload all files to run at zero cost.
+Live URL: [https://asmallhamis.github.io/...](https://asmallhamis.github.io/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/)
 
 ---
 ## 致谢与致敬 (Credits)
