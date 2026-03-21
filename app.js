@@ -85,7 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Filter State
     Object.keys(SPELL_DATA).forEach(id => {
-        filterState.spells[id] = { min: 0, max: Infinity };
+        // BURST_8 always appears at most once in the dataset
+        const maxVal = id === 'BURST_8' ? 1 : Infinity;
+        filterState.spells[id] = { min: 0, max: maxVal };
     });
 
     // --- DOM Elements ---
