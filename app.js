@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- i18n Data ---
     const I18N_DATA = {
         zh: {
-            nav_title: "Noita 魔杖全量穷举查询器",
-            nav_subtitle: "768万种组合 • 高性能本地筛选",
+            nav_title: "Noita Wand Codex",
             filter_title: "高级筛选",
             slots_label: "魔杖槽位",
             spells_label: "法术库存上限 (Inventory)",
@@ -18,12 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
             status_no_matches: (total) => `📭 在 ${total} 组数据中未找到匹配当前筛选条件的组合。`,
             status_complete: (matches, limit) => `✅ 筛选完成：匹配 ${matches} 组。展示前 ${limit} 组。`,
             status_error: "⚠️ 查询出错，请确认网络连接或数据是否存在。",
-            min_lbl: "最少",
-            max_lbl: "最多"
+            min_lbl: "Min",
+            max_lbl: "Max"
         },
         en: {
-            nav_title: "Noita Wand Analytics",
-            nav_subtitle: "7.68 Million Combinations • High Performance",
+            nav_title: "Noita Wand Codex",
             filter_title: "Advanced Filter",
             slots_label: "Wand Slots",
             spells_label: "Spells Inventory Limits",
@@ -186,10 +184,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Mobile Sidebar Toggle
+    const iconMenu = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+    const iconClose = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+
     elements.mobileToggle.addEventListener('click', () => {
         elements.sidebar.classList.toggle('active');
-        elements.mobileToggle.innerHTML = elements.sidebar.classList.contains('active') ? '✕' : '☰';
+        elements.mobileToggle.innerHTML = elements.sidebar.classList.contains('active') ? iconClose : iconMenu;
     });
 
     // --- Search Logic ---
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close sidebar on mobile after search
             if (window.innerWidth <= 1024) {
                 elements.sidebar.classList.remove('active');
-                elements.mobileToggle.innerHTML = '☰';
+                elements.mobileToggle.innerHTML = iconMenu;
             }
 
         } catch (error) {
