@@ -249,7 +249,8 @@ body {
     background: var(--accent-gradient);
 }
 
-input[type="number"] {
+input[type="number"],
+input[type="text"] {
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
     border: none;
@@ -262,7 +263,8 @@ input[type="number"] {
     transition: var(--transition-smooth);
 }
 
-input[type="number"]:focus {
+input[type="number"]:focus,
+input[type="text"]:focus {
     background: rgba(0, 0, 0, 0.6);
     box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
 }
@@ -473,10 +475,16 @@ header.main-header {
     border-top-right-radius: 20px;
 }
 
+.search-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
 .search-box {
     display: flex;
     gap: 16px;
-    margin-bottom: 40px;
 }
 
 .main-search {
@@ -492,7 +500,8 @@ header.main-header {
     color: var(--text-muted);
 }
 
-.main-search input[type="number"] {
+.main-search input[type="number"],
+.main-search input[type="text"] {
     padding-left: 50px;
     padding-right: 20px;
     padding-top: 16px;
@@ -580,6 +589,109 @@ header.main-header {
     padding-right: 10px;
 }
 
+.table-wrapper.range-mode {
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-right: 0;
+    padding-bottom: 14px;
+}
+
+.range-results {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: max-content;
+}
+
+.range-column {
+    flex: 0 0 min(420px, 86vw);
+    width: min(420px, 86vw);
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.range-column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: rgba(0,0,0,0.35);
+    border-bottom: 1px solid var(--border-glass);
+    color: var(--accent-primary);
+    font-family: var(--font-mono);
+    font-weight: 700;
+}
+
+.range-column-header span:first-child {
+    font-size: 1.2rem;
+}
+
+.range-column-header span:last-child {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.range-column-body {
+    max-height: 740px;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.range-card {
+    background: rgba(0,0,0,0.24);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: var(--transition-fast);
+}
+
+.range-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-glass-light);
+}
+
+.range-card .wand-sequence {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.range-card .spell-icons-row {
+    flex-wrap: wrap;
+}
+
+.range-card .wand-result-main {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.range-card .wand-text-id {
+    width: 100%;
+    border-left: none;
+    padding-left: 0;
+    font-size: 0.78rem;
+}
+
+.range-empty {
+    padding: 14px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border: 1px dashed var(--border-glass);
+    border-radius: 10px;
+}
+
 table {
     width: 100%;
     border-collapse: separate;
@@ -664,6 +776,33 @@ tr:hover .spell-icon-res {
     word-break: break-all;
     flex: 1;
     min-width: 0;
+}
+
+.wand-result-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.twwe-link {
+    flex: 0 0 auto;
+    color: #fff;
+    background: rgba(0, 240, 255, 0.12);
+    border: 1px solid rgba(0, 240, 255, 0.28);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.twwe-link:hover {
+    background: var(--accent-primary);
+    color: #001014;
+    box-shadow: 0 0 14px rgba(0, 240, 255, 0.3);
 }
 
 tr:hover .wand-text-id {
@@ -753,7 +892,8 @@ footer.main-footer {
         justify-content: center;
     }
     
-    .main-search input[type="number"] {
+    .main-search input[type="number"],
+    .main-search input[type="text"] {
         width: 100%;
     }
     
@@ -766,6 +906,12 @@ footer.main-footer {
     .wand-text-id {
         border-left: none;
         padding-left: 0;
+    }
+
+    .wand-result-main {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
     }
     
     td {

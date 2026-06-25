@@ -59,15 +59,17 @@
                     <h1 data-i18n="nav_title" class="hero-title">Noita Wand Codex</h1>
                 </header>
 
-                <div class="search-box glass-panel glass-border">
-                    <div class="input-wrapper main-search">
-                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        <input type="number" id="targetCount" placeholder="Target FLY_DOWNWARDS count (e.g. 54)" data-i18n-placeholder="search_placeholder" min="0">
+                <div class="search-panel glass-panel glass-border">
+                    <div class="search-box">
+                        <div class="input-wrapper main-search">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <input type="text" id="targetCount" placeholder="Target count or range (e.g. 54 / 54-56)" data-i18n-placeholder="search_placeholder">
+                        </div>
+                        <button id="searchBtn" class="btn-primary">
+                            <span class="btn-text" data-i18n="search_btn">Search</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
                     </div>
-                    <button id="searchBtn" class="btn-primary">
-                        <span class="btn-text" data-i18n="search_btn">Search</span>
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </button>
                 </div>
 
                 <div id="status" class="status-msg" data-i18n="status_ready">Ready</div>
@@ -77,6 +79,7 @@
                         <table id="resultsTable">
                             <thead>
                                 <tr>
+                                    <th data-i18n="table_count">Target</th>
                                     <th data-i18n="table_seq">Wand Sequence</th>
                                     <th data-i18n="table_slots" style="text-align: right;">Slots</th>
                                 </tr>
@@ -85,6 +88,7 @@
                                 <!-- 动态插入 -->
                             </tbody>
                         </table>
+                        <div id="rangeResults" class="range-results"></div>
                     </div>
                 </div>
 
