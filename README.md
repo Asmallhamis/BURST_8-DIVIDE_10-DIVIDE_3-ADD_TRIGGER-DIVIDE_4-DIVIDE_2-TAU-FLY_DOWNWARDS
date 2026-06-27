@@ -19,3 +19,13 @@ python -m http.server 18029
 ```
 
 Then open `http://127.0.0.1:18029/`.
+
+## Reproducing
+
+The generic shard runner and merge tools are in `tools/wand_eval_tree/`.
+They require Python, LuaJIT, and an extracted vanilla Noita `data/` directory.
+
+```bash
+export NOITA_DATA_PATH=/path/to/noita/data
+SHARD_ID=0 SHARD_COUNT=10 WORKERS=32 bash tools/wand_eval_tree/run_shard.sh
+```
