@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noita 13 法术 9 槽穷举查询器</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Premium Background Effects -->
+    <div class="bg-fx">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar for Advanced Filters -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 data-i18n="filter_title" class="gradient-text">Advanced Filter</h2>
+                <button id="langToggle" class="btn-sm" title="Toggle Language">EN / ZH</button>
+            </div>
+            
+            <div class="filter-section">
+                <div class="filter-group">
+                    <span class="filter-label"><span class="label-dot"></span><span data-i18n="slots_label">Wand Slots</span></span>
+                    <div class="slots-inputs">
+                        <div class="input-wrapper">
+                            <input type="number" id="minSlots" placeholder="Min" min="1" max="9">
+                        </div>
+                        <span class="separator">-</span>
+                        <div class="input-wrapper">
+                            <input type="number" id="maxSlots" placeholder="Max" min="1" max="9">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <span class="filter-label"><span class="label-dot"></span><span data-i18n="spells_label">Spells Filter</span></span>
+                    <div id="spellFilters" class="spell-filters-list">
+                        <!-- Spells will be injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="footer-line"></div>
+                <p data-i18n="sidebar_footer">Click 'Search' to apply filters</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main>
+            <div class="container-main">
+                <header class="main-header">
+                    <h1 data-i18n="nav_title" class="hero-title">Noita Wand Codex</h1>
+                </header>
+
+                <div class="search-panel glass-panel glass-border">
+                    <div class="search-box">
+                        <div class="input-wrapper main-search">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <input type="text" id="targetCount" placeholder="Target count or range (e.g. 54 / 54-56)" data-i18n-placeholder="search_placeholder">
+                        </div>
+                        <button id="searchBtn" class="btn-primary">
+                            <span class="btn-text" data-i18n="search_btn">Search</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="status" class="status-msg" data-i18n="status_ready">Ready</div>
+
+                <div class="results-container" id="resultsContainer">
+                    <div class="table-wrapper">
+                        <table id="resultsTable">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="table_count">Target</th>
+                                    <th data-i18n="table_seq">Wand Sequence</th>
+                                    <th data-i18n="table_slots" style="text-align: right;">Slots</th>
+                                </tr>
+                            </thead>
+                            <tbody id="resultsBody">
+                                <!-- 动态插入 -->
+                            </tbody>
+                        </table>
+                        <div id="rangeResults" class="range-results"></div>
+                    </div>
+                </div>
+
+                <footer class="main-footer">
+                    <p>Based on <a href="https://github.com/NathanSnail/wand_eval_tree" target="_blank" class="glow-link">NathanSnail/wand_eval_tree</a></p>
+                    <p>Online: <a href="https://asmallhamis.github.io/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/" class="glow-link">GitHub Pages</a></p>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="mobile-toggle btn-primary circle" id="mobileToggle">
+        <svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
