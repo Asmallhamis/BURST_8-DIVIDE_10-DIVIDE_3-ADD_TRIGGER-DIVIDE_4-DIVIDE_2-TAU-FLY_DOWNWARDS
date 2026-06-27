@@ -99,6 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const SIMULATOR_BASE_URL = 'https://asmallhamis.github.io/TheWebWandEngine/';
     const TWWE_WAND_PREFIX = 'NOLLA,HORIZONTAL_ARC,DELAYED_SPELL,BURST_8,TENTACLE_TIMER,CASTER_CAST,TELEPORT_PROJECTILE_CLOSER,,,';
+    const formatTwweSpellToken = (spellId) => {
+        const charged = spellId.match(/^(.+)#(-?\d+)$/);
+        return charged ? `${charged[1]}{${charged[2]}}` : spellId;
+    };
+    const formatTwweSpellSequence = (wand) => wand.split(',').map(formatTwweSpellToken).join(',');
     const getTwweWandText = (wand) => `{{Wand2
 | wandCard     = Yes
 | castDelay    = 0.13
@@ -108,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 | capacity     = 26
 | spread       = 0
 | speed        = 1.00
-| spells       = ${TWWE_WAND_PREFIX + wand}
+| spells       = ${TWWE_WAND_PREFIX + formatTwweSpellSequence(wand)}
 }}`;
 
     // Filter State
