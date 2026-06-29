@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const FULL_HITS_DIR = `${DATA_DIR}/full_hits`;
     const MAX_SLOTS = 9;
     const RESULT_LIMIT = 500;
+    const APP_BUILD = '20260629-filter-fast';
     let datasetManifest = null;
     let fullHitManifest = null;
     const fullHitCache = new Map();
@@ -713,7 +714,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const worker = new Worker('search-worker.js');
+            const worker = new Worker(`search-worker.js?v=${APP_BUILD}`);
             activeWorker = worker;
             worker.onmessage = (event) => {
                 const message = event.data;

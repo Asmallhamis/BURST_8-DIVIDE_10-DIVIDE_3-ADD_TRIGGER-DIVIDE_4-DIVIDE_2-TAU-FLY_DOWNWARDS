@@ -3,6 +3,7 @@ const FULL_HITS_DIR = `${DATA_DIR}/full_hits`;
 const MAX_SLOTS = 9;
 const RESULT_LIMIT = 500;
 const CANDIDATE_SET_LIMIT = 2_000_000;
+const CANDIDATE_SET_MIN_INDEX_ROWS = 50_000;
 
 const SPELL_IDS = [
     'BURST_8',
@@ -84,6 +85,12 @@ const shouldTryCandidateSet = (filters) => {
     return score >= 3;
 };
 
+const getConstrainedSpellIds = (filters) => SPELL_IDS.filter(id => {
+    const rule = getRule(filters, id);
+    const defaultMax = id === 'BURST_8' ? 1 : Infinity;
+    return (rule.min || 0) > 0 || maxValue(rule.max) < defaultMax;
+});
+
 const countsCanStillMatch = (counts, filters, remaining) => {
     for (const id of SPELL_IDS) {
         const rule = getRule(filters, id);
@@ -92,6 +99,81 @@ const countsCanStillMatch = (counts, filters, remaining) => {
         if (actual + remaining < (rule.min || 0)) return false;
     }
     return true;
+};
+
+const estimateCandidateCount = (filters, cap) => {
+    const constrainedIds = getConstrainedSpellIds(filters);
+    if (constrainedIds.length === 0) return cap + 1;
+    const constrainedIndex = Object.fromEntries(constrainedIds.map((id, index) => [id, index]));
+    const constrainedCanStillMatch = (counts, remaining) => {
+        for (let i = 0; i < constrainedIds.length; i++) {
+            const rule = getRule(filters, constrainedIds[i]);
+            if (counts[i] > maxValue(rule.max)) return false;
+            if (counts[i] + remaining < (rule.min || 0)) return false;
+        }
+        return true;
+    };
+    const constrainedMatchFinal = (counts) => {
+        for (let i = 0; i < constrainedIds.length; i++) {
+            const rule = getRule(filters, constrainedIds[i]);
+            if (counts[i] < (rule.min || 0) || counts[i] > maxValue(rule.max)) return false;
+        }
+        return true;
+    };
+
+    let total = 0;
+    for (const segment of COUNT_SEGMENTS) {
+        const length = segment.prefix.length + segment.remLen;
+        if (length < filters.minS || length > filters.maxS) continue;
+
+        const startCounts = new Array(constrainedIds.length).fill(0);
+        if (segment.prefix === 'B' && constrainedIndex.BURST_8 !== undefined) {
+            startCounts[constrainedIndex.BURST_8] = 1;
+        }
+        if (!constrainedCanStillMatch(startCounts, segment.remLen)) continue;
+
+        const memo = new Map();
+        const visit = (pos, counts) => {
+            const remaining = segment.remLen - pos;
+            if (!constrainedCanStillMatch(counts, remaining)) return 0;
+            if (pos === segment.remLen) return constrainedMatchFinal(counts) ? 1 : 0;
+
+            const key = `${pos}|${counts.join(',')}`;
+            const cached = memo.get(key);
+            if (cached !== undefined) return cached;
+
+            let subtotal = 0;
+            for (const code of CORE_CODES) {
+                const spellId = CODE_TO_SPELL[code];
+                const idx = constrainedIndex[spellId];
+                if (idx === undefined) {
+                    subtotal += visit(pos + 1, counts);
+                } else {
+                    counts[idx] += 1;
+                    if (counts[idx] <= maxValue(getRule(filters, spellId).max)) {
+                        subtotal += visit(pos + 1, counts);
+                    }
+                    counts[idx] -= 1;
+                }
+                if (subtotal > cap) {
+                    memo.set(key, cap + 1);
+                    return cap + 1;
+                }
+            }
+            memo.set(key, subtotal);
+            return subtotal;
+        };
+
+        total += visit(0, startCounts);
+        if (total > cap) return cap + 1;
+    }
+    return total;
+};
+
+const shouldBuildCandidateSet = (filters, entryTotal) => {
+    if (entryTotal < CANDIDATE_SET_MIN_INDEX_ROWS || !shouldTryCandidateSet(filters)) return false;
+    const cap = Math.min(CANDIDATE_SET_LIMIT, entryTotal * 2);
+    return estimateCandidateCount(filters, cap) <= cap;
 };
 
 const countsMatchFinal = (counts, filters) => {
@@ -104,8 +186,6 @@ const countsMatchFinal = (counts, filters) => {
 };
 
 const buildCandidateSet = (filters) => {
-    if (!shouldTryCandidateSet(filters)) return null;
-
     const candidates = new Set();
     const addCandidate = (index) => {
         candidates.add(index);
@@ -246,7 +326,7 @@ const fetchIndexByteStream = async (entry) => {
 const scanIndexStream = async (queryId, count, entry, filters, onPartial) => {
     const allPass = isDefaultAllPassFilter(filters);
     let candidateSet = null;
-    if (!allPass) {
+    if (!allPass && shouldBuildCandidateSet(filters, entry.total)) {
         try {
             candidateSet = buildCandidateSet(filters);
         } catch (error) {
