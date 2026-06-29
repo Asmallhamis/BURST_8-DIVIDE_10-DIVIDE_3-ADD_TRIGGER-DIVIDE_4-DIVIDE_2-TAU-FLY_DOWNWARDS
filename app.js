@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
             table_seq: "最简魔杖序列",
             table_slots: "槽位",
             twwe_btn: "打开 TWWE",
-            status_ready: "已准备就绪：13 法术 / 9 槽静态索引",
-            status_fetching: (count) => `正在读取产出量为 ${count} 的索引...`,
-            status_fetching_range: (total) => `正在查询 ${total} 个目标产出量的索引...`,
+            status_ready: "已准备就绪：13 法术 / 9 槽静态索引。全量查询按需下载压缩索引：23≈1.4 MB，24≈1.8 MB，160≈25 KB。",
+            status_fetching: (count, traffic) => `正在读取产出量为 ${count} 的索引${traffic ? `（首次约 ${traffic} 流量）` : ''}...`,
+            status_fetching_range: (total, traffic) => `正在查询 ${total} 个目标产出量的索引${traffic ? `（首次合计约 ${traffic} 流量）` : ''}...`,
             status_no_results: (count) => `索引中未找到产出量为 ${count} 的法术组合。`,
             status_no_matches: (indexed, total, mode) => mode === 'full'
                 ? `全量筛选完成：已检查 ${formatNumber(total)} 组真实命中，没有符合当前筛选的配方。`
@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             table_seq: "Wand Sequence",
             table_slots: "Slots",
             twwe_btn: "Open TWWE",
-            status_ready: "Ready: 13-spell / 9-slot static index",
-            status_fetching: (count) => `Reading index for target count ${count}...`,
-            status_fetching_range: (total) => `Reading indexes for ${total} target counts...`,
+            status_ready: "Ready: 13-spell / 9-slot static index. Exact searches download compressed indexes on demand: 23≈1.4 MB, 24≈1.8 MB, 160≈25 KB.",
+            status_fetching: (count, traffic) => `Reading index for target count ${count}${traffic ? ` (~${traffic} first-load transfer)` : ''}...`,
+            status_fetching_range: (total, traffic) => `Reading indexes for ${total} target counts${traffic ? ` (~${traffic} first-load transfer)` : ''}...`,
             status_no_results: (count) => `No indexed combinations found for count ${count}.`,
             status_no_matches: (indexed, total, mode) => mode === 'full'
                 ? `Full filtering complete: checked ${formatNumber(total)} real hits; none match the current filters.`
@@ -100,6 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const formatNumber = (value) => {
         if (value === undefined || value === null || Number.isNaN(Number(value))) return '?';
         return Number(value).toLocaleString(currentLang === 'zh' ? 'zh-CN' : 'en-US');
+    };
+
+    const formatBytes = (bytes) => {
+        if (!bytes || Number.isNaN(Number(bytes))) return '';
+        const value = Number(bytes);
+        if (value < 1024) return `${value} B`;
+        if (value < 1024 * 1024) return `${(value / 1024).toFixed(value < 100 * 1024 ? 1 : 0)} KB`;
+        return `${(value / 1024 / 1024).toFixed(value < 10 * 1024 * 1024 ? 1 : 0)} MB`;
     };
 
     const SPELL_DATA = {
@@ -415,13 +423,50 @@ document.addEventListener('DOMContentLoaded', () => {
         const entry = fullHitManifest?.counts?.[key];
         if (!entry) return null;
 
-        const response = await fetch(`${FULL_HITS_DIR}/${entry.file}`);
-        if (!response.ok) return null;
+        const buffer = await fetchFullHitIndexBuffer(entry);
+        if (!buffer) return null;
 
-        const indexes = decodeVarintGapIndexes(await response.arrayBuffer(), entry.total);
+        const indexes = decodeVarintGapIndexes(buffer, entry.total);
         const loaded = { entry, indexes };
         fullHitCache.set(key, loaded);
         return loaded;
+    };
+
+    const fetchFullHitIndexBuffer = async (entry) => {
+        const candidates = [];
+        if (entry.compressed_file && window.DecompressionStream) {
+            candidates.push({ file: entry.compressed_file, compressed: true });
+        }
+        candidates.push({ file: entry.file, compressed: false });
+
+        for (const candidate of candidates) {
+            const response = await fetch(`${FULL_HITS_DIR}/${candidate.file}`);
+            if (!response.ok) continue;
+
+            if (!candidate.compressed || response.headers.get('content-encoding') === 'gzip') {
+                return response.arrayBuffer();
+            }
+            if (!response.body?.pipeThrough) continue;
+
+            try {
+                const stream = response.body.pipeThrough(new DecompressionStream('gzip'));
+                return new Response(stream).arrayBuffer();
+            } catch (_error) {
+                continue;
+            }
+        }
+        return null;
+    };
+
+    const getIndexTransferBytes = (count) => {
+        const entry = fullHitManifest?.counts?.[String(count)];
+        if (!entry) return 0;
+        return entry.compressed_bytes || entry.bytes || 0;
+    };
+
+    const getTrafficSummary = (counts) => {
+        const bytes = counts.reduce((total, count) => total + getIndexTransferBytes(count), 0);
+        return formatBytes(bytes);
     };
 
     const loadFullCountResults = async (count, filters, meta) => {
@@ -650,7 +695,8 @@ document.addEventListener('DOMContentLoaded', () => {
             activeWorker = null;
         }
         const queryId = ++activeSearchId;
-        elements.status.textContent = counts.length === 1 ? t('status_fetching', counts[0]) : t('status_fetching_range', counts.length);
+        const traffic = getTrafficSummary(counts);
+        elements.status.textContent = counts.length === 1 ? t('status_fetching', counts[0], traffic) : t('status_fetching_range', counts.length, traffic);
         elements.resultsBody.innerHTML = '';
         elements.rangeResults.innerHTML = '';
         elements.resultsContainer.classList.remove('visible');

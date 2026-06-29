@@ -9,6 +9,14 @@ The page uses two static indexes:
 
 Large exact searches run in a Web Worker. The page can show the first visible matches while the worker continues counting the full filtered result set.
 
+Exact hit-position indexes are fetched as gzip transport files when that saves bandwidth. This is lossless: the browser decompresses the same complete `.idx` data before filtering it.
+
+Typical first-load transfer sizes:
+
+- Count `23`: about `1.4 MB` compressed instead of `11.8 MB` raw.
+- Count `24`: about `1.8 MB` compressed instead of `16.2 MB` raw.
+- Count `160`: about `25 KB` compressed instead of `381 KB` raw.
+
 The original lossless count streams are archived separately and are not included in this Pages build.
 
 ## Dataset
@@ -46,4 +54,12 @@ python tools/wand_eval_tree/build_full_hit_index.py \
   --output-dir data13/full_hits \
   --min-count 11 \
   --max-total 0
+```
+
+Then create the lossless gzip transport copies and update the full-hit manifest:
+
+```bash
+python tools/wand_eval_tree/compress_full_hit_index.py \
+  --index-dir data13/full_hits \
+  --level 9
 ```

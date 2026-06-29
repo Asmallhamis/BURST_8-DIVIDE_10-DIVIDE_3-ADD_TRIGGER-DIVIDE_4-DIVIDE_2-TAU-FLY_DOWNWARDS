@@ -14,2322 +14,3250 @@
     "11": {
       "total": 79467005,
       "file": "11.idx",
-      "bytes": 87236861
+      "bytes": 87236861,
+      "compressed_file": "11.idx.gz",
+      "compressed_bytes": 5237686
     },
     "12": {
       "total": 58919529,
       "file": "12.idx",
-      "bytes": 65647730
+      "bytes": 65647730,
+      "compressed_file": "12.idx.gz",
+      "compressed_bytes": 5653498
     },
     "13": {
       "total": 33100141,
       "file": "13.idx",
-      "bytes": 38084101
+      "bytes": 38084101,
+      "compressed_file": "13.idx.gz",
+      "compressed_bytes": 3593130
     },
     "14": {
       "total": 30361354,
       "file": "14.idx",
-      "bytes": 34866531
+      "bytes": 34866531,
+      "compressed_file": "14.idx.gz",
+      "compressed_bytes": 3879736
     },
     "15": {
       "total": 14045666,
       "file": "15.idx",
-      "bytes": 16946858
+      "bytes": 16946858,
+      "compressed_file": "15.idx.gz",
+      "compressed_bytes": 2441251
     },
     "16": {
       "total": 18133542,
       "file": "16.idx",
-      "bytes": 21281960
+      "bytes": 21281960,
+      "compressed_file": "16.idx.gz",
+      "compressed_bytes": 2857956
     },
     "17": {
       "total": 9284338,
       "file": "17.idx",
-      "bytes": 11315420
+      "bytes": 11315420,
+      "compressed_file": "17.idx.gz",
+      "compressed_bytes": 1864020
     },
     "18": {
       "total": 15107887,
       "file": "18.idx",
-      "bytes": 17464590
+      "bytes": 17464590,
+      "compressed_file": "18.idx.gz",
+      "compressed_bytes": 2251706
     },
     "19": {
       "total": 5304669,
       "file": "19.idx",
-      "bytes": 6696642
+      "bytes": 6696642,
+      "compressed_file": "19.idx.gz",
+      "compressed_bytes": 1298233
     },
     "20": {
       "total": 11806384,
       "file": "20.idx",
-      "bytes": 13607656
+      "bytes": 13607656,
+      "compressed_file": "20.idx.gz",
+      "compressed_bytes": 1835681
     },
     "21": {
       "total": 22617500,
       "file": "21.idx",
-      "bytes": 25547569
+      "bytes": 25547569,
+      "compressed_file": "21.idx.gz",
+      "compressed_bytes": 1688928
     },
     "22": {
       "total": 41423815,
       "file": "22.idx",
-      "bytes": 45484887
+      "bytes": 45484887,
+      "compressed_file": "22.idx.gz",
+      "compressed_bytes": 2753078
     },
     "23": {
       "total": 9832139,
       "file": "23.idx",
-      "bytes": 11811758
+      "bytes": 11811758,
+      "compressed_file": "23.idx.gz",
+      "compressed_bytes": 1448098
     },
     "24": {
       "total": 14000867,
       "file": "24.idx",
-      "bytes": 16188182
+      "bytes": 16188182,
+      "compressed_file": "24.idx.gz",
+      "compressed_bytes": 1876487
     },
     "25": {
       "total": 5256792,
       "file": "25.idx",
-      "bytes": 6540220
+      "bytes": 6540220,
+      "compressed_file": "25.idx.gz",
+      "compressed_bytes": 1081556
     },
     "26": {
       "total": 8879232,
       "file": "26.idx",
-      "bytes": 10557633
+      "bytes": 10557633,
+      "compressed_file": "26.idx.gz",
+      "compressed_bytes": 1477856
     },
     "27": {
       "total": 3399068,
       "file": "27.idx",
-      "bytes": 4351873
+      "bytes": 4351873,
+      "compressed_file": "27.idx.gz",
+      "compressed_bytes": 789203
     },
     "28": {
       "total": 4494113,
       "file": "28.idx",
-      "bytes": 5624493
+      "bytes": 5624493,
+      "compressed_file": "28.idx.gz",
+      "compressed_bytes": 1009718
     },
     "29": {
       "total": 2054888,
       "file": "29.idx",
-      "bytes": 2720838
+      "bytes": 2720838,
+      "compressed_file": "29.idx.gz",
+      "compressed_bytes": 575574
     },
     "30": {
       "total": 3935661,
       "file": "30.idx",
-      "bytes": 4892652
+      "bytes": 4892652,
+      "compressed_file": "30.idx.gz",
+      "compressed_bytes": 880980
     },
     "31": {
       "total": 3076145,
       "file": "31.idx",
-      "bytes": 3808369
+      "bytes": 3808369,
+      "compressed_file": "31.idx.gz",
+      "compressed_bytes": 571333
     },
     "32": {
       "total": 4613984,
       "file": "32.idx",
-      "bytes": 5546888
+      "bytes": 5546888,
+      "compressed_file": "32.idx.gz",
+      "compressed_bytes": 863493
     },
     "33": {
       "total": 2941092,
       "file": "33.idx",
-      "bytes": 3653361
+      "bytes": 3653361,
+      "compressed_file": "33.idx.gz",
+      "compressed_bytes": 583393
     },
     "34": {
       "total": 2509368,
       "file": "34.idx",
-      "bytes": 3218610
+      "bytes": 3218610,
+      "compressed_file": "34.idx.gz",
+      "compressed_bytes": 646345
     },
     "35": {
       "total": 1251905,
       "file": "35.idx",
-      "bytes": 1699275
+      "bytes": 1699275,
+      "compressed_file": "35.idx.gz",
+      "compressed_bytes": 399524
     },
     "36": {
       "total": 2113540,
       "file": "36.idx",
-      "bytes": 2648076
+      "bytes": 2648076,
+      "compressed_file": "36.idx.gz",
+      "compressed_bytes": 535026
     },
     "37": {
       "total": 1636080,
       "file": "37.idx",
-      "bytes": 2078989
+      "bytes": 2078989,
+      "compressed_file": "37.idx.gz",
+      "compressed_bytes": 393842
     },
     "38": {
       "total": 1287977,
       "file": "38.idx",
-      "bytes": 1713142
+      "bytes": 1713142,
+      "compressed_file": "38.idx.gz",
+      "compressed_bytes": 417605
     },
     "39": {
       "total": 736405,
       "file": "39.idx",
-      "bytes": 1029743
+      "bytes": 1029743,
+      "compressed_file": "39.idx.gz",
+      "compressed_bytes": 287554
     },
     "40": {
       "total": 2083718,
       "file": "40.idx",
-      "bytes": 2540142
+      "bytes": 2540142,
+      "compressed_file": "40.idx.gz",
+      "compressed_bytes": 442162
     },
     "41": {
       "total": 2621506,
       "file": "41.idx",
-      "bytes": 3098688
+      "bytes": 3098688,
+      "compressed_file": "41.idx.gz",
+      "compressed_bytes": 387201
     },
     "42": {
       "total": 7601896,
       "file": "42.idx",
-      "bytes": 8437135
+      "bytes": 8437135,
+      "compressed_file": "42.idx.gz",
+      "compressed_bytes": 695234
     },
     "43": {
       "total": 1103034,
       "file": "43.idx",
-      "bytes": 1473464
+      "bytes": 1473464,
+      "compressed_file": "43.idx.gz",
+      "compressed_bytes": 313199
     },
     "44": {
       "total": 5041785,
       "file": "44.idx",
-      "bytes": 5772976
+      "bytes": 5772976,
+      "compressed_file": "44.idx.gz",
+      "compressed_bytes": 582121
     },
     "45": {
       "total": 970296,
       "file": "45.idx",
-      "bytes": 1294905
+      "bytes": 1294905,
+      "compressed_file": "45.idx.gz",
+      "compressed_bytes": 295137
     },
     "46": {
       "total": 1925721,
       "file": "46.idx",
-      "bytes": 2419866
+      "bytes": 2419866,
+      "compressed_file": "46.idx.gz",
+      "compressed_bytes": 419061
     },
     "47": {
       "total": 435163,
       "file": "47.idx",
-      "bytes": 639390
+      "bytes": 639390,
+      "compressed_file": "47.idx.gz",
+      "compressed_bytes": 187297
     },
     "48": {
       "total": 1625727,
       "file": "48.idx",
-      "bytes": 2003525
+      "bytes": 2003525,
+      "compressed_file": "48.idx.gz",
+      "compressed_bytes": 352492
     },
     "49": {
       "total": 778575,
       "file": "49.idx",
-      "bytes": 1011290
+      "bytes": 1011290,
+      "compressed_file": "49.idx.gz",
+      "compressed_bytes": 213997
     },
     "50": {
       "total": 987410,
       "file": "50.idx",
-      "bytes": 1302394
+      "bytes": 1302394,
+      "compressed_file": "50.idx.gz",
+      "compressed_bytes": 283688
     },
     "51": {
       "total": 864915,
       "file": "51.idx",
-      "bytes": 1121997
+      "bytes": 1121997,
+      "compressed_file": "51.idx.gz",
+      "compressed_bytes": 209002
     },
     "52": {
       "total": 956499,
       "file": "52.idx",
-      "bytes": 1282767
+      "bytes": 1282767,
+      "compressed_file": "52.idx.gz",
+      "compressed_bytes": 277478
     },
     "53": {
       "total": 514703,
       "file": "53.idx",
-      "bytes": 721150
+      "bytes": 721150,
+      "compressed_file": "53.idx.gz",
+      "compressed_bytes": 178650
     },
     "54": {
       "total": 583970,
       "file": "54.idx",
-      "bytes": 810001
+      "bytes": 810001,
+      "compressed_file": "54.idx.gz",
+      "compressed_bytes": 216158
     },
     "55": {
       "total": 215396,
       "file": "55.idx",
-      "bytes": 335269
+      "bytes": 335269,
+      "compressed_file": "55.idx.gz",
+      "compressed_bytes": 108637
     },
     "56": {
       "total": 347694,
       "file": "56.idx",
-      "bytes": 507240
+      "bytes": 507240,
+      "compressed_file": "56.idx.gz",
+      "compressed_bytes": 155689
     },
     "57": {
       "total": 235679,
       "file": "57.idx",
-      "bytes": 351839
+      "bytes": 351839,
+      "compressed_file": "57.idx.gz",
+      "compressed_bytes": 101509
     },
     "58": {
       "total": 313575,
       "file": "58.idx",
-      "bytes": 460267
+      "bytes": 460267,
+      "compressed_file": "58.idx.gz",
+      "compressed_bytes": 136351
     },
     "59": {
       "total": 142979,
       "file": "59.idx",
-      "bytes": 226214
+      "bytes": 226214,
+      "compressed_file": "59.idx.gz",
+      "compressed_bytes": 71845
     },
     "60": {
       "total": 853018,
       "file": "60.idx",
-      "bytes": 1012134
+      "bytes": 1012134,
+      "compressed_file": "60.idx.gz",
+      "compressed_bytes": 161181
     },
     "61": {
       "total": 991608,
       "file": "61.idx",
-      "bytes": 1207258
+      "bytes": 1207258,
+      "compressed_file": "61.idx.gz",
+      "compressed_bytes": 157842
     },
     "62": {
       "total": 990294,
       "file": "62.idx",
-      "bytes": 1215595
+      "bytes": 1215595,
+      "compressed_file": "62.idx.gz",
+      "compressed_bytes": 185342
     },
     "63": {
       "total": 310433,
       "file": "63.idx",
-      "bytes": 435841
+      "bytes": 435841,
+      "compressed_file": "63.idx.gz",
+      "compressed_bytes": 102857
     },
     "64": {
       "total": 900135,
       "file": "64.idx",
-      "bytes": 1105738
+      "bytes": 1105738,
+      "compressed_file": "64.idx.gz",
+      "compressed_bytes": 187019
     },
     "65": {
       "total": 396526,
       "file": "65.idx",
-      "bytes": 523721
+      "bytes": 523721,
+      "compressed_file": "65.idx.gz",
+      "compressed_bytes": 104382
     },
     "66": {
       "total": 476172,
       "file": "66.idx",
-      "bytes": 643565
+      "bytes": 643565,
+      "compressed_file": "66.idx.gz",
+      "compressed_bytes": 147255
     },
     "67": {
       "total": 184209,
       "file": "67.idx",
-      "bytes": 276904
+      "bytes": 276904,
+      "compressed_file": "67.idx.gz",
+      "compressed_bytes": 74108
     },
     "68": {
       "total": 236243,
       "file": "68.idx",
-      "bytes": 346430
+      "bytes": 346430,
+      "compressed_file": "68.idx.gz",
+      "compressed_bytes": 95718
     },
     "69": {
       "total": 285744,
       "file": "69.idx",
-      "bytes": 394806
+      "bytes": 394806,
+      "compressed_file": "69.idx.gz",
+      "compressed_bytes": 83614
     },
     "70": {
       "total": 271925,
       "file": "70.idx",
-      "bytes": 390582
+      "bytes": 390582,
+      "compressed_file": "70.idx.gz",
+      "compressed_bytes": 100224
     },
     "71": {
       "total": 144192,
       "file": "71.idx",
-      "bytes": 220784
+      "bytes": 220784,
+      "compressed_file": "71.idx.gz",
+      "compressed_bytes": 59651
     },
     "72": {
       "total": 347234,
       "file": "72.idx",
-      "bytes": 457089
+      "bytes": 457089,
+      "compressed_file": "72.idx.gz",
+      "compressed_bytes": 105211
     },
     "73": {
       "total": 218124,
       "file": "73.idx",
-      "bytes": 309048
+      "bytes": 309048,
+      "compressed_file": "73.idx.gz",
+      "compressed_bytes": 70597
     },
     "74": {
       "total": 251569,
       "file": "74.idx",
-      "bytes": 353161
+      "bytes": 353161,
+      "compressed_file": "74.idx.gz",
+      "compressed_bytes": 84632
     },
     "75": {
       "total": 88712,
       "file": "75.idx",
-      "bytes": 142996
+      "bytes": 142996,
+      "compressed_file": "75.idx.gz",
+      "compressed_bytes": 45069
     },
     "76": {
       "total": 102501,
       "file": "76.idx",
-      "bytes": 161583
+      "bytes": 161583,
+      "compressed_file": "76.idx.gz",
+      "compressed_bytes": 54588
     },
     "77": {
       "total": 127414,
       "file": "77.idx",
-      "bytes": 184533
+      "bytes": 184533,
+      "compressed_file": "77.idx.gz",
+      "compressed_bytes": 43531
     },
     "78": {
       "total": 103813,
       "file": "78.idx",
-      "bytes": 161474
+      "bytes": 161474,
+      "compressed_file": "78.idx.gz",
+      "compressed_bytes": 48822
     },
     "79": {
       "total": 55508,
       "file": "79.idx",
-      "bytes": 89836
+      "bytes": 89836,
+      "compressed_file": "79.idx.gz",
+      "compressed_bytes": 30519
     },
     "80": {
       "total": 767720,
       "file": "80.idx",
-      "bytes": 871290
+      "bytes": 871290,
+      "compressed_file": "80.idx.gz",
+      "compressed_bytes": 90932
     },
     "81": {
       "total": 524751,
       "file": "81.idx",
-      "bytes": 640859
+      "bytes": 640859,
+      "compressed_file": "81.idx.gz",
+      "compressed_bytes": 82706
     },
     "82": {
       "total": 736648,
       "file": "82.idx",
-      "bytes": 877625
+      "bytes": 877625,
+      "compressed_file": "82.idx.gz",
+      "compressed_bytes": 110842
     },
     "83": {
       "total": 168878,
       "file": "83.idx",
-      "bytes": 238141
+      "bytes": 238141,
+      "compressed_file": "83.idx.gz",
+      "compressed_bytes": 47914
     },
     "84": {
       "total": 324568,
       "file": "84.idx",
-      "bytes": 425066
+      "bytes": 425066,
+      "compressed_file": "84.idx.gz",
+      "compressed_bytes": 78349
     },
     "85": {
       "total": 182826,
       "file": "85.idx",
-      "bytes": 260268
+      "bytes": 260268,
+      "compressed_file": "85.idx.gz",
+      "compressed_bytes": 53359
     },
     "86": {
       "total": 188183,
       "file": "86.idx",
-      "bytes": 272115
+      "bytes": 272115,
+      "compressed_file": "86.idx.gz",
+      "compressed_bytes": 62595
     },
     "87": {
       "total": 90884,
       "file": "87.idx",
-      "bytes": 139706
+      "bytes": 139706,
+      "compressed_file": "87.idx.gz",
+      "compressed_bytes": 35444
     },
     "88": {
       "total": 138078,
       "file": "88.idx",
-      "bytes": 200218
+      "bytes": 200218,
+      "compressed_file": "88.idx.gz",
+      "compressed_bytes": 52234
     },
     "89": {
       "total": 82178,
       "file": "89.idx",
-      "bytes": 124339
+      "bytes": 124339,
+      "compressed_file": "89.idx.gz",
+      "compressed_bytes": 32770
     },
     "90": {
       "total": 427009,
       "file": "90.idx",
-      "bytes": 529852
+      "bytes": 529852,
+      "compressed_file": "90.idx.gz",
+      "compressed_bytes": 82669
     },
     "91": {
       "total": 276627,
       "file": "91.idx",
-      "bytes": 354998
+      "bytes": 354998,
+      "compressed_file": "91.idx.gz",
+      "compressed_bytes": 53467
     },
     "92": {
       "total": 176654,
       "file": "92.idx",
-      "bytes": 248803
+      "bytes": 248803,
+      "compressed_file": "92.idx.gz",
+      "compressed_bytes": 55742
     },
     "93": {
       "total": 163299,
       "file": "93.idx",
-      "bytes": 229844
+      "bytes": 229844,
+      "compressed_file": "93.idx.gz",
+      "compressed_bytes": 46507
     },
     "94": {
       "total": 110192,
       "file": "94.idx",
-      "bytes": 168868
+      "bytes": 168868,
+      "compressed_file": "94.idx.gz",
+      "compressed_bytes": 45251
     },
     "95": {
       "total": 61965,
       "file": "95.idx",
-      "bytes": 97736
+      "bytes": 97736,
+      "compressed_file": "95.idx.gz",
+      "compressed_bytes": 26738
     },
     "96": {
       "total": 236587,
       "file": "96.idx",
-      "bytes": 294123
+      "bytes": 294123,
+      "compressed_file": "96.idx.gz",
+      "compressed_bytes": 49570
     },
     "97": {
       "total": 87486,
       "file": "97.idx",
-      "bytes": 128220
+      "bytes": 128220,
+      "compressed_file": "97.idx.gz",
+      "compressed_bytes": 29825
     },
     "98": {
       "total": 127998,
       "file": "98.idx",
-      "bytes": 174604
+      "bytes": 174604,
+      "compressed_file": "98.idx.gz",
+      "compressed_bytes": 38660
     },
     "99": {
       "total": 63522,
       "file": "99.idx",
-      "bytes": 98084
+      "bytes": 98084,
+      "compressed_file": "99.idx.gz",
+      "compressed_bytes": 26383
     },
     "100": {
       "total": 940770,
       "file": "100.idx",
-      "bytes": 1118203
+      "bytes": 1118203,
+      "compressed_file": "100.idx.gz",
+      "compressed_bytes": 94741
     },
     "101": {
       "total": 1107298,
       "file": "101.idx",
-      "bytes": 1329893
+      "bytes": 1329893,
+      "compressed_file": "101.idx.gz",
+      "compressed_bytes": 113295
     },
     "102": {
       "total": 1093164,
       "file": "102.idx",
-      "bytes": 1315866
+      "bytes": 1315866,
+      "compressed_file": "102.idx.gz",
+      "compressed_bytes": 124713
     },
     "103": {
       "total": 782769,
       "file": "103.idx",
-      "bytes": 992221
+      "bytes": 992221,
+      "compressed_file": "103.idx.gz",
+      "compressed_bytes": 108055
     },
     "104": {
       "total": 435816,
       "file": "104.idx",
-      "bytes": 596854
+      "bytes": 596854,
+      "compressed_file": "104.idx.gz",
+      "compressed_bytes": 95382
     },
     "105": {
       "total": 356874,
       "file": "105.idx",
-      "bytes": 493975
+      "bytes": 493975,
+      "compressed_file": "105.idx.gz",
+      "compressed_bytes": 74969
     },
     "106": {
       "total": 296115,
       "file": "106.idx",
-      "bytes": 421379
+      "bytes": 421379,
+      "compressed_file": "106.idx.gz",
+      "compressed_bytes": 74592
     },
     "107": {
       "total": 186942,
       "file": "107.idx",
-      "bytes": 275821
+      "bytes": 275821,
+      "compressed_file": "107.idx.gz",
+      "compressed_bytes": 46721
     },
     "108": {
       "total": 135807,
       "file": "108.idx",
-      "bytes": 208538
+      "bytes": 208538,
+      "compressed_file": "108.idx.gz",
+      "compressed_bytes": 45572
     },
     "109": {
       "total": 160210,
       "file": "109.idx",
-      "bytes": 235479
+      "bytes": 235479,
+      "compressed_file": "109.idx.gz",
+      "compressed_bytes": 43770
     },
     "110": {
       "total": 178846,
       "file": "110.idx",
-      "bytes": 261764
+      "bytes": 261764,
+      "compressed_file": "110.idx.gz",
+      "compressed_bytes": 51620
     },
     "111": {
       "total": 327792,
       "file": "111.idx",
-      "bytes": 447863
+      "bytes": 447863,
+      "compressed_file": "111.idx.gz",
+      "compressed_bytes": 71331
     },
     "112": {
       "total": 275540,
       "file": "112.idx",
-      "bytes": 386095
+      "bytes": 386095,
+      "compressed_file": "112.idx.gz",
+      "compressed_bytes": 76632
     },
     "113": {
       "total": 184466,
       "file": "113.idx",
-      "bytes": 270536
+      "bytes": 270536,
+      "compressed_file": "113.idx.gz",
+      "compressed_bytes": 58426
     },
     "114": {
       "total": 121009,
       "file": "114.idx",
-      "bytes": 188249
+      "bytes": 188249,
+      "compressed_file": "114.idx.gz",
+      "compressed_bytes": 49789
     },
     "115": {
       "total": 61340,
       "file": "115.idx",
-      "bytes": 104989
+      "bytes": 104989,
+      "compressed_file": "115.idx.gz",
+      "compressed_bytes": 34699
     },
     "116": {
       "total": 50615,
       "file": "116.idx",
-      "bytes": 86197
+      "bytes": 86197,
+      "compressed_file": "116.idx.gz",
+      "compressed_bytes": 31791
     },
     "117": {
       "total": 51358,
       "file": "117.idx",
-      "bytes": 84426
+      "bytes": 84426,
+      "compressed_file": "117.idx.gz",
+      "compressed_bytes": 28418
     },
     "118": {
       "total": 40293,
       "file": "118.idx",
-      "bytes": 69355
+      "bytes": 69355,
+      "compressed_file": "118.idx.gz",
+      "compressed_bytes": 26353
     },
     "119": {
       "total": 25046,
       "file": "119.idx",
-      "bytes": 43525
+      "bytes": 43525,
+      "compressed_file": "119.idx.gz",
+      "compressed_bytes": 18407
     },
     "120": {
       "total": 566400,
       "file": "120.idx",
-      "bytes": 640306
+      "bytes": 640306,
+      "compressed_file": "120.idx.gz",
+      "compressed_bytes": 62542
     },
     "121": {
       "total": 856512,
       "file": "121.idx",
-      "bytes": 1008976
+      "bytes": 1008976,
+      "compressed_file": "121.idx.gz",
+      "compressed_bytes": 88704
     },
     "122": {
       "total": 455659,
       "file": "122.idx",
-      "bytes": 580641
+      "bytes": 580641,
+      "compressed_file": "122.idx.gz",
+      "compressed_bytes": 78546
     },
     "123": {
       "total": 190451,
       "file": "123.idx",
-      "bytes": 268896
+      "bytes": 268896,
+      "compressed_file": "123.idx.gz",
+      "compressed_bytes": 47051
     },
     "124": {
       "total": 155344,
       "file": "124.idx",
-      "bytes": 221120
+      "bytes": 221120,
+      "compressed_file": "124.idx.gz",
+      "compressed_bytes": 45427
     },
     "125": {
       "total": 111854,
       "file": "125.idx",
-      "bytes": 165713
+      "bytes": 165713,
+      "compressed_file": "125.idx.gz",
+      "compressed_bytes": 34667
     },
     "126": {
       "total": 100658,
       "file": "126.idx",
-      "bytes": 153097
+      "bytes": 153097,
+      "compressed_file": "126.idx.gz",
+      "compressed_bytes": 35836
     },
     "127": {
       "total": 59460,
       "file": "127.idx",
-      "bytes": 96249
+      "bytes": 96249,
+      "compressed_file": "127.idx.gz",
+      "compressed_bytes": 25840
     },
     "128": {
       "total": 130836,
       "file": "128.idx",
-      "bytes": 171714
+      "bytes": 171714,
+      "compressed_file": "128.idx.gz",
+      "compressed_bytes": 33050
     },
     "129": {
       "total": 79438,
       "file": "129.idx",
-      "bytes": 116461
+      "bytes": 116461,
+      "compressed_file": "129.idx.gz",
+      "compressed_bytes": 26473
     },
     "130": {
       "total": 160568,
       "file": "130.idx",
-      "bytes": 219187
+      "bytes": 219187,
+      "compressed_file": "130.idx.gz",
+      "compressed_bytes": 41094
     },
     "131": {
       "total": 90972,
       "file": "131.idx",
-      "bytes": 135136
+      "bytes": 135136,
+      "compressed_file": "131.idx.gz",
+      "compressed_bytes": 29312
     },
     "132": {
       "total": 133207,
       "file": "132.idx",
-      "bytes": 190149
+      "bytes": 190149,
+      "compressed_file": "132.idx.gz",
+      "compressed_bytes": 40029
     },
     "133": {
       "total": 141761,
       "file": "133.idx",
-      "bytes": 200292
+      "bytes": 200292,
+      "compressed_file": "133.idx.gz",
+      "compressed_bytes": 38169
     },
     "134": {
       "total": 75229,
       "file": "134.idx",
-      "bytes": 118011
+      "bytes": 118011,
+      "compressed_file": "134.idx.gz",
+      "compressed_bytes": 30028
     },
     "135": {
       "total": 34864,
       "file": "135.idx",
-      "bytes": 59339
+      "bytes": 59339,
+      "compressed_file": "135.idx.gz",
+      "compressed_bytes": 20297
     },
     "136": {
       "total": 35156,
       "file": "136.idx",
-      "bytes": 59066
+      "bytes": 59066,
+      "compressed_file": "136.idx.gz",
+      "compressed_bytes": 21962
     },
     "137": {
       "total": 26911,
       "file": "137.idx",
-      "bytes": 45952
+      "bytes": 45952,
+      "compressed_file": "137.idx.gz",
+      "compressed_bytes": 17499
     },
     "138": {
       "total": 47314,
       "file": "138.idx",
-      "bytes": 72176
+      "bytes": 72176,
+      "compressed_file": "138.idx.gz",
+      "compressed_bytes": 21384
     },
     "139": {
       "total": 18062,
       "file": "139.idx",
-      "bytes": 32157
+      "bytes": 32157,
+      "compressed_file": "139.idx.gz",
+      "compressed_bytes": 12903
     },
     "140": {
       "total": 36988,
       "file": "140.idx",
-      "bytes": 58832
+      "bytes": 58832,
+      "compressed_file": "140.idx.gz",
+      "compressed_bytes": 19085
     },
     "141": {
       "total": 73987,
       "file": "141.idx",
-      "bytes": 110859
+      "bytes": 110859,
+      "compressed_file": "141.idx.gz",
+      "compressed_bytes": 22962
     },
     "142": {
       "total": 53426,
       "file": "142.idx",
-      "bytes": 86716
+      "bytes": 86716,
+      "compressed_file": "142.idx.gz",
+      "compressed_bytes": 23095
     },
     "143": {
       "total": 22435,
       "file": "143.idx",
-      "bytes": 40759
+      "bytes": 40759,
+      "compressed_file": "143.idx.gz",
+      "compressed_bytes": 14488
     },
     "144": {
       "total": 37728,
       "file": "144.idx",
-      "bytes": 59395
+      "bytes": 59395,
+      "compressed_file": "144.idx.gz",
+      "compressed_bytes": 19010
     },
     "145": {
       "total": 23442,
       "file": "145.idx",
-      "bytes": 40858
+      "bytes": 40858,
+      "compressed_file": "145.idx.gz",
+      "compressed_bytes": 14114
     },
     "146": {
       "total": 22553,
       "file": "146.idx",
-      "bytes": 39569
+      "bytes": 39569,
+      "compressed_file": "146.idx.gz",
+      "compressed_bytes": 14642
     },
     "147": {
       "total": 12414,
       "file": "147.idx",
-      "bytes": 24135
+      "bytes": 24135,
+      "compressed_file": "147.idx.gz",
+      "compressed_bytes": 9922
     },
     "148": {
       "total": 14031,
       "file": "148.idx",
-      "bytes": 25849
+      "bytes": 25849,
+      "compressed_file": "148.idx.gz",
+      "compressed_bytes": 10880
     },
     "149": {
       "total": 13300,
       "file": "149.idx",
-      "bytes": 23239
+      "bytes": 23239,
+      "compressed_file": "149.idx.gz",
+      "compressed_bytes": 8842
     },
     "150": {
       "total": 29282,
       "file": "150.idx",
-      "bytes": 45084
+      "bytes": 45084,
+      "compressed_file": "150.idx.gz",
+      "compressed_bytes": 13497
     },
     "151": {
       "total": 28172,
       "file": "151.idx",
-      "bytes": 45678
+      "bytes": 45678,
+      "compressed_file": "151.idx.gz",
+      "compressed_bytes": 12739
     },
     "152": {
       "total": 18205,
       "file": "152.idx",
-      "bytes": 33225
+      "bytes": 33225,
+      "compressed_file": "152.idx.gz",
+      "compressed_bytes": 12963
     },
     "153": {
       "total": 31167,
       "file": "153.idx",
-      "bytes": 47235
+      "bytes": 47235,
+      "compressed_file": "153.idx.gz",
+      "compressed_bytes": 12580
     },
     "154": {
       "total": 18228,
       "file": "154.idx",
-      "bytes": 32016
+      "bytes": 32016,
+      "compressed_file": "154.idx.gz",
+      "compressed_bytes": 12327
     },
     "155": {
       "total": 7264,
       "file": "155.idx",
-      "bytes": 14778
+      "bytes": 14778,
+      "compressed_file": "155.idx.gz",
+      "compressed_bytes": 7680
     },
     "156": {
       "total": 13554,
       "file": "156.idx",
-      "bytes": 22836
+      "bytes": 22836,
+      "compressed_file": "156.idx.gz",
+      "compressed_bytes": 9128
     },
     "157": {
       "total": 12204,
       "file": "157.idx",
-      "bytes": 21781
+      "bytes": 21781,
+      "compressed_file": "157.idx.gz",
+      "compressed_bytes": 8209
     },
     "158": {
       "total": 6402,
       "file": "158.idx",
-      "bytes": 13169
+      "bytes": 13169,
+      "compressed_file": "158.idx.gz",
+      "compressed_bytes": 6914
     },
     "159": {
       "total": 5279,
       "file": "159.idx",
-      "bytes": 10507
+      "bytes": 10507,
+      "compressed_file": "159.idx.gz",
+      "compressed_bytes": 5221
     },
     "160": {
       "total": 340744,
       "file": "160.idx",
-      "bytes": 381211
+      "bytes": 381211,
+      "compressed_file": "160.idx.gz",
+      "compressed_bytes": 25729
     },
     "161": {
       "total": 225322,
       "file": "161.idx",
-      "bytes": 271836
+      "bytes": 271836,
+      "compressed_file": "161.idx.gz",
+      "compressed_bytes": 24778
     },
     "162": {
       "total": 175858,
       "file": "162.idx",
-      "bytes": 219947
+      "bytes": 219947,
+      "compressed_file": "162.idx.gz",
+      "compressed_bytes": 24908
     },
     "163": {
       "total": 51084,
       "file": "163.idx",
-      "bytes": 73780
+      "bytes": 73780,
+      "compressed_file": "163.idx.gz",
+      "compressed_bytes": 13377
     },
     "164": {
       "total": 76390,
       "file": "164.idx",
-      "bytes": 104116
+      "bytes": 104116,
+      "compressed_file": "164.idx.gz",
+      "compressed_bytes": 16799
     },
     "165": {
       "total": 46322,
       "file": "165.idx",
-      "bytes": 68297
+      "bytes": 68297,
+      "compressed_file": "165.idx.gz",
+      "compressed_bytes": 13512
     },
     "166": {
       "total": 36830,
       "file": "166.idx",
-      "bytes": 58404
+      "bytes": 58404,
+      "compressed_file": "166.idx.gz",
+      "compressed_bytes": 13761
     },
     "167": {
       "total": 17057,
       "file": "167.idx",
-      "bytes": 29594
+      "bytes": 29594,
+      "compressed_file": "167.idx.gz",
+      "compressed_bytes": 8511
     },
     "168": {
       "total": 27814,
       "file": "168.idx",
-      "bytes": 43719
+      "bytes": 43719,
+      "compressed_file": "168.idx.gz",
+      "compressed_bytes": 12133
     },
     "169": {
       "total": 30401,
       "file": "169.idx",
-      "bytes": 46830
+      "bytes": 46830,
+      "compressed_file": "169.idx.gz",
+      "compressed_bytes": 10700
     },
     "170": {
       "total": 57137,
       "file": "170.idx",
-      "bytes": 83083
+      "bytes": 83083,
+      "compressed_file": "170.idx.gz",
+      "compressed_bytes": 15277
     },
     "171": {
       "total": 42504,
       "file": "171.idx",
-      "bytes": 62921
+      "bytes": 62921,
+      "compressed_file": "171.idx.gz",
+      "compressed_bytes": 12217
     },
     "172": {
       "total": 28985,
       "file": "172.idx",
-      "bytes": 46690
+      "bytes": 46690,
+      "compressed_file": "172.idx.gz",
+      "compressed_bytes": 13431
     },
     "173": {
       "total": 45701,
       "file": "173.idx",
-      "bytes": 66591
+      "bytes": 66591,
+      "compressed_file": "173.idx.gz",
+      "compressed_bytes": 12783
     },
     "174": {
       "total": 20985,
       "file": "174.idx",
-      "bytes": 35585
+      "bytes": 35585,
+      "compressed_file": "174.idx.gz",
+      "compressed_bytes": 10090
     },
     "175": {
       "total": 10578,
       "file": "175.idx",
-      "bytes": 19250
+      "bytes": 19250,
+      "compressed_file": "175.idx.gz",
+      "compressed_bytes": 6842
     },
     "176": {
       "total": 24703,
       "file": "176.idx",
-      "bytes": 36373
+      "bytes": 36373,
+      "compressed_file": "176.idx.gz",
+      "compressed_bytes": 9419
     },
     "177": {
       "total": 19608,
       "file": "177.idx",
-      "bytes": 32643
+      "bytes": 32643,
+      "compressed_file": "177.idx.gz",
+      "compressed_bytes": 8930
     },
     "178": {
       "total": 13788,
       "file": "178.idx",
-      "bytes": 24668
+      "bytes": 24668,
+      "compressed_file": "178.idx.gz",
+      "compressed_bytes": 8544
     },
     "179": {
       "total": 5889,
       "file": "179.idx",
-      "bytes": 11641
+      "bytes": 11641,
+      "compressed_file": "179.idx.gz",
+      "compressed_bytes": 5111
     },
     "180": {
       "total": 114081,
       "file": "180.idx",
-      "bytes": 135713
+      "bytes": 135713,
+      "compressed_file": "180.idx.gz",
+      "compressed_bytes": 16507
     },
     "181": {
       "total": 44465,
       "file": "181.idx",
-      "bytes": 63677
+      "bytes": 63677,
+      "compressed_file": "181.idx.gz",
+      "compressed_bytes": 13064
     },
     "182": {
       "total": 68189,
       "file": "182.idx",
-      "bytes": 91399
+      "bytes": 91399,
+      "compressed_file": "182.idx.gz",
+      "compressed_bytes": 15751
     },
     "183": {
       "total": 15060,
       "file": "183.idx",
-      "bytes": 25535
+      "bytes": 25535,
+      "compressed_file": "183.idx.gz",
+      "compressed_bytes": 8571
     },
     "184": {
       "total": 24908,
       "file": "184.idx",
-      "bytes": 38406
+      "bytes": 38406,
+      "compressed_file": "184.idx.gz",
+      "compressed_bytes": 10933
     },
     "185": {
       "total": 12027,
       "file": "185.idx",
-      "bytes": 20296
+      "bytes": 20296,
+      "compressed_file": "185.idx.gz",
+      "compressed_bytes": 7413
     },
     "186": {
       "total": 17141,
       "file": "186.idx",
-      "bytes": 28379
+      "bytes": 28379,
+      "compressed_file": "186.idx.gz",
+      "compressed_bytes": 9296
     },
     "187": {
       "total": 7635,
       "file": "187.idx",
-      "bytes": 13856
+      "bytes": 13856,
+      "compressed_file": "187.idx.gz",
+      "compressed_bytes": 5346
     },
     "188": {
       "total": 7174,
       "file": "188.idx",
-      "bytes": 13709
+      "bytes": 13709,
+      "compressed_file": "188.idx.gz",
+      "compressed_bytes": 6360
     },
     "189": {
       "total": 15830,
       "file": "189.idx",
-      "bytes": 24711
+      "bytes": 24711,
+      "compressed_file": "189.idx.gz",
+      "compressed_bytes": 7458
     },
     "190": {
       "total": 14937,
       "file": "190.idx",
-      "bytes": 24904
+      "bytes": 24904,
+      "compressed_file": "190.idx.gz",
+      "compressed_bytes": 8519
     },
     "191": {
       "total": 7036,
       "file": "191.idx",
-      "bytes": 13520
+      "bytes": 13520,
+      "compressed_file": "191.idx.gz",
+      "compressed_bytes": 5889
     },
     "192": {
       "total": 19297,
       "file": "192.idx",
-      "bytes": 29020
+      "bytes": 29020,
+      "compressed_file": "192.idx.gz",
+      "compressed_bytes": 8686
     },
     "193": {
       "total": 10603,
       "file": "193.idx",
-      "bytes": 19198
+      "bytes": 19198,
+      "compressed_file": "193.idx.gz",
+      "compressed_bytes": 7273
     },
     "194": {
       "total": 10009,
       "file": "194.idx",
-      "bytes": 17103
+      "bytes": 17103,
+      "compressed_file": "194.idx.gz",
+      "compressed_bytes": 6514
     },
     "195": {
       "total": 3843,
       "file": "195.idx",
-      "bytes": 8353
+      "bytes": 8353,
+      "compressed_file": "195.idx.gz",
+      "compressed_bytes": 4491
     },
     "196": {
       "total": 6035,
       "file": "196.idx",
-      "bytes": 10887
+      "bytes": 10887,
+      "compressed_file": "196.idx.gz",
+      "compressed_bytes": 4805
     },
     "197": {
       "total": 12629,
       "file": "197.idx",
-      "bytes": 19421
+      "bytes": 19421,
+      "compressed_file": "197.idx.gz",
+      "compressed_bytes": 5308
     },
     "198": {
       "total": 9580,
       "file": "198.idx",
-      "bytes": 15915
+      "bytes": 15915,
+      "compressed_file": "198.idx.gz",
+      "compressed_bytes": 5592
     },
     "199": {
       "total": 6579,
       "file": "199.idx",
-      "bytes": 11923
+      "bytes": 11923,
+      "compressed_file": "199.idx.gz",
+      "compressed_bytes": 4546
     },
     "200": {
       "total": 516726,
       "file": "200.idx",
-      "bytes": 573415
+      "bytes": 573415,
+      "compressed_file": "200.idx.gz",
+      "compressed_bytes": 40186
     },
     "201": {
       "total": 212884,
       "file": "201.idx",
-      "bytes": 261192
+      "bytes": 261192,
+      "compressed_file": "201.idx.gz",
+      "compressed_bytes": 28620
     },
     "202": {
       "total": 342236,
       "file": "202.idx",
-      "bytes": 406060
+      "bytes": 406060,
+      "compressed_file": "202.idx.gz",
+      "compressed_bytes": 45585
     },
     "203": {
       "total": 166549,
       "file": "203.idx",
-      "bytes": 219065
+      "bytes": 219065,
+      "compressed_file": "203.idx.gz",
+      "compressed_bytes": 28331
     },
     "204": {
       "total": 315075,
       "file": "204.idx",
-      "bytes": 378201
+      "bytes": 378201,
+      "compressed_file": "204.idx.gz",
+      "compressed_bytes": 45152
     },
     "205": {
       "total": 103915,
       "file": "205.idx",
-      "bytes": 142031
+      "bytes": 142031,
+      "compressed_file": "205.idx.gz",
+      "compressed_bytes": 26120
     },
     "206": {
       "total": 168114,
       "file": "206.idx",
-      "bytes": 219490
+      "bytes": 219490,
+      "compressed_file": "206.idx.gz",
+      "compressed_bytes": 34699
     },
     "207": {
       "total": 66782,
       "file": "207.idx",
-      "bytes": 96526
+      "bytes": 96526,
+      "compressed_file": "207.idx.gz",
+      "compressed_bytes": 19914
     },
     "208": {
       "total": 82760,
       "file": "208.idx",
-      "bytes": 117482
+      "bytes": 117482,
+      "compressed_file": "208.idx.gz",
+      "compressed_bytes": 25069
     },
     "209": {
       "total": 54057,
       "file": "209.idx",
-      "bytes": 80473
+      "bytes": 80473,
+      "compressed_file": "209.idx.gz",
+      "compressed_bytes": 18202
     },
     "210": {
       "total": 106076,
       "file": "210.idx",
-      "bytes": 147612
+      "bytes": 147612,
+      "compressed_file": "210.idx.gz",
+      "compressed_bytes": 28544
     },
     "211": {
       "total": 61129,
       "file": "211.idx",
-      "bytes": 91906
+      "bytes": 91906,
+      "compressed_file": "211.idx.gz",
+      "compressed_bytes": 22020
     },
     "212": {
       "total": 71675,
       "file": "212.idx",
-      "bytes": 104561
+      "bytes": 104561,
+      "compressed_file": "212.idx.gz",
+      "compressed_bytes": 26865
     },
     "213": {
       "total": 75981,
       "file": "213.idx",
-      "bytes": 109698
+      "bytes": 109698,
+      "compressed_file": "213.idx.gz",
+      "compressed_bytes": 24423
     },
     "214": {
       "total": 58558,
       "file": "214.idx",
-      "bytes": 88577
+      "bytes": 88577,
+      "compressed_file": "214.idx.gz",
+      "compressed_bytes": 23897
     },
     "215": {
       "total": 24664,
       "file": "215.idx",
-      "bytes": 41725
+      "bytes": 41725,
+      "compressed_file": "215.idx.gz",
+      "compressed_bytes": 14617
     },
     "216": {
       "total": 26503,
       "file": "216.idx",
-      "bytes": 43927
+      "bytes": 43927,
+      "compressed_file": "216.idx.gz",
+      "compressed_bytes": 15600
     },
     "217": {
       "total": 15634,
       "file": "217.idx",
-      "bytes": 27505
+      "bytes": 27505,
+      "compressed_file": "217.idx.gz",
+      "compressed_bytes": 11702
     },
     "218": {
       "total": 19754,
       "file": "218.idx",
-      "bytes": 33492
+      "bytes": 33492,
+      "compressed_file": "218.idx.gz",
+      "compressed_bytes": 12471
     },
     "219": {
       "total": 9589,
       "file": "219.idx",
-      "bytes": 17464
+      "bytes": 17464,
+      "compressed_file": "219.idx.gz",
+      "compressed_bytes": 8399
     },
     "220": {
       "total": 38092,
       "file": "220.idx",
-      "bytes": 55174
+      "bytes": 55174,
+      "compressed_file": "220.idx.gz",
+      "compressed_bytes": 15523
     },
     "221": {
       "total": 140101,
       "file": "221.idx",
-      "bytes": 182899
+      "bytes": 182899,
+      "compressed_file": "221.idx.gz",
+      "compressed_bytes": 22346
     },
     "222": {
       "total": 95891,
       "file": "222.idx",
-      "bytes": 129309
+      "bytes": 129309,
+      "compressed_file": "222.idx.gz",
+      "compressed_bytes": 23389
     },
     "223": {
       "total": 22678,
       "file": "223.idx",
-      "bytes": 38582
+      "bytes": 38582,
+      "compressed_file": "223.idx.gz",
+      "compressed_bytes": 12990
     },
     "224": {
       "total": 47832,
       "file": "224.idx",
-      "bytes": 68279
+      "bytes": 68279,
+      "compressed_file": "224.idx.gz",
+      "compressed_bytes": 17678
     },
     "225": {
       "total": 17253,
       "file": "225.idx",
-      "bytes": 30063
+      "bytes": 30063,
+      "compressed_file": "225.idx.gz",
+      "compressed_bytes": 11153
     },
     "226": {
       "total": 21415,
       "file": "226.idx",
-      "bytes": 36115
+      "bytes": 36115,
+      "compressed_file": "226.idx.gz",
+      "compressed_bytes": 12522
     },
     "227": {
       "total": 6829,
       "file": "227.idx",
-      "bytes": 13703
+      "bytes": 13703,
+      "compressed_file": "227.idx.gz",
+      "compressed_bytes": 6657
     },
     "228": {
       "total": 10998,
       "file": "228.idx",
-      "bytes": 19500
+      "bytes": 19500,
+      "compressed_file": "228.idx.gz",
+      "compressed_bytes": 8301
     },
     "229": {
       "total": 6907,
       "file": "229.idx",
-      "bytes": 13535
+      "bytes": 13535,
+      "compressed_file": "229.idx.gz",
+      "compressed_bytes": 6295
     },
     "230": {
       "total": 9902,
       "file": "230.idx",
-      "bytes": 18266
+      "bytes": 18266,
+      "compressed_file": "230.idx.gz",
+      "compressed_bytes": 7823
     },
     "231": {
       "total": 5676,
       "file": "231.idx",
-      "bytes": 11497
+      "bytes": 11497,
+      "compressed_file": "231.idx.gz",
+      "compressed_bytes": 5611
     },
     "232": {
       "total": 23243,
       "file": "232.idx",
-      "bytes": 36280
+      "bytes": 36280,
+      "compressed_file": "232.idx.gz",
+      "compressed_bytes": 8612
     },
     "233": {
       "total": 9583,
       "file": "233.idx",
-      "bytes": 17292
+      "bytes": 17292,
+      "compressed_file": "233.idx.gz",
+      "compressed_bytes": 6183
     },
     "234": {
       "total": 8515,
       "file": "234.idx",
-      "bytes": 16223
+      "bytes": 16223,
+      "compressed_file": "234.idx.gz",
+      "compressed_bytes": 6630
     },
     "235": {
       "total": 3029,
       "file": "235.idx",
-      "bytes": 6813
+      "bytes": 6813,
+      "compressed_file": "235.idx.gz",
+      "compressed_bytes": 4125
     },
     "236": {
       "total": 3232,
       "file": "236.idx",
-      "bytes": 7016
+      "bytes": 7016,
+      "compressed_file": "236.idx.gz",
+      "compressed_bytes": 4106
     },
     "237": {
       "total": 4585,
       "file": "237.idx",
-      "bytes": 8398
+      "bytes": 8398,
+      "compressed_file": "237.idx.gz",
+      "compressed_bytes": 3838
     },
     "238": {
       "total": 2425,
       "file": "238.idx",
-      "bytes": 5373
+      "bytes": 5373,
+      "compressed_file": "238.idx.gz",
+      "compressed_bytes": 3357
     },
     "239": {
       "total": 1748,
       "file": "239.idx",
-      "bytes": 3879
+      "bytes": 3879,
+      "compressed_file": "239.idx.gz",
+      "compressed_bytes": 2489
     },
     "240": {
       "total": 159717,
       "file": "240.idx",
-      "bytes": 181675
+      "bytes": 181675,
+      "compressed_file": "240.idx.gz",
+      "compressed_bytes": 11804
     },
     "241": {
       "total": 59263,
       "file": "241.idx",
-      "bytes": 79644
+      "bytes": 79644,
+      "compressed_file": "241.idx.gz",
+      "compressed_bytes": 10082
     },
     "242": {
       "total": 110427,
       "file": "242.idx",
-      "bytes": 137077
+      "bytes": 137077,
+      "compressed_file": "242.idx.gz",
+      "compressed_bytes": 14357
     },
     "243": {
       "total": 19020,
       "file": "243.idx",
-      "bytes": 30239
+      "bytes": 30239,
+      "compressed_file": "243.idx.gz",
+      "compressed_bytes": 7080
     },
     "244": {
       "total": 36792,
       "file": "244.idx",
-      "bytes": 53008
+      "bytes": 53008,
+      "compressed_file": "244.idx.gz",
+      "compressed_bytes": 9794
     },
     "245": {
       "total": 14114,
       "file": "245.idx",
-      "bytes": 22523
+      "bytes": 22523,
+      "compressed_file": "245.idx.gz",
+      "compressed_bytes": 6068
     },
     "246": {
       "total": 20604,
       "file": "246.idx",
-      "bytes": 33124
+      "bytes": 33124,
+      "compressed_file": "246.idx.gz",
+      "compressed_bytes": 7949
     },
     "247": {
       "total": 6120,
       "file": "247.idx",
-      "bytes": 11455
+      "bytes": 11455,
+      "compressed_file": "247.idx.gz",
+      "compressed_bytes": 3946
     },
     "248": {
       "total": 9333,
       "file": "248.idx",
-      "bytes": 16672
+      "bytes": 16672,
+      "compressed_file": "248.idx.gz",
+      "compressed_bytes": 5479
     },
     "249": {
       "total": 8969,
       "file": "249.idx",
-      "bytes": 15217
+      "bytes": 15217,
+      "compressed_file": "249.idx.gz",
+      "compressed_bytes": 4611
     },
     "250": {
       "total": 15369,
       "file": "250.idx",
-      "bytes": 25600
+      "bytes": 25600,
+      "compressed_file": "250.idx.gz",
+      "compressed_bytes": 6881
     },
     "251": {
       "total": 7052,
       "file": "251.idx",
-      "bytes": 13327
+      "bytes": 13327,
+      "compressed_file": "251.idx.gz",
+      "compressed_bytes": 4610
     },
     "252": {
       "total": 10451,
       "file": "252.idx",
-      "bytes": 18385
+      "bytes": 18385,
+      "compressed_file": "252.idx.gz",
+      "compressed_bytes": 6094
     },
     "253": {
       "total": 9850,
       "file": "253.idx",
-      "bytes": 17511
+      "bytes": 17511,
+      "compressed_file": "253.idx.gz",
+      "compressed_bytes": 5354
     },
     "254": {
       "total": 5506,
       "file": "254.idx",
-      "bytes": 11006
+      "bytes": 11006,
+      "compressed_file": "254.idx.gz",
+      "compressed_bytes": 4514
     },
     "255": {
       "total": 2248,
       "file": "255.idx",
-      "bytes": 5151
+      "bytes": 5151,
+      "compressed_file": "255.idx.gz",
+      "compressed_bytes": 2793
     },
     "256": {
       "total": 6360,
       "file": "256.idx",
-      "bytes": 10144
+      "bytes": 10144,
+      "compressed_file": "256.idx.gz",
+      "compressed_bytes": 3779
     },
     "257": {
       "total": 2169,
       "file": "257.idx",
-      "bytes": 4650
+      "bytes": 4650,
+      "compressed_file": "257.idx.gz",
+      "compressed_bytes": 2600
     },
     "258": {
       "total": 4049,
       "file": "258.idx",
-      "bytes": 7214
+      "bytes": 7214,
+      "compressed_file": "258.idx.gz",
+      "compressed_bytes": 3217
     },
     "259": {
       "total": 1177,
       "file": "259.idx",
-      "bytes": 2647
+      "bytes": 2647,
+      "compressed_file": "259.idx.gz",
+      "compressed_bytes": 1713
     },
     "260": {
       "total": 11041,
       "file": "260.idx",
-      "bytes": 16183
+      "bytes": 16183,
+      "compressed_file": "260.idx.gz",
+      "compressed_bytes": 4392
     },
     "261": {
       "total": 9279,
       "file": "261.idx",
-      "bytes": 16013
+      "bytes": 16013,
+      "compressed_file": "261.idx.gz",
+      "compressed_bytes": 4716
     },
     "262": {
       "total": 9879,
       "file": "262.idx",
-      "bytes": 16802
+      "bytes": 16802,
+      "compressed_file": "262.idx.gz",
+      "compressed_bytes": 5314
     },
     "263": {
       "total": 2436,
       "file": "263.idx",
-      "bytes": 5251
+      "bytes": 5251,
+      "compressed_file": "263.idx.gz",
+      "compressed_bytes": 2835
     },
     "264": {
       "total": 8426,
       "file": "264.idx",
-      "bytes": 13302
+      "bytes": 13302,
+      "compressed_file": "264.idx.gz",
+      "compressed_bytes": 4631
     },
     "265": {
       "total": 4321,
       "file": "265.idx",
-      "bytes": 7464
+      "bytes": 7464,
+      "compressed_file": "265.idx.gz",
+      "compressed_bytes": 2928
     },
     "266": {
       "total": 4342,
       "file": "266.idx",
-      "bytes": 8121
+      "bytes": 8121,
+      "compressed_file": "266.idx.gz",
+      "compressed_bytes": 3791
     },
     "267": {
       "total": 1324,
       "file": "267.idx",
-      "bytes": 2836
+      "bytes": 2836,
+      "compressed_file": "267.idx.gz",
+      "compressed_bytes": 1713
     },
     "268": {
       "total": 2146,
       "file": "268.idx",
-      "bytes": 4253
+      "bytes": 4253,
+      "compressed_file": "268.idx.gz",
+      "compressed_bytes": 2351
     },
     "269": {
       "total": 2020,
       "file": "269.idx",
-      "bytes": 4199
+      "bytes": 4199,
+      "compressed_file": "269.idx.gz",
+      "compressed_bytes": 1980
     },
     "270": {
       "total": 24486,
       "file": "270.idx",
-      "bytes": 30424
+      "bytes": 30424,
+      "compressed_file": "270.idx.gz",
+      "compressed_bytes": 4538
     },
     "271": {
       "total": 2862,
       "file": "271.idx",
-      "bytes": 5094
+      "bytes": 5094,
+      "compressed_file": "271.idx.gz",
+      "compressed_bytes": 2211
     },
     "272": {
       "total": 5811,
       "file": "272.idx",
-      "bytes": 10051
+      "bytes": 10051,
+      "compressed_file": "272.idx.gz",
+      "compressed_bytes": 3552
     },
     "273": {
       "total": 5415,
       "file": "273.idx",
-      "bytes": 9316
+      "bytes": 9316,
+      "compressed_file": "273.idx.gz",
+      "compressed_bytes": 3160
     },
     "274": {
       "total": 3242,
       "file": "274.idx",
-      "bytes": 6361
+      "bytes": 6361,
+      "compressed_file": "274.idx.gz",
+      "compressed_bytes": 2926
     },
     "275": {
       "total": 1486,
       "file": "275.idx",
-      "bytes": 3139
+      "bytes": 3139,
+      "compressed_file": "275.idx.gz",
+      "compressed_bytes": 1760
     },
     "276": {
       "total": 1608,
       "file": "276.idx",
-      "bytes": 3347
+      "bytes": 3347,
+      "compressed_file": "276.idx.gz",
+      "compressed_bytes": 2045
     },
     "277": {
       "total": 3240,
       "file": "277.idx",
-      "bytes": 5744
+      "bytes": 5744,
+      "compressed_file": "277.idx.gz",
+      "compressed_bytes": 2402
     },
     "278": {
       "total": 1447,
       "file": "278.idx",
-      "bytes": 3113
+      "bytes": 3113,
+      "compressed_file": "278.idx.gz",
+      "compressed_bytes": 1776
     },
     "279": {
       "total": 2665,
       "file": "279.idx",
-      "bytes": 4547
+      "bytes": 4547,
+      "compressed_file": "279.idx.gz",
+      "compressed_bytes": 1818
     },
     "280": {
       "total": 15376,
       "file": "280.idx",
-      "bytes": 21176
+      "bytes": 21176,
+      "compressed_file": "280.idx.gz",
+      "compressed_bytes": 4512
     },
     "281": {
       "total": 7543,
       "file": "281.idx",
-      "bytes": 12545
+      "bytes": 12545,
+      "compressed_file": "281.idx.gz",
+      "compressed_bytes": 3306
     },
     "282": {
       "total": 4922,
       "file": "282.idx",
-      "bytes": 9224
+      "bytes": 9224,
+      "compressed_file": "282.idx.gz",
+      "compressed_bytes": 3878
     },
     "283": {
       "total": 2659,
       "file": "283.idx",
-      "bytes": 5342
+      "bytes": 5342,
+      "compressed_file": "283.idx.gz",
+      "compressed_bytes": 2618
     },
     "284": {
       "total": 2895,
       "file": "284.idx",
-      "bytes": 5379
+      "bytes": 5379,
+      "compressed_file": "284.idx.gz",
+      "compressed_bytes": 2903
     },
     "285": {
       "total": 1670,
       "file": "285.idx",
-      "bytes": 3615
+      "bytes": 3615,
+      "compressed_file": "285.idx.gz",
+      "compressed_bytes": 2200
     },
     "286": {
       "total": 1315,
       "file": "286.idx",
-      "bytes": 2917
+      "bytes": 2917,
+      "compressed_file": "286.idx.gz",
+      "compressed_bytes": 1896
     },
     "287": {
       "total": 1395,
       "file": "287.idx",
-      "bytes": 2630
+      "bytes": 2630,
+      "compressed_file": "287.idx.gz",
+      "compressed_bytes": 1381
     },
     "288": {
       "total": 4512,
       "file": "288.idx",
-      "bytes": 7271
+      "bytes": 7271,
+      "compressed_file": "288.idx.gz",
+      "compressed_bytes": 2717
     },
     "289": {
       "total": 2592,
       "file": "289.idx",
-      "bytes": 4803
+      "bytes": 4803,
+      "compressed_file": "289.idx.gz",
+      "compressed_bytes": 2068
     },
     "290": {
       "total": 4698,
       "file": "290.idx",
-      "bytes": 7921
+      "bytes": 7921,
+      "compressed_file": "290.idx.gz",
+      "compressed_bytes": 2699
     },
     "291": {
       "total": 2259,
       "file": "291.idx",
-      "bytes": 4490
+      "bytes": 4490,
+      "compressed_file": "291.idx.gz",
+      "compressed_bytes": 2195
     },
     "292": {
       "total": 1743,
       "file": "292.idx",
-      "bytes": 3643
+      "bytes": 3643,
+      "compressed_file": "292.idx.gz",
+      "compressed_bytes": 2176
     },
     "293": {
       "total": 4698,
       "file": "293.idx",
-      "bytes": 7925
+      "bytes": 7925,
+      "compressed_file": "293.idx.gz",
+      "compressed_bytes": 2547
     },
     "294": {
       "total": 1950,
       "file": "294.idx",
-      "bytes": 3892
+      "bytes": 3892,
+      "compressed_file": "294.idx.gz",
+      "compressed_bytes": 1939
     },
     "295": {
       "total": 637,
       "file": "295.idx",
-      "bytes": 1594
+      "bytes": 1594,
+      "compressed_file": "295.idx.gz",
+      "compressed_bytes": 1178
     },
     "296": {
       "total": 1068,
       "file": "296.idx",
-      "bytes": 2289
+      "bytes": 2289,
+      "compressed_file": "296.idx.gz",
+      "compressed_bytes": 1520
     },
     "297": {
       "total": 1963,
       "file": "297.idx",
-      "bytes": 3666
+      "bytes": 3666,
+      "compressed_file": "297.idx.gz",
+      "compressed_bytes": 1790
     },
     "298": {
       "total": 1355,
       "file": "298.idx",
-      "bytes": 2857
+      "bytes": 2857,
+      "compressed_file": "298.idx.gz",
+      "compressed_bytes": 1669
     },
     "299": {
       "total": 962,
       "file": "299.idx",
-      "bytes": 2060
+      "bytes": 2060,
+      "compressed_file": "299.idx.gz",
+      "compressed_bytes": 1326
     },
     "300": {
       "total": 232129,
       "file": "300.idx",
-      "bytes": 261561
+      "bytes": 261561,
+      "compressed_file": "300.idx.gz",
+      "compressed_bytes": 12522
     },
     "301": {
       "total": 147464,
       "file": "301.idx",
-      "bytes": 174942
+      "bytes": 174942,
+      "compressed_file": "301.idx.gz",
+      "compressed_bytes": 11587
     },
     "302": {
       "total": 56507,
       "file": "302.idx",
-      "bytes": 74066
+      "bytes": 74066,
+      "compressed_file": "302.idx.gz",
+      "compressed_bytes": 8413
     },
     "303": {
       "total": 33391,
       "file": "303.idx",
-      "bytes": 47670
+      "bytes": 47670,
+      "compressed_file": "303.idx.gz",
+      "compressed_bytes": 7361
     },
     "304": {
       "total": 93531,
       "file": "304.idx",
-      "bytes": 124387
+      "bytes": 124387,
+      "compressed_file": "304.idx.gz",
+      "compressed_bytes": 10488
     },
     "305": {
       "total": 47075,
       "file": "305.idx",
-      "bytes": 69165
+      "bytes": 69165,
+      "compressed_file": "305.idx.gz",
+      "compressed_bytes": 9062
     },
     "306": {
       "total": 29402,
       "file": "306.idx",
-      "bytes": 44795
+      "bytes": 44795,
+      "compressed_file": "306.idx.gz",
+      "compressed_bytes": 8380
     },
     "307": {
       "total": 23218,
       "file": "307.idx",
-      "bytes": 36705
+      "bytes": 36705,
+      "compressed_file": "307.idx.gz",
+      "compressed_bytes": 6986
     },
     "308": {
       "total": 13847,
       "file": "308.idx",
-      "bytes": 23523
+      "bytes": 23523,
+      "compressed_file": "308.idx.gz",
+      "compressed_bytes": 6223
     },
     "309": {
       "total": 27084,
       "file": "309.idx",
-      "bytes": 41094
+      "bytes": 41094,
+      "compressed_file": "309.idx.gz",
+      "compressed_bytes": 8123
     },
     "310": {
       "total": 50167,
       "file": "310.idx",
-      "bytes": 69369
+      "bytes": 69369,
+      "compressed_file": "310.idx.gz",
+      "compressed_bytes": 10260
     },
     "311": {
       "total": 27360,
       "file": "311.idx",
-      "bytes": 41244
+      "bytes": 41244,
+      "compressed_file": "311.idx.gz",
+      "compressed_bytes": 8018
     },
     "312": {
       "total": 12338,
       "file": "312.idx",
-      "bytes": 21174
+      "bytes": 21174,
+      "compressed_file": "312.idx.gz",
+      "compressed_bytes": 7110
     },
     "313": {
       "total": 46334,
       "file": "313.idx",
-      "bytes": 64134
+      "bytes": 64134,
+      "compressed_file": "313.idx.gz",
+      "compressed_bytes": 10173
     },
     "314": {
       "total": 19981,
       "file": "314.idx",
-      "bytes": 31874
+      "bytes": 31874,
+      "compressed_file": "314.idx.gz",
+      "compressed_bytes": 7737
     },
     "315": {
       "total": 11065,
       "file": "315.idx",
-      "bytes": 19452
+      "bytes": 19452,
+      "compressed_file": "315.idx.gz",
+      "compressed_bytes": 6567
     },
     "316": {
       "total": 8133,
       "file": "316.idx",
-      "bytes": 14801
+      "bytes": 14801,
+      "compressed_file": "316.idx.gz",
+      "compressed_bytes": 5773
     },
     "317": {
       "total": 8420,
       "file": "317.idx",
-      "bytes": 14887
+      "bytes": 14887,
+      "compressed_file": "317.idx.gz",
+      "compressed_bytes": 5309
     },
     "318": {
       "total": 5561,
       "file": "318.idx",
-      "bytes": 10415
+      "bytes": 10415,
+      "compressed_file": "318.idx.gz",
+      "compressed_bytes": 4667
     },
     "319": {
       "total": 3789,
       "file": "319.idx",
-      "bytes": 7504
+      "bytes": 7504,
+      "compressed_file": "319.idx.gz",
+      "compressed_bytes": 3553
     },
     "320": {
       "total": 84583,
       "file": "320.idx",
-      "bytes": 98159
+      "bytes": 98159,
+      "compressed_file": "320.idx.gz",
+      "compressed_bytes": 8026
     },
     "321": {
       "total": 59852,
       "file": "321.idx",
-      "bytes": 80865
+      "bytes": 80865,
+      "compressed_file": "321.idx.gz",
+      "compressed_bytes": 9925
     },
     "322": {
       "total": 62899,
       "file": "322.idx",
-      "bytes": 81058
+      "bytes": 81058,
+      "compressed_file": "322.idx.gz",
+      "compressed_bytes": 9636
     },
     "323": {
       "total": 10402,
       "file": "323.idx",
-      "bytes": 17374
+      "bytes": 17374,
+      "compressed_file": "323.idx.gz",
+      "compressed_bytes": 5204
     },
     "324": {
       "total": 19701,
       "file": "324.idx",
-      "bytes": 29205
+      "bytes": 29205,
+      "compressed_file": "324.idx.gz",
+      "compressed_bytes": 6006
     },
     "325": {
       "total": 8171,
       "file": "325.idx",
-      "bytes": 13801
+      "bytes": 13801,
+      "compressed_file": "325.idx.gz",
+      "compressed_bytes": 4672
     },
     "326": {
       "total": 9095,
       "file": "326.idx",
-      "bytes": 15616
+      "bytes": 15616,
+      "compressed_file": "326.idx.gz",
+      "compressed_bytes": 5058
     },
     "327": {
       "total": 3500,
       "file": "327.idx",
-      "bytes": 6741
+      "bytes": 6741,
+      "compressed_file": "327.idx.gz",
+      "compressed_bytes": 2993
     },
     "328": {
       "total": 5010,
       "file": "328.idx",
-      "bytes": 9361
+      "bytes": 9361,
+      "compressed_file": "328.idx.gz",
+      "compressed_bytes": 3739
     },
     "329": {
       "total": 4780,
       "file": "329.idx",
-      "bytes": 8555
+      "bytes": 8555,
+      "compressed_file": "329.idx.gz",
+      "compressed_bytes": 3110
     },
     "330": {
       "total": 29411,
       "file": "330.idx",
-      "bytes": 40036
+      "bytes": 40036,
+      "compressed_file": "330.idx.gz",
+      "compressed_bytes": 7679
     },
     "331": {
       "total": 17543,
       "file": "331.idx",
-      "bytes": 27050
+      "bytes": 27050,
+      "compressed_file": "331.idx.gz",
+      "compressed_bytes": 5845
     },
     "332": {
       "total": 16468,
       "file": "332.idx",
-      "bytes": 27464
+      "bytes": 27464,
+      "compressed_file": "332.idx.gz",
+      "compressed_bytes": 6829
     },
     "333": {
       "total": 7509,
       "file": "333.idx",
-      "bytes": 14418
+      "bytes": 14418,
+      "compressed_file": "333.idx.gz",
+      "compressed_bytes": 5065
     },
     "334": {
       "total": 7566,
       "file": "334.idx",
-      "bytes": 13264
+      "bytes": 13264,
+      "compressed_file": "334.idx.gz",
+      "compressed_bytes": 5253
     },
     "335": {
       "total": 6188,
       "file": "335.idx",
-      "bytes": 10265
+      "bytes": 10265,
+      "compressed_file": "335.idx.gz",
+      "compressed_bytes": 4226
     },
     "336": {
       "total": 4452,
       "file": "336.idx",
-      "bytes": 8197
+      "bytes": 8197,
+      "compressed_file": "336.idx.gz",
+      "compressed_bytes": 4196
     },
     "337": {
       "total": 2453,
       "file": "337.idx",
-      "bytes": 5032
+      "bytes": 5032,
+      "compressed_file": "337.idx.gz",
+      "compressed_bytes": 2950
     },
     "338": {
       "total": 2564,
       "file": "338.idx",
-      "bytes": 5276
+      "bytes": 5276,
+      "compressed_file": "338.idx.gz",
+      "compressed_bytes": 2948
     },
     "339": {
       "total": 1727,
       "file": "339.idx",
-      "bytes": 3682
+      "bytes": 3682,
+      "compressed_file": "339.idx.gz",
+      "compressed_bytes": 2256
     },
     "340": {
       "total": 5971,
       "file": "340.idx",
-      "bytes": 9565
+      "bytes": 9565,
+      "compressed_file": "340.idx.gz",
+      "compressed_bytes": 3536
     },
     "341": {
       "total": 4742,
       "file": "341.idx",
-      "bytes": 8913
+      "bytes": 8913,
+      "compressed_file": "341.idx.gz",
+      "compressed_bytes": 3642
     },
     "342": {
       "total": 5459,
       "file": "342.idx",
-      "bytes": 9858
+      "bytes": 9858,
+      "compressed_file": "342.idx.gz",
+      "compressed_bytes": 3840
     },
     "343": {
       "total": 3345,
       "file": "343.idx",
-      "bytes": 6379
+      "bytes": 6379,
+      "compressed_file": "343.idx.gz",
+      "compressed_bytes": 2762
     },
     "344": {
       "total": 2468,
       "file": "344.idx",
-      "bytes": 5034
+      "bytes": 5034,
+      "compressed_file": "344.idx.gz",
+      "compressed_bytes": 2658
     },
     "345": {
       "total": 1077,
       "file": "345.idx",
-      "bytes": 2499
+      "bytes": 2499,
+      "compressed_file": "345.idx.gz",
+      "compressed_bytes": 1794
     },
     "346": {
       "total": 892,
       "file": "346.idx",
-      "bytes": 2144
+      "bytes": 2144,
+      "compressed_file": "346.idx.gz",
+      "compressed_bytes": 1629
     },
     "347": {
       "total": 627,
       "file": "347.idx",
-      "bytes": 1575
+      "bytes": 1575,
+      "compressed_file": "347.idx.gz",
+      "compressed_bytes": 1145
     },
     "348": {
       "total": 717,
       "file": "348.idx",
-      "bytes": 1694
+      "bytes": 1694,
+      "compressed_file": "348.idx.gz",
+      "compressed_bytes": 1245
     },
     "349": {
       "total": 1393,
       "file": "349.idx",
-      "bytes": 2846
+      "bytes": 2846,
+      "compressed_file": "349.idx.gz",
+      "compressed_bytes": 1540
     },
     "350": {
       "total": 1423,
       "file": "350.idx",
-      "bytes": 2882
+      "bytes": 2882,
+      "compressed_file": "350.idx.gz",
+      "compressed_bytes": 1592
     },
     "351": {
       "total": 18913,
       "file": "351.idx",
-      "bytes": 26397
+      "bytes": 26397,
+      "compressed_file": "351.idx.gz",
+      "compressed_bytes": 3044
     },
     "352": {
       "total": 8518,
       "file": "352.idx",
-      "bytes": 13408
+      "bytes": 13408,
+      "compressed_file": "352.idx.gz",
+      "compressed_bytes": 3082
     },
     "353": {
       "total": 4029,
       "file": "353.idx",
-      "bytes": 7133
+      "bytes": 7133,
+      "compressed_file": "353.idx.gz",
+      "compressed_bytes": 2600
     },
     "354": {
       "total": 1748,
       "file": "354.idx",
-      "bytes": 3593
+      "bytes": 3593,
+      "compressed_file": "354.idx.gz",
+      "compressed_bytes": 1949
     },
     "355": {
       "total": 2088,
       "file": "355.idx",
-      "bytes": 4329
+      "bytes": 4329,
+      "compressed_file": "355.idx.gz",
+      "compressed_bytes": 1779
     },
     "356": {
       "total": 1661,
       "file": "356.idx",
-      "bytes": 3634
+      "bytes": 3634,
+      "compressed_file": "356.idx.gz",
+      "compressed_bytes": 1790
     },
     "357": {
       "total": 1636,
       "file": "357.idx",
-      "bytes": 3547
+      "bytes": 3547,
+      "compressed_file": "357.idx.gz",
+      "compressed_bytes": 1815
     },
     "358": {
       "total": 1053,
       "file": "358.idx",
-      "bytes": 2380
+      "bytes": 2380,
+      "compressed_file": "358.idx.gz",
+      "compressed_bytes": 1387
     },
     "359": {
       "total": 579,
       "file": "359.idx",
-      "bytes": 1487
+      "bytes": 1487,
+      "compressed_file": "359.idx.gz",
+      "compressed_bytes": 1075
     },
     "360": {
       "total": 32759,
       "file": "360.idx",
-      "bytes": 40161
+      "bytes": 40161,
+      "compressed_file": "360.idx.gz",
+      "compressed_bytes": 5040
     },
     "361": {
       "total": 4920,
       "file": "361.idx",
-      "bytes": 8717
+      "bytes": 8717,
+      "compressed_file": "361.idx.gz",
+      "compressed_bytes": 3040
     },
     "362": {
       "total": 10398,
       "file": "362.idx",
-      "bytes": 16522
+      "bytes": 16522,
+      "compressed_file": "362.idx.gz",
+      "compressed_bytes": 4179
     },
     "363": {
       "total": 4169,
       "file": "363.idx",
-      "bytes": 7716
+      "bytes": 7716,
+      "compressed_file": "363.idx.gz",
+      "compressed_bytes": 2813
     },
     "364": {
       "total": 4062,
       "file": "364.idx",
-      "bytes": 7319
+      "bytes": 7319,
+      "compressed_file": "364.idx.gz",
+      "compressed_bytes": 2973
     },
     "365": {
       "total": 2285,
       "file": "365.idx",
-      "bytes": 4357
+      "bytes": 4357,
+      "compressed_file": "365.idx.gz",
+      "compressed_bytes": 2064
     },
     "366": {
       "total": 2062,
       "file": "366.idx",
-      "bytes": 4207
+      "bytes": 4207,
+      "compressed_file": "366.idx.gz",
+      "compressed_bytes": 2003
     },
     "367": {
       "total": 1395,
       "file": "367.idx",
-      "bytes": 2977
+      "bytes": 2977,
+      "compressed_file": "367.idx.gz",
+      "compressed_bytes": 1553
     },
     "368": {
       "total": 1159,
       "file": "368.idx",
-      "bytes": 2425
+      "bytes": 2425,
+      "compressed_file": "368.idx.gz",
+      "compressed_bytes": 1401
     },
     "369": {
       "total": 3193,
       "file": "369.idx",
-      "bytes": 5256
+      "bytes": 5256,
+      "compressed_file": "369.idx.gz",
+      "compressed_bytes": 2050
     },
     "370": {
       "total": 2768,
       "file": "370.idx",
-      "bytes": 4949
+      "bytes": 4949,
+      "compressed_file": "370.idx.gz",
+      "compressed_bytes": 2207
     },
     "371": {
       "total": 1094,
       "file": "371.idx",
-      "bytes": 2492
+      "bytes": 2492,
+      "compressed_file": "371.idx.gz",
+      "compressed_bytes": 1395
     },
     "372": {
       "total": 1261,
       "file": "372.idx",
-      "bytes": 2692
+      "bytes": 2692,
+      "compressed_file": "372.idx.gz",
+      "compressed_bytes": 1512
     },
     "373": {
       "total": 1686,
       "file": "373.idx",
-      "bytes": 3519
+      "bytes": 3519,
+      "compressed_file": "373.idx.gz",
+      "compressed_bytes": 1817
     },
     "374": {
       "total": 498,
       "file": "374.idx",
-      "bytes": 1356
+      "bytes": 1356,
+      "compressed_file": "374.idx.gz",
+      "compressed_bytes": 1096
     },
     "375": {
       "total": 586,
       "file": "375.idx",
-      "bytes": 1421
+      "bytes": 1421,
+      "compressed_file": "375.idx.gz",
+      "compressed_bytes": 932
     },
     "376": {
       "total": 1011,
       "file": "376.idx",
-      "bytes": 2041
+      "bytes": 2041,
+      "compressed_file": "376.idx.gz",
+      "compressed_bytes": 1221
     },
     "377": {
       "total": 476,
       "file": "377.idx",
-      "bytes": 1133
+      "bytes": 1133,
+      "compressed_file": "377.idx.gz",
+      "compressed_bytes": 856
     },
     "378": {
       "total": 1579,
       "file": "378.idx",
-      "bytes": 2658
+      "bytes": 2658,
+      "compressed_file": "378.idx.gz",
+      "compressed_bytes": 1101
     },
     "379": {
       "total": 1208,
       "file": "379.idx",
-      "bytes": 2295
+      "bytes": 2295,
+      "compressed_file": "379.idx.gz",
+      "compressed_bytes": 968
     },
     "380": {
       "total": 841,
       "file": "380.idx",
-      "bytes": 1875
+      "bytes": 1875,
+      "compressed_file": "380.idx.gz",
+      "compressed_bytes": 1280
     },
     "381": {
       "total": 2755,
       "file": "381.idx",
-      "bytes": 5024
+      "bytes": 5024,
+      "compressed_file": "381.idx.gz",
+      "compressed_bytes": 1965
     },
     "382": {
       "total": 1460,
       "file": "382.idx",
-      "bytes": 3019
+      "bytes": 3019,
+      "compressed_file": "382.idx.gz",
+      "compressed_bytes": 1553
     },
     "383": {
       "total": 452,
       "file": "383.idx",
-      "bytes": 1168
+      "bytes": 1168,
+      "compressed_file": "383.idx.gz",
+      "compressed_bytes": 804
     },
     "384": {
       "total": 883,
       "file": "384.idx",
-      "bytes": 1752
+      "bytes": 1752,
+      "compressed_file": "384.idx.gz",
+      "compressed_bytes": 1136
     },
     "385": {
       "total": 833,
       "file": "385.idx",
-      "bytes": 1588
+      "bytes": 1588,
+      "compressed_file": "385.idx.gz",
+      "compressed_bytes": 995
     },
     "386": {
       "total": 1114,
       "file": "386.idx",
-      "bytes": 1948
+      "bytes": 1948,
+      "compressed_file": "386.idx.gz",
+      "compressed_bytes": 1073
     },
     "387": {
       "total": 1137,
       "file": "387.idx",
-      "bytes": 1820
+      "bytes": 1820,
+      "compressed_file": "387.idx.gz",
+      "compressed_bytes": 833
     },
     "388": {
       "total": 427,
       "file": "388.idx",
-      "bytes": 968
+      "bytes": 968,
+      "compressed_file": "388.idx.gz",
+      "compressed_bytes": 706
     },
     "389": {
       "total": 624,
       "file": "389.idx",
-      "bytes": 1417
+      "bytes": 1417,
+      "compressed_file": "389.idx.gz",
+      "compressed_bytes": 878
     },
     "390": {
       "total": 5670,
       "file": "390.idx",
-      "bytes": 7732
+      "bytes": 7732,
+      "compressed_file": "390.idx.gz",
+      "compressed_bytes": 1997
     },
     "391": {
       "total": 2993,
       "file": "391.idx",
-      "bytes": 5132
+      "bytes": 5132,
+      "compressed_file": "391.idx.gz",
+      "compressed_bytes": 1814
     },
     "392": {
       "total": 1075,
       "file": "392.idx",
-      "bytes": 2310
+      "bytes": 2310,
+      "compressed_file": "392.idx.gz",
+      "compressed_bytes": 1298
     },
     "393": {
       "total": 743,
       "file": "393.idx",
-      "bytes": 1785
+      "bytes": 1785,
+      "compressed_file": "393.idx.gz",
+      "compressed_bytes": 1287
     },
     "394": {
       "total": 1054,
       "file": "394.idx",
-      "bytes": 1874
+      "bytes": 1874,
+      "compressed_file": "394.idx.gz",
+      "compressed_bytes": 1168
     },
     "395": {
       "total": 609,
       "file": "395.idx",
-      "bytes": 1166
+      "bytes": 1166,
+      "compressed_file": "395.idx.gz",
+      "compressed_bytes": 829
     },
     "396": {
       "total": 1255,
       "file": "396.idx",
-      "bytes": 1977
+      "bytes": 1977,
+      "compressed_file": "396.idx.gz",
+      "compressed_bytes": 849
     },
     "397": {
       "total": 487,
       "file": "397.idx",
-      "bytes": 1039
+      "bytes": 1039,
+      "compressed_file": "397.idx.gz",
+      "compressed_bytes": 785
     },
     "398": {
       "total": 279,
       "file": "398.idx",
-      "bytes": 723
+      "bytes": 723,
+      "compressed_file": "398.idx.gz",
+      "compressed_bytes": 638
     },
     "399": {
       "total": 1349,
       "file": "399.idx",
-      "bytes": 2325
+      "bytes": 2325,
+      "compressed_file": "399.idx.gz",
+      "compressed_bytes": 1143
     },
     "400": {
       "total": 304517,
       "file": "400.idx",
-      "bytes": 338484
+      "bytes": 338484,
+      "compressed_file": "400.idx.gz",
+      "compressed_bytes": 14698
     },
     "401": {
       "total": 163771,
       "file": "401.idx",
-      "bytes": 193529
+      "bytes": 193529,
+      "compressed_file": "401.idx.gz",
+      "compressed_bytes": 11414
     },
     "402": {
       "total": 83980,
       "file": "402.idx",
-      "bytes": 105845
+      "bytes": 105845,
+      "compressed_file": "402.idx.gz",
+      "compressed_bytes": 10149
     },
     "403": {
       "total": 40169,
       "file": "403.idx",
-      "bytes": 56897
+      "bytes": 56897,
+      "compressed_file": "403.idx.gz",
+      "compressed_bytes": 7627
     },
     "404": {
       "total": 48594,
       "file": "404.idx",
-      "bytes": 66187
+      "bytes": 66187,
+      "compressed_file": "404.idx.gz",
+      "compressed_bytes": 10213
     },
     "405": {
       "total": 97701,
       "file": "405.idx",
-      "bytes": 129508
+      "bytes": 129508,
+      "compressed_file": "405.idx.gz",
+      "compressed_bytes": 10190
     },
     "406": {
       "total": 47961,
       "file": "406.idx",
-      "bytes": 69807
+      "bytes": 69807,
+      "compressed_file": "406.idx.gz",
+      "compressed_bytes": 10370
     },
     "407": {
       "total": 23050,
       "file": "407.idx",
-      "bytes": 37106
+      "bytes": 37106,
+      "compressed_file": "407.idx.gz",
+      "compressed_bytes": 6783
     },
     "408": {
       "total": 25006,
       "file": "408.idx",
-      "bytes": 37614
+      "bytes": 37614,
+      "compressed_file": "408.idx.gz",
+      "compressed_bytes": 8658
     },
     "409": {
       "total": 27245,
       "file": "409.idx",
-      "bytes": 40405
+      "bytes": 40405,
+      "compressed_file": "409.idx.gz",
+      "compressed_bytes": 7308
     },
     "410": {
       "total": 60582,
       "file": "410.idx",
-      "bytes": 83704
+      "bytes": 83704,
+      "compressed_file": "410.idx.gz",
+      "compressed_bytes": 12568
     },
     "411": {
       "total": 29362,
       "file": "411.idx",
-      "bytes": 43759
+      "bytes": 43759,
+      "compressed_file": "411.idx.gz",
+      "compressed_bytes": 8293
     },
     "412": {
       "total": 18291,
       "file": "412.idx",
-      "bytes": 29542
+      "bytes": 29542,
+      "compressed_file": "412.idx.gz",
+      "compressed_bytes": 9008
     },
     "413": {
       "total": 49963,
       "file": "413.idx",
-      "bytes": 68544
+      "bytes": 68544,
+      "compressed_file": "413.idx.gz",
+      "compressed_bytes": 9787
     },
     "414": {
       "total": 21107,
       "file": "414.idx",
-      "bytes": 33557
+      "bytes": 33557,
+      "compressed_file": "414.idx.gz",
+      "compressed_bytes": 8338
     },
     "415": {
       "total": 10669,
       "file": "415.idx",
-      "bytes": 18192
+      "bytes": 18192,
+      "compressed_file": "415.idx.gz",
+      "compressed_bytes": 5683
     },
     "416": {
       "total": 10932,
       "file": "416.idx",
-      "bytes": 18906
+      "bytes": 18906,
+      "compressed_file": "416.idx.gz",
+      "compressed_bytes": 6630
     },
     "417": {
       "total": 5946,
       "file": "417.idx",
-      "bytes": 11269
+      "bytes": 11269,
+      "compressed_file": "417.idx.gz",
+      "compressed_bytes": 4806
     },
     "418": {
       "total": 8279,
       "file": "418.idx",
-      "bytes": 14713
+      "bytes": 14713,
+      "compressed_file": "418.idx.gz",
+      "compressed_bytes": 5286
     },
     "419": {
       "total": 3604,
       "file": "419.idx",
-      "bytes": 6901
+      "bytes": 6901,
+      "compressed_file": "419.idx.gz",
+      "compressed_bytes": 2981
     },
     "420": {
       "total": 15545,
       "file": "420.idx",
-      "bytes": 23614
+      "bytes": 23614,
+      "compressed_file": "420.idx.gz",
+      "compressed_bytes": 6679
     },
     "421": {
       "total": 21265,
       "file": "421.idx",
-      "bytes": 34095
+      "bytes": 34095,
+      "compressed_file": "421.idx.gz",
+      "compressed_bytes": 6838
     },
     "422": {
       "total": 11068,
       "file": "422.idx",
-      "bytes": 19851
+      "bytes": 19851,
+      "compressed_file": "422.idx.gz",
+      "compressed_bytes": 6484
     },
     "423": {
       "total": 3158,
       "file": "423.idx",
-      "bytes": 6737
+      "bytes": 6737,
+      "compressed_file": "423.idx.gz",
+      "compressed_bytes": 3477
     },
     "424": {
       "total": 7882,
       "file": "424.idx",
-      "bytes": 13162
+      "bytes": 13162,
+      "compressed_file": "424.idx.gz",
+      "compressed_bytes": 5235
     },
     "425": {
       "total": 2557,
       "file": "425.idx",
-      "bytes": 5322
+      "bytes": 5322,
+      "compressed_file": "425.idx.gz",
+      "compressed_bytes": 3047
     },
     "426": {
       "total": 3288,
       "file": "426.idx",
-      "bytes": 6770
+      "bytes": 6770,
+      "compressed_file": "426.idx.gz",
+      "compressed_bytes": 3731
     },
     "427": {
       "total": 928,
       "file": "427.idx",
-      "bytes": 2228
+      "bytes": 2228,
+      "compressed_file": "427.idx.gz",
+      "compressed_bytes": 1682
     },
     "428": {
       "total": 2160,
       "file": "428.idx",
-      "bytes": 3961
+      "bytes": 3961,
+      "compressed_file": "428.idx.gz",
+      "compressed_bytes": 2142
     },
     "429": {
       "total": 1417,
       "file": "429.idx",
-      "bytes": 2882
+      "bytes": 2882,
+      "compressed_file": "429.idx.gz",
+      "compressed_bytes": 1573
     },
     "430": {
       "total": 6399,
       "file": "430.idx",
-      "bytes": 10108
+      "bytes": 10108,
+      "compressed_file": "430.idx.gz",
+      "compressed_bytes": 3238
     },
     "431": {
       "total": 3015,
       "file": "431.idx",
-      "bytes": 5686
+      "bytes": 5686,
+      "compressed_file": "431.idx.gz",
+      "compressed_bytes": 2279
     },
     "432": {
       "total": 3870,
       "file": "432.idx",
-      "bytes": 7459
+      "bytes": 7459,
+      "compressed_file": "432.idx.gz",
+      "compressed_bytes": 3189
     },
     "433": {
       "total": 3444,
       "file": "433.idx",
-      "bytes": 6212
+      "bytes": 6212,
+      "compressed_file": "433.idx.gz",
+      "compressed_bytes": 2420
     },
     "434": {
       "total": 2082,
       "file": "434.idx",
-      "bytes": 4379
+      "bytes": 4379,
+      "compressed_file": "434.idx.gz",
+      "compressed_bytes": 2211
     },
     "435": {
       "total": 869,
       "file": "435.idx",
-      "bytes": 2043
+      "bytes": 2043,
+      "compressed_file": "435.idx.gz",
+      "compressed_bytes": 1390
     },
     "436": {
       "total": 865,
       "file": "436.idx",
-      "bytes": 2027
+      "bytes": 2027,
+      "compressed_file": "436.idx.gz",
+      "compressed_bytes": 1453
     },
     "437": {
       "total": 725,
       "file": "437.idx",
-      "bytes": 1803
+      "bytes": 1803,
+      "compressed_file": "437.idx.gz",
+      "compressed_bytes": 1242
     },
     "438": {
       "total": 548,
       "file": "438.idx",
-      "bytes": 1454
+      "bytes": 1454,
+      "compressed_file": "438.idx.gz",
+      "compressed_bytes": 1128
     },
     "439": {
       "total": 581,
       "file": "439.idx",
-      "bytes": 1291
+      "bytes": 1291,
+      "compressed_file": "439.idx.gz",
+      "compressed_bytes": 940
     },
     "440": {
       "total": 25980,
       "file": "440.idx",
-      "bytes": 33044
+      "bytes": 33044,
+      "compressed_file": "440.idx.gz",
+      "compressed_bytes": 5023
     },
     "441": {
       "total": 20095,
       "file": "441.idx",
-      "bytes": 29869
+      "bytes": 29869,
+      "compressed_file": "441.idx.gz",
+      "compressed_bytes": 5324
     },
     "442": {
       "total": 8590,
       "file": "442.idx",
-      "bytes": 14645
+      "bytes": 14645,
+      "compressed_file": "442.idx.gz",
+      "compressed_bytes": 4630
     },
     "443": {
       "total": 3755,
       "file": "443.idx",
-      "bytes": 6824
+      "bytes": 6824,
+      "compressed_file": "443.idx.gz",
+      "compressed_bytes": 2690
     },
     "444": {
       "total": 5191,
       "file": "444.idx",
-      "bytes": 8951
+      "bytes": 8951,
+      "compressed_file": "444.idx.gz",
+      "compressed_bytes": 4048
     },
     "445": {
       "total": 4058,
       "file": "445.idx",
-      "bytes": 6786
+      "bytes": 6786,
+      "compressed_file": "445.idx.gz",
+      "compressed_bytes": 3219
     },
     "446": {
       "total": 5230,
       "file": "446.idx",
-      "bytes": 8225
+      "bytes": 8225,
+      "compressed_file": "446.idx.gz",
+      "compressed_bytes": 3381
     },
     "447": {
       "total": 994,
       "file": "447.idx",
-      "bytes": 2160
+      "bytes": 2160,
+      "compressed_file": "447.idx.gz",
+      "compressed_bytes": 1523
     },
     "448": {
       "total": 1926,
       "file": "448.idx",
-      "bytes": 3640
+      "bytes": 3640,
+      "compressed_file": "448.idx.gz",
+      "compressed_bytes": 2105
     },
     "449": {
       "total": 1400,
       "file": "449.idx",
-      "bytes": 2664
+      "bytes": 2664,
+      "compressed_file": "449.idx.gz",
+      "compressed_bytes": 1471
     },
     "450": {
       "total": 4595,
       "file": "450.idx",
-      "bytes": 7541
+      "bytes": 7541,
+      "compressed_file": "450.idx.gz",
+      "compressed_bytes": 2566
     },
     "451": {
       "total": 3620,
       "file": "451.idx",
-      "bytes": 6243
+      "bytes": 6243,
+      "compressed_file": "451.idx.gz",
+      "compressed_bytes": 2417
     },
     "452": {
       "total": 1936,
       "file": "452.idx",
-      "bytes": 3948
+      "bytes": 3948,
+      "compressed_file": "452.idx.gz",
+      "compressed_bytes": 2178
     },
     "453": {
       "total": 4651,
       "file": "453.idx",
-      "bytes": 7167
+      "bytes": 7167,
+      "compressed_file": "453.idx.gz",
+      "compressed_bytes": 2100
     },
     "454": {
       "total": 1845,
       "file": "454.idx",
-      "bytes": 3593
+      "bytes": 3593,
+      "compressed_file": "454.idx.gz",
+      "compressed_bytes": 1802
     },
     "455": {
       "total": 672,
       "file": "455.idx",
-      "bytes": 1637
+      "bytes": 1637,
+      "compressed_file": "455.idx.gz",
+      "compressed_bytes": 1073
     },
     "456": {
       "total": 965,
       "file": "456.idx",
-      "bytes": 2055
+      "bytes": 2055,
+      "compressed_file": "456.idx.gz",
+      "compressed_bytes": 1389
     },
     "457": {
       "total": 499,
       "file": "457.idx",
-      "bytes": 1224
+      "bytes": 1224,
+      "compressed_file": "457.idx.gz",
+      "compressed_bytes": 939
     },
     "458": {
       "total": 646,
       "file": "458.idx",
-      "bytes": 1501
+      "bytes": 1501,
+      "compressed_file": "458.idx.gz",
+      "compressed_bytes": 989
     },
     "459": {
       "total": 331,
       "file": "459.idx",
-      "bytes": 806
+      "bytes": 806,
+      "compressed_file": "459.idx.gz",
+      "compressed_bytes": 639
     },
     "460": {
       "total": 1699,
       "file": "460.idx",
-      "bytes": 3152
+      "bytes": 3152,
+      "compressed_file": "460.idx.gz",
+      "compressed_bytes": 1568
     },
     "461": {
       "total": 19978,
       "file": "461.idx",
-      "bytes": 27431
+      "bytes": 27431,
+      "compressed_file": "461.idx.gz",
+      "compressed_bytes": 3320
     },
     "462": {
       "total": 7399,
       "file": "462.idx",
-      "bytes": 11894
+      "bytes": 11894,
+      "compressed_file": "462.idx.gz",
+      "compressed_bytes": 2655
     },
     "463": {
       "total": 1863,
       "file": "463.idx",
-      "bytes": 3524
+      "bytes": 3524,
+      "compressed_file": "463.idx.gz",
+      "compressed_bytes": 1631
     },
     "464": {
       "total": 1975,
       "file": "464.idx",
-      "bytes": 4119
+      "bytes": 4119,
+      "compressed_file": "464.idx.gz",
+      "compressed_bytes": 1725
     },
     "465": {
       "total": 2005,
       "file": "465.idx",
-      "bytes": 3936
+      "bytes": 3936,
+      "compressed_file": "465.idx.gz",
+      "compressed_bytes": 1752
     },
     "466": {
       "total": 3016,
       "file": "466.idx",
-      "bytes": 5799
+      "bytes": 5799,
+      "compressed_file": "466.idx.gz",
+      "compressed_bytes": 1840
     },
     "467": {
       "total": 1111,
       "file": "467.idx",
-      "bytes": 2350
+      "bytes": 2350,
+      "compressed_file": "467.idx.gz",
+      "compressed_bytes": 1130
     },
     "468": {
       "total": 1106,
       "file": "468.idx",
-      "bytes": 2293
+      "bytes": 2293,
+      "compressed_file": "468.idx.gz",
+      "compressed_bytes": 1099
     },
     "469": {
       "total": 912,
       "file": "469.idx",
-      "bytes": 1961
+      "bytes": 1961,
+      "compressed_file": "469.idx.gz",
+      "compressed_bytes": 1256
     },
     "470": {
       "total": 1344,
       "file": "470.idx",
-      "bytes": 2717
+      "bytes": 2717,
+      "compressed_file": "470.idx.gz",
+      "compressed_bytes": 1431
     },
     "471": {
       "total": 803,
       "file": "471.idx",
-      "bytes": 1904
+      "bytes": 1904,
+      "compressed_file": "471.idx.gz",
+      "compressed_bytes": 1159
     },
     "472": {
       "total": 1546,
       "file": "472.idx",
-      "bytes": 2990
+      "bytes": 2990,
+      "compressed_file": "472.idx.gz",
+      "compressed_bytes": 1303
     },
     "473": {
       "total": 950,
       "file": "473.idx",
-      "bytes": 2055
+      "bytes": 2055,
+      "compressed_file": "473.idx.gz",
+      "compressed_bytes": 1191
     },
     "474": {
       "total": 567,
       "file": "474.idx",
-      "bytes": 1389
+      "bytes": 1389,
+      "compressed_file": "474.idx.gz",
+      "compressed_bytes": 929
     },
     "475": {
       "total": 178,
@@ -2339,12 +3267,16 @@
     "476": {
       "total": 204,
       "file": "476.idx",
-      "bytes": 582
+      "bytes": 582,
+      "compressed_file": "476.idx.gz",
+      "compressed_bytes": 541
     },
     "477": {
       "total": 400,
       "file": "477.idx",
-      "bytes": 993
+      "bytes": 993,
+      "compressed_file": "477.idx.gz",
+      "compressed_bytes": 747
     },
     "478": {
       "total": 155,
@@ -2359,87 +3291,121 @@
     "480": {
       "total": 12152,
       "file": "480.idx",
-      "bytes": 16162
+      "bytes": 16162,
+      "compressed_file": "480.idx.gz",
+      "compressed_bytes": 2567
     },
     "481": {
       "total": 2158,
       "file": "481.idx",
-      "bytes": 3940
+      "bytes": 3940,
+      "compressed_file": "481.idx.gz",
+      "compressed_bytes": 1633
     },
     "482": {
       "total": 6939,
       "file": "482.idx",
-      "bytes": 10270
+      "bytes": 10270,
+      "compressed_file": "482.idx.gz",
+      "compressed_bytes": 2210
     },
     "483": {
       "total": 1821,
       "file": "483.idx",
-      "bytes": 3392
+      "bytes": 3392,
+      "compressed_file": "483.idx.gz",
+      "compressed_bytes": 1288
     },
     "484": {
       "total": 4378,
       "file": "484.idx",
-      "bytes": 6877
+      "bytes": 6877,
+      "compressed_file": "484.idx.gz",
+      "compressed_bytes": 1660
     },
     "485": {
       "total": 1266,
       "file": "485.idx",
-      "bytes": 2350
+      "bytes": 2350,
+      "compressed_file": "485.idx.gz",
+      "compressed_bytes": 1162
     },
     "486": {
       "total": 1539,
       "file": "486.idx",
-      "bytes": 3131
+      "bytes": 3131,
+      "compressed_file": "486.idx.gz",
+      "compressed_bytes": 1343
     },
     "487": {
       "total": 817,
       "file": "487.idx",
-      "bytes": 1724
+      "bytes": 1724,
+      "compressed_file": "487.idx.gz",
+      "compressed_bytes": 911
     },
     "488": {
       "total": 938,
       "file": "488.idx",
-      "bytes": 1975
+      "bytes": 1975,
+      "compressed_file": "488.idx.gz",
+      "compressed_bytes": 1045
     },
     "489": {
       "total": 868,
       "file": "489.idx",
-      "bytes": 1764
+      "bytes": 1764,
+      "compressed_file": "489.idx.gz",
+      "compressed_bytes": 973
     },
     "490": {
       "total": 1189,
       "file": "490.idx",
-      "bytes": 2499
+      "bytes": 2499,
+      "compressed_file": "490.idx.gz",
+      "compressed_bytes": 1372
     },
     "491": {
       "total": 668,
       "file": "491.idx",
-      "bytes": 1429
+      "bytes": 1429,
+      "compressed_file": "491.idx.gz",
+      "compressed_bytes": 841
     },
     "492": {
       "total": 779,
       "file": "492.idx",
-      "bytes": 1680
+      "bytes": 1680,
+      "compressed_file": "492.idx.gz",
+      "compressed_bytes": 855
     },
     "493": {
       "total": 943,
       "file": "493.idx",
-      "bytes": 1968
+      "bytes": 1968,
+      "compressed_file": "493.idx.gz",
+      "compressed_bytes": 1059
     },
     "494": {
       "total": 331,
       "file": "494.idx",
-      "bytes": 912
+      "bytes": 912,
+      "compressed_file": "494.idx.gz",
+      "compressed_bytes": 739
     },
     "495": {
       "total": 174,
       "file": "495.idx",
-      "bytes": 508
+      "bytes": 508,
+      "compressed_file": "495.idx.gz",
+      "compressed_bytes": 475
     },
     "496": {
       "total": 204,
       "file": "496.idx",
-      "bytes": 532
+      "bytes": 532,
+      "compressed_file": "496.idx.gz",
+      "compressed_bytes": 485
     },
     "497": {
       "total": 123,
@@ -2449,87 +3415,121 @@
     "498": {
       "total": 355,
       "file": "498.idx",
-      "bytes": 766
+      "bytes": 766,
+      "compressed_file": "498.idx.gz",
+      "compressed_bytes": 590
     },
     "499": {
       "total": 206,
       "file": "499.idx",
-      "bytes": 500
+      "bytes": 500,
+      "compressed_file": "499.idx.gz",
+      "compressed_bytes": 461
     },
     "500": {
       "total": 4223,
       "file": "500.idx",
-      "bytes": 5849
+      "bytes": 5849,
+      "compressed_file": "500.idx.gz",
+      "compressed_bytes": 1587
     },
     "501": {
       "total": 4038,
       "file": "501.idx",
-      "bytes": 6555
+      "bytes": 6555,
+      "compressed_file": "501.idx.gz",
+      "compressed_bytes": 2070
     },
     "502": {
       "total": 1424,
       "file": "502.idx",
-      "bytes": 2879
+      "bytes": 2879,
+      "compressed_file": "502.idx.gz",
+      "compressed_bytes": 1398
     },
     "503": {
       "total": 529,
       "file": "503.idx",
-      "bytes": 1156
+      "bytes": 1156,
+      "compressed_file": "503.idx.gz",
+      "compressed_bytes": 882
     },
     "504": {
       "total": 806,
       "file": "504.idx",
-      "bytes": 1669
+      "bytes": 1669,
+      "compressed_file": "504.idx.gz",
+      "compressed_bytes": 1021
     },
     "505": {
       "total": 399,
       "file": "505.idx",
-      "bytes": 859
+      "bytes": 859,
+      "compressed_file": "505.idx.gz",
+      "compressed_bytes": 688
     },
     "506": {
       "total": 588,
       "file": "506.idx",
-      "bytes": 1433
+      "bytes": 1433,
+      "compressed_file": "506.idx.gz",
+      "compressed_bytes": 948
     },
     "507": {
       "total": 169,
       "file": "507.idx",
-      "bytes": 466
+      "bytes": 466,
+      "compressed_file": "507.idx.gz",
+      "compressed_bytes": 429
     },
     "508": {
       "total": 232,
       "file": "508.idx",
-      "bytes": 589
+      "bytes": 589,
+      "compressed_file": "508.idx.gz",
+      "compressed_bytes": 533
     },
     "509": {
       "total": 808,
       "file": "509.idx",
-      "bytes": 1481
+      "bytes": 1481,
+      "compressed_file": "509.idx.gz",
+      "compressed_bytes": 755
     },
     "510": {
       "total": 2380,
       "file": "510.idx",
-      "bytes": 3719
+      "bytes": 3719,
+      "compressed_file": "510.idx.gz",
+      "compressed_bytes": 1179
     },
     "511": {
       "total": 762,
       "file": "511.idx",
-      "bytes": 1498
+      "bytes": 1498,
+      "compressed_file": "511.idx.gz",
+      "compressed_bytes": 855
     },
     "512": {
       "total": 482,
       "file": "512.idx",
-      "bytes": 1023
+      "bytes": 1023,
+      "compressed_file": "512.idx.gz",
+      "compressed_bytes": 741
     },
     "513": {
       "total": 2322,
       "file": "513.idx",
-      "bytes": 3635
+      "bytes": 3635,
+      "compressed_file": "513.idx.gz",
+      "compressed_bytes": 1117
     },
     "514": {
       "total": 654,
       "file": "514.idx",
-      "bytes": 1360
+      "bytes": 1360,
+      "compressed_file": "514.idx.gz",
+      "compressed_bytes": 803
     },
     "515": {
       "total": 164,
@@ -2544,7 +3544,9 @@
     "517": {
       "total": 251,
       "file": "517.idx",
-      "bytes": 616
+      "bytes": 616,
+      "compressed_file": "517.idx.gz",
+      "compressed_bytes": 512
     },
     "518": {
       "total": 113,
@@ -2559,37 +3561,51 @@
     "520": {
       "total": 4715,
       "file": "520.idx",
-      "bytes": 6354
+      "bytes": 6354,
+      "compressed_file": "520.idx.gz",
+      "compressed_bytes": 1592
     },
     "521": {
       "total": 2927,
       "file": "521.idx",
-      "bytes": 5212
+      "bytes": 5212,
+      "compressed_file": "521.idx.gz",
+      "compressed_bytes": 1634
     },
     "522": {
       "total": 1007,
       "file": "522.idx",
-      "bytes": 2029
+      "bytes": 2029,
+      "compressed_file": "522.idx.gz",
+      "compressed_bytes": 1151
     },
     "523": {
       "total": 369,
       "file": "523.idx",
-      "bytes": 880
+      "bytes": 880,
+      "compressed_file": "523.idx.gz",
+      "compressed_bytes": 677
     },
     "524": {
       "total": 841,
       "file": "524.idx",
-      "bytes": 1735
+      "bytes": 1735,
+      "compressed_file": "524.idx.gz",
+      "compressed_bytes": 1008
     },
     "525": {
       "total": 645,
       "file": "525.idx",
-      "bytes": 1208
+      "bytes": 1208,
+      "compressed_file": "525.idx.gz",
+      "compressed_bytes": 781
     },
     "526": {
       "total": 432,
       "file": "526.idx",
-      "bytes": 878
+      "bytes": 878,
+      "compressed_file": "526.idx.gz",
+      "compressed_bytes": 651
     },
     "527": {
       "total": 108,
@@ -2604,97 +3620,135 @@
     "529": {
       "total": 471,
       "file": "529.idx",
-      "bytes": 850
+      "bytes": 850,
+      "compressed_file": "529.idx.gz",
+      "compressed_bytes": 529
     },
     "530": {
       "total": 1926,
       "file": "530.idx",
-      "bytes": 3174
+      "bytes": 3174,
+      "compressed_file": "530.idx.gz",
+      "compressed_bytes": 1087
     },
     "531": {
       "total": 588,
       "file": "531.idx",
-      "bytes": 1217
+      "bytes": 1217,
+      "compressed_file": "531.idx.gz",
+      "compressed_bytes": 720
     },
     "532": {
       "total": 820,
       "file": "532.idx",
-      "bytes": 1624
+      "bytes": 1624,
+      "compressed_file": "532.idx.gz",
+      "compressed_bytes": 801
     },
     "533": {
       "total": 2009,
       "file": "533.idx",
-      "bytes": 3329
+      "bytes": 3329,
+      "compressed_file": "533.idx.gz",
+      "compressed_bytes": 1142
     },
     "534": {
       "total": 654,
       "file": "534.idx",
-      "bytes": 1387
+      "bytes": 1387,
+      "compressed_file": "534.idx.gz",
+      "compressed_bytes": 786
     },
     "535": {
       "total": 372,
       "file": "535.idx",
-      "bytes": 918
+      "bytes": 918,
+      "compressed_file": "535.idx.gz",
+      "compressed_bytes": 588
     },
     "536": {
       "total": 198,
       "file": "536.idx",
-      "bytes": 520
+      "bytes": 520,
+      "compressed_file": "536.idx.gz",
+      "compressed_bytes": 434
     },
     "537": {
       "total": 255,
       "file": "537.idx",
-      "bytes": 607
+      "bytes": 607,
+      "compressed_file": "537.idx.gz",
+      "compressed_bytes": 513
     },
     "538": {
       "total": 296,
       "file": "538.idx",
-      "bytes": 705
+      "bytes": 705,
+      "compressed_file": "538.idx.gz",
+      "compressed_bytes": 522
     },
     "539": {
       "total": 154,
       "file": "539.idx",
-      "bytes": 379
+      "bytes": 379,
+      "compressed_file": "539.idx.gz",
+      "compressed_bytes": 323
     },
     "540": {
       "total": 4249,
       "file": "540.idx",
-      "bytes": 5723
+      "bytes": 5723,
+      "compressed_file": "540.idx.gz",
+      "compressed_bytes": 1484
     },
     "541": {
       "total": 763,
       "file": "541.idx",
-      "bytes": 1599
+      "bytes": 1599,
+      "compressed_file": "541.idx.gz",
+      "compressed_bytes": 997
     },
     "542": {
       "total": 642,
       "file": "542.idx",
-      "bytes": 1402
+      "bytes": 1402,
+      "compressed_file": "542.idx.gz",
+      "compressed_bytes": 849
     },
     "543": {
       "total": 340,
       "file": "543.idx",
-      "bytes": 742
+      "bytes": 742,
+      "compressed_file": "543.idx.gz",
+      "compressed_bytes": 537
     },
     "544": {
       "total": 468,
       "file": "544.idx",
-      "bytes": 969
+      "bytes": 969,
+      "compressed_file": "544.idx.gz",
+      "compressed_bytes": 592
     },
     "545": {
       "total": 270,
       "file": "545.idx",
-      "bytes": 683
+      "bytes": 683,
+      "compressed_file": "545.idx.gz",
+      "compressed_bytes": 567
     },
     "546": {
       "total": 203,
       "file": "546.idx",
-      "bytes": 543
+      "bytes": 543,
+      "compressed_file": "546.idx.gz",
+      "compressed_bytes": 473
     },
     "547": {
       "total": 130,
       "file": "547.idx",
-      "bytes": 388
+      "bytes": 388,
+      "compressed_file": "547.idx.gz",
+      "compressed_bytes": 328
     },
     "548": {
       "total": 38,
@@ -2704,32 +3758,44 @@
     "549": {
       "total": 536,
       "file": "549.idx",
-      "bytes": 925
+      "bytes": 925,
+      "compressed_file": "549.idx.gz",
+      "compressed_bytes": 560
     },
     "550": {
       "total": 299,
       "file": "550.idx",
-      "bytes": 663
+      "bytes": 663,
+      "compressed_file": "550.idx.gz",
+      "compressed_bytes": 535
     },
     "551": {
       "total": 528,
       "file": "551.idx",
-      "bytes": 1012
+      "bytes": 1012,
+      "compressed_file": "551.idx.gz",
+      "compressed_bytes": 521
     },
     "552": {
       "total": 166,
       "file": "552.idx",
-      "bytes": 451
+      "bytes": 451,
+      "compressed_file": "552.idx.gz",
+      "compressed_bytes": 409
     },
     "553": {
       "total": 1325,
       "file": "553.idx",
-      "bytes": 2191
+      "bytes": 2191,
+      "compressed_file": "553.idx.gz",
+      "compressed_bytes": 779
     },
     "554": {
       "total": 386,
       "file": "554.idx",
-      "bytes": 813
+      "bytes": 813,
+      "compressed_file": "554.idx.gz",
+      "compressed_bytes": 526
     },
     "555": {
       "total": 95,
@@ -2739,7 +3805,9 @@
     "556": {
       "total": 196,
       "file": "556.idx",
-      "bytes": 383
+      "bytes": 383,
+      "compressed_file": "556.idx.gz",
+      "compressed_bytes": 305
     },
     "557": {
       "total": 69,
@@ -2749,132 +3817,184 @@
     "558": {
       "total": 283,
       "file": "558.idx",
-      "bytes": 586
+      "bytes": 586,
+      "compressed_file": "558.idx.gz",
+      "compressed_bytes": 369
     },
     "559": {
       "total": 126,
       "file": "559.idx",
-      "bytes": 299
+      "bytes": 299,
+      "compressed_file": "559.idx.gz",
+      "compressed_bytes": 263
     },
     "560": {
       "total": 4677,
       "file": "560.idx",
-      "bytes": 6191
+      "bytes": 6191,
+      "compressed_file": "560.idx.gz",
+      "compressed_bytes": 1393
     },
     "561": {
       "total": 3405,
       "file": "561.idx",
-      "bytes": 5330
+      "bytes": 5330,
+      "compressed_file": "561.idx.gz",
+      "compressed_bytes": 1549
     },
     "562": {
       "total": 1414,
       "file": "562.idx",
-      "bytes": 2643
+      "bytes": 2643,
+      "compressed_file": "562.idx.gz",
+      "compressed_bytes": 1290
     },
     "563": {
       "total": 340,
       "file": "563.idx",
-      "bytes": 775
+      "bytes": 775,
+      "compressed_file": "563.idx.gz",
+      "compressed_bytes": 621
     },
     "564": {
       "total": 591,
       "file": "564.idx",
-      "bytes": 1135
+      "bytes": 1135,
+      "compressed_file": "564.idx.gz",
+      "compressed_bytes": 780
     },
     "565": {
       "total": 663,
       "file": "565.idx",
-      "bytes": 1137
+      "bytes": 1137,
+      "compressed_file": "565.idx.gz",
+      "compressed_bytes": 706
     },
     "566": {
       "total": 502,
       "file": "566.idx",
-      "bytes": 978
+      "bytes": 978,
+      "compressed_file": "566.idx.gz",
+      "compressed_bytes": 708
     },
     "567": {
       "total": 147,
       "file": "567.idx",
-      "bytes": 403
+      "bytes": 403,
+      "compressed_file": "567.idx.gz",
+      "compressed_bytes": 364
     },
     "568": {
       "total": 249,
       "file": "568.idx",
-      "bytes": 503
+      "bytes": 503,
+      "compressed_file": "568.idx.gz",
+      "compressed_bytes": 395
     },
     "569": {
       "total": 563,
       "file": "569.idx",
-      "bytes": 998
+      "bytes": 998,
+      "compressed_file": "569.idx.gz",
+      "compressed_bytes": 580
     },
     "570": {
       "total": 1950,
       "file": "570.idx",
-      "bytes": 3218
+      "bytes": 3218,
+      "compressed_file": "570.idx.gz",
+      "compressed_bytes": 1104
     },
     "571": {
       "total": 535,
       "file": "571.idx",
-      "bytes": 1063
+      "bytes": 1063,
+      "compressed_file": "571.idx.gz",
+      "compressed_bytes": 636
     },
     "572": {
       "total": 454,
       "file": "572.idx",
-      "bytes": 1026
+      "bytes": 1026,
+      "compressed_file": "572.idx.gz",
+      "compressed_bytes": 630
     },
     "573": {
       "total": 1941,
       "file": "573.idx",
-      "bytes": 3226
+      "bytes": 3226,
+      "compressed_file": "573.idx.gz",
+      "compressed_bytes": 1084
     },
     "574": {
       "total": 704,
       "file": "574.idx",
-      "bytes": 1388
+      "bytes": 1388,
+      "compressed_file": "574.idx.gz",
+      "compressed_bytes": 804
     },
     "575": {
       "total": 377,
       "file": "575.idx",
-      "bytes": 920
+      "bytes": 920,
+      "compressed_file": "575.idx.gz",
+      "compressed_bytes": 605
     },
     "576": {
       "total": 752,
       "file": "576.idx",
-      "bytes": 1259
+      "bytes": 1259,
+      "compressed_file": "576.idx.gz",
+      "compressed_bytes": 703
     },
     "577": {
       "total": 335,
       "file": "577.idx",
-      "bytes": 710
+      "bytes": 710,
+      "compressed_file": "577.idx.gz",
+      "compressed_bytes": 582
     },
     "578": {
       "total": 417,
       "file": "578.idx",
-      "bytes": 988
+      "bytes": 988,
+      "compressed_file": "578.idx.gz",
+      "compressed_bytes": 651
     },
     "579": {
       "total": 164,
       "file": "579.idx",
-      "bytes": 446
+      "bytes": 446,
+      "compressed_file": "579.idx.gz",
+      "compressed_bytes": 398
     },
     "580": {
       "total": 359,
       "file": "580.idx",
-      "bytes": 758
+      "bytes": 758,
+      "compressed_file": "580.idx.gz",
+      "compressed_bytes": 574
     },
     "581": {
       "total": 541,
       "file": "581.idx",
-      "bytes": 1206
+      "bytes": 1206,
+      "compressed_file": "581.idx.gz",
+      "compressed_bytes": 818
     },
     "582": {
       "total": 233,
       "file": "582.idx",
-      "bytes": 647
+      "bytes": 647,
+      "compressed_file": "582.idx.gz",
+      "compressed_bytes": 569
     },
     "583": {
       "total": 149,
       "file": "583.idx",
-      "bytes": 376
+      "bytes": 376,
+      "compressed_file": "583.idx.gz",
+      "compressed_bytes": 330
     },
     "584": {
       "total": 118,
@@ -2889,7 +4009,9 @@
     "586": {
       "total": 183,
       "file": "586.idx",
-      "bytes": 440
+      "bytes": 440,
+      "compressed_file": "586.idx.gz",
+      "compressed_bytes": 382
     },
     "587": {
       "total": 44,
@@ -2924,12 +4046,16 @@
     "593": {
       "total": 155,
       "file": "593.idx",
-      "bytes": 383
+      "bytes": 383,
+      "compressed_file": "593.idx.gz",
+      "compressed_bytes": 303
     },
     "594": {
       "total": 142,
       "file": "594.idx",
-      "bytes": 336
+      "bytes": 336,
+      "compressed_file": "594.idx.gz",
+      "compressed_bytes": 272
     },
     "595": {
       "total": 36,
@@ -2944,12 +4070,16 @@
     "597": {
       "total": 1057,
       "file": "597.idx",
-      "bytes": 1713
+      "bytes": 1713,
+      "compressed_file": "597.idx.gz",
+      "compressed_bytes": 555
     },
     "598": {
       "total": 279,
       "file": "598.idx",
-      "bytes": 570
+      "bytes": 570,
+      "compressed_file": "598.idx.gz",
+      "compressed_bytes": 328
     },
     "599": {
       "total": 71,
@@ -2959,142 +4089,198 @@
     "600": {
       "total": 71097,
       "file": "600.idx",
-      "bytes": 79407
+      "bytes": 79407,
+      "compressed_file": "600.idx.gz",
+      "compressed_bytes": 4411
     },
     "601": {
       "total": 15947,
       "file": "601.idx",
-      "bytes": 20897
+      "bytes": 20897,
+      "compressed_file": "601.idx.gz",
+      "compressed_bytes": 2625
     },
     "602": {
       "total": 30267,
       "file": "602.idx",
-      "bytes": 38116
+      "bytes": 38116,
+      "compressed_file": "602.idx.gz",
+      "compressed_bytes": 4094
     },
     "603": {
       "total": 4999,
       "file": "603.idx",
-      "bytes": 8045
+      "bytes": 8045,
+      "compressed_file": "603.idx.gz",
+      "compressed_bytes": 2368
     },
     "604": {
       "total": 16714,
       "file": "604.idx",
-      "bytes": 23941
+      "bytes": 23941,
+      "compressed_file": "604.idx.gz",
+      "compressed_bytes": 3768
     },
     "605": {
       "total": 12631,
       "file": "605.idx",
-      "bytes": 19344
+      "bytes": 19344,
+      "compressed_file": "605.idx.gz",
+      "compressed_bytes": 3124
     },
     "606": {
       "total": 7492,
       "file": "606.idx",
-      "bytes": 11973
+      "bytes": 11973,
+      "compressed_file": "606.idx.gz",
+      "compressed_bytes": 3295
     },
     "607": {
       "total": 3614,
       "file": "607.idx",
-      "bytes": 6471
+      "bytes": 6471,
+      "compressed_file": "607.idx.gz",
+      "compressed_bytes": 2312
     },
     "608": {
       "total": 16181,
       "file": "608.idx",
-      "bytes": 22411
+      "bytes": 22411,
+      "compressed_file": "608.idx.gz",
+      "compressed_bytes": 3679
     },
     "609": {
       "total": 6327,
       "file": "609.idx",
-      "bytes": 10096
+      "bytes": 10096,
+      "compressed_file": "609.idx.gz",
+      "compressed_bytes": 2925
     },
     "610": {
       "total": 12560,
       "file": "610.idx",
-      "bytes": 19800
+      "bytes": 19800,
+      "compressed_file": "610.idx.gz",
+      "compressed_bytes": 4660
     },
     "611": {
       "total": 3540,
       "file": "611.idx",
-      "bytes": 6550
+      "bytes": 6550,
+      "compressed_file": "611.idx.gz",
+      "compressed_bytes": 2590
     },
     "612": {
       "total": 3485,
       "file": "612.idx",
-      "bytes": 6266
+      "bytes": 6266,
+      "compressed_file": "612.idx.gz",
+      "compressed_bytes": 2797
     },
     "613": {
       "total": 8600,
       "file": "613.idx",
-      "bytes": 13853
+      "bytes": 13853,
+      "compressed_file": "613.idx.gz",
+      "compressed_bytes": 3076
     },
     "614": {
       "total": 3728,
       "file": "614.idx",
-      "bytes": 7088
+      "bytes": 7088,
+      "compressed_file": "614.idx.gz",
+      "compressed_bytes": 2602
     },
     "615": {
       "total": 1649,
       "file": "615.idx",
-      "bytes": 3585
+      "bytes": 3585,
+      "compressed_file": "615.idx.gz",
+      "compressed_bytes": 1788
     },
     "616": {
       "total": 1156,
       "file": "616.idx",
-      "bytes": 2581
+      "bytes": 2581,
+      "compressed_file": "616.idx.gz",
+      "compressed_bytes": 1558
     },
     "617": {
       "total": 1045,
       "file": "617.idx",
-      "bytes": 2455
+      "bytes": 2455,
+      "compressed_file": "617.idx.gz",
+      "compressed_bytes": 1202
     },
     "618": {
       "total": 1862,
       "file": "618.idx",
-      "bytes": 3645
+      "bytes": 3645,
+      "compressed_file": "618.idx.gz",
+      "compressed_bytes": 1732
     },
     "619": {
       "total": 386,
       "file": "619.idx",
-      "bytes": 1089
+      "bytes": 1089,
+      "compressed_file": "619.idx.gz",
+      "compressed_bytes": 738
     },
     "620": {
       "total": 2007,
       "file": "620.idx",
-      "bytes": 3816
+      "bytes": 3816,
+      "compressed_file": "620.idx.gz",
+      "compressed_bytes": 1552
     },
     "621": {
       "total": 1579,
       "file": "621.idx",
-      "bytes": 3441
+      "bytes": 3441,
+      "compressed_file": "621.idx.gz",
+      "compressed_bytes": 1519
     },
     "622": {
       "total": 2456,
       "file": "622.idx",
-      "bytes": 4483
+      "bytes": 4483,
+      "compressed_file": "622.idx.gz",
+      "compressed_bytes": 1769
     },
     "623": {
       "total": 493,
       "file": "623.idx",
-      "bytes": 1112
+      "bytes": 1112,
+      "compressed_file": "623.idx.gz",
+      "compressed_bytes": 811
     },
     "624": {
       "total": 1103,
       "file": "624.idx",
-      "bytes": 2364
+      "bytes": 2364,
+      "compressed_file": "624.idx.gz",
+      "compressed_bytes": 1364
     },
     "625": {
       "total": 408,
       "file": "625.idx",
-      "bytes": 988
+      "bytes": 988,
+      "compressed_file": "625.idx.gz",
+      "compressed_bytes": 738
     },
     "626": {
       "total": 689,
       "file": "626.idx",
-      "bytes": 1423
+      "bytes": 1423,
+      "compressed_file": "626.idx.gz",
+      "compressed_bytes": 908
     },
     "627": {
       "total": 189,
       "file": "627.idx",
-      "bytes": 565
+      "bytes": 565,
+      "compressed_file": "627.idx.gz",
+      "compressed_bytes": 405
     },
     "628": {
       "total": 169,
@@ -3109,42 +4295,58 @@
     "630": {
       "total": 3152,
       "file": "630.idx",
-      "bytes": 5331
+      "bytes": 5331,
+      "compressed_file": "630.idx.gz",
+      "compressed_bytes": 1655
     },
     "631": {
       "total": 1717,
       "file": "631.idx",
-      "bytes": 3464
+      "bytes": 3464,
+      "compressed_file": "631.idx.gz",
+      "compressed_bytes": 1168
     },
     "632": {
       "total": 1450,
       "file": "632.idx",
-      "bytes": 2918
+      "bytes": 2918,
+      "compressed_file": "632.idx.gz",
+      "compressed_bytes": 1261
     },
     "633": {
       "total": 537,
       "file": "633.idx",
-      "bytes": 1210
+      "bytes": 1210,
+      "compressed_file": "633.idx.gz",
+      "compressed_bytes": 823
     },
     "634": {
       "total": 1037,
       "file": "634.idx",
-      "bytes": 2318
+      "bytes": 2318,
+      "compressed_file": "634.idx.gz",
+      "compressed_bytes": 1068
     },
     "635": {
       "total": 703,
       "file": "635.idx",
-      "bytes": 1618
+      "bytes": 1618,
+      "compressed_file": "635.idx.gz",
+      "compressed_bytes": 852
     },
     "636": {
       "total": 353,
       "file": "636.idx",
-      "bytes": 929
+      "bytes": 929,
+      "compressed_file": "636.idx.gz",
+      "compressed_bytes": 666
     },
     "637": {
       "total": 340,
       "file": "637.idx",
-      "bytes": 772
+      "bytes": 772,
+      "compressed_file": "637.idx.gz",
+      "compressed_bytes": 598
     },
     "638": {
       "total": 159,
@@ -3154,87 +4356,121 @@
     "639": {
       "total": 178,
       "file": "639.idx",
-      "bytes": 426
+      "bytes": 426,
+      "compressed_file": "639.idx.gz",
+      "compressed_bytes": 393
     },
     "640": {
       "total": 4961,
       "file": "640.idx",
-      "bytes": 6581
+      "bytes": 6581,
+      "compressed_file": "640.idx.gz",
+      "compressed_bytes": 1187
     },
     "641": {
       "total": 1358,
       "file": "641.idx",
-      "bytes": 2520
+      "bytes": 2520,
+      "compressed_file": "641.idx.gz",
+      "compressed_bytes": 844
     },
     "642": {
       "total": 3941,
       "file": "642.idx",
-      "bytes": 5847
+      "bytes": 5847,
+      "compressed_file": "642.idx.gz",
+      "compressed_bytes": 1302
     },
     "643": {
       "total": 456,
       "file": "643.idx",
-      "bytes": 930
+      "bytes": 930,
+      "compressed_file": "643.idx.gz",
+      "compressed_bytes": 534
     },
     "644": {
       "total": 2267,
       "file": "644.idx",
-      "bytes": 3731
+      "bytes": 3731,
+      "compressed_file": "644.idx.gz",
+      "compressed_bytes": 1141
     },
     "645": {
       "total": 296,
       "file": "645.idx",
-      "bytes": 596
+      "bytes": 596,
+      "compressed_file": "645.idx.gz",
+      "compressed_bytes": 417
     },
     "646": {
       "total": 485,
       "file": "646.idx",
-      "bytes": 1052
+      "bytes": 1052,
+      "compressed_file": "646.idx.gz",
+      "compressed_bytes": 634
     },
     "647": {
       "total": 159,
       "file": "647.idx",
-      "bytes": 395
+      "bytes": 395,
+      "compressed_file": "647.idx.gz",
+      "compressed_bytes": 325
     },
     "648": {
       "total": 389,
       "file": "648.idx",
-      "bytes": 824
+      "bytes": 824,
+      "compressed_file": "648.idx.gz",
+      "compressed_bytes": 523
     },
     "649": {
       "total": 256,
       "file": "649.idx",
-      "bytes": 537
+      "bytes": 537,
+      "compressed_file": "649.idx.gz",
+      "compressed_bytes": 371
     },
     "650": {
       "total": 413,
       "file": "650.idx",
-      "bytes": 1019
+      "bytes": 1019,
+      "compressed_file": "650.idx.gz",
+      "compressed_bytes": 650
     },
     "651": {
       "total": 3302,
       "file": "651.idx",
-      "bytes": 5324
+      "bytes": 5324,
+      "compressed_file": "651.idx.gz",
+      "compressed_bytes": 957
     },
     "652": {
       "total": 1130,
       "file": "652.idx",
-      "bytes": 2303
+      "bytes": 2303,
+      "compressed_file": "652.idx.gz",
+      "compressed_bytes": 867
     },
     "653": {
       "total": 476,
       "file": "653.idx",
-      "bytes": 1140
+      "bytes": 1140,
+      "compressed_file": "653.idx.gz",
+      "compressed_bytes": 631
     },
     "654": {
       "total": 150,
       "file": "654.idx",
-      "bytes": 428
+      "bytes": 428,
+      "compressed_file": "654.idx.gz",
+      "compressed_bytes": 369
     },
     "655": {
       "total": 237,
       "file": "655.idx",
-      "bytes": 542
+      "bytes": 542,
+      "compressed_file": "655.idx.gz",
+      "compressed_bytes": 339
     },
     "656": {
       "total": 111,
@@ -3249,7 +4485,9 @@
     "658": {
       "total": 87,
       "file": "658.idx",
-      "bytes": 282
+      "bytes": 282,
+      "compressed_file": "658.idx.gz",
+      "compressed_bytes": 232
     },
     "659": {
       "total": 53,
@@ -3259,42 +4497,58 @@
     "660": {
       "total": 4780,
       "file": "660.idx",
-      "bytes": 6117
+      "bytes": 6117,
+      "compressed_file": "660.idx.gz",
+      "compressed_bytes": 1238
     },
     "661": {
       "total": 2431,
       "file": "661.idx",
-      "bytes": 3825
+      "bytes": 3825,
+      "compressed_file": "661.idx.gz",
+      "compressed_bytes": 1072
     },
     "662": {
       "total": 1106,
       "file": "662.idx",
-      "bytes": 2165
+      "bytes": 2165,
+      "compressed_file": "662.idx.gz",
+      "compressed_bytes": 1104
     },
     "663": {
       "total": 288,
       "file": "663.idx",
-      "bytes": 653
+      "bytes": 653,
+      "compressed_file": "663.idx.gz",
+      "compressed_bytes": 517
     },
     "664": {
       "total": 1066,
       "file": "664.idx",
-      "bytes": 1670
+      "bytes": 1670,
+      "compressed_file": "664.idx.gz",
+      "compressed_bytes": 858
     },
     "665": {
       "total": 567,
       "file": "665.idx",
-      "bytes": 996
+      "bytes": 996,
+      "compressed_file": "665.idx.gz",
+      "compressed_bytes": 659
     },
     "666": {
       "total": 834,
       "file": "666.idx",
-      "bytes": 1421
+      "bytes": 1421,
+      "compressed_file": "666.idx.gz",
+      "compressed_bytes": 842
     },
     "667": {
       "total": 453,
       "file": "667.idx",
-      "bytes": 817
+      "bytes": 817,
+      "compressed_file": "667.idx.gz",
+      "compressed_bytes": 581
     },
     "668": {
       "total": 183,
@@ -3304,37 +4558,51 @@
     "669": {
       "total": 433,
       "file": "669.idx",
-      "bytes": 781
+      "bytes": 781,
+      "compressed_file": "669.idx.gz",
+      "compressed_bytes": 505
     },
     "670": {
       "total": 1760,
       "file": "670.idx",
-      "bytes": 2959
+      "bytes": 2959,
+      "compressed_file": "670.idx.gz",
+      "compressed_bytes": 1028
     },
     "671": {
       "total": 504,
       "file": "671.idx",
-      "bytes": 1006
+      "bytes": 1006,
+      "compressed_file": "671.idx.gz",
+      "compressed_bytes": 615
     },
     "672": {
       "total": 438,
       "file": "672.idx",
-      "bytes": 977
+      "bytes": 977,
+      "compressed_file": "672.idx.gz",
+      "compressed_bytes": 625
     },
     "673": {
       "total": 1645,
       "file": "673.idx",
-      "bytes": 2838
+      "bytes": 2838,
+      "compressed_file": "673.idx.gz",
+      "compressed_bytes": 960
     },
     "674": {
       "total": 641,
       "file": "674.idx",
-      "bytes": 1321
+      "bytes": 1321,
+      "compressed_file": "674.idx.gz",
+      "compressed_bytes": 724
     },
     "675": {
       "total": 190,
       "file": "675.idx",
-      "bytes": 480
+      "bytes": 480,
+      "compressed_file": "675.idx.gz",
+      "compressed_bytes": 421
     },
     "676": {
       "total": 164,
@@ -3344,32 +4612,44 @@
     "677": {
       "total": 263,
       "file": "677.idx",
-      "bytes": 621
+      "bytes": 621,
+      "compressed_file": "677.idx.gz",
+      "compressed_bytes": 448
     },
     "678": {
       "total": 289,
       "file": "678.idx",
-      "bytes": 562
+      "bytes": 562,
+      "compressed_file": "678.idx.gz",
+      "compressed_bytes": 417
     },
     "679": {
       "total": 167,
       "file": "679.idx",
-      "bytes": 381
+      "bytes": 381,
+      "compressed_file": "679.idx.gz",
+      "compressed_bytes": 329
     },
     "680": {
       "total": 242,
       "file": "680.idx",
-      "bytes": 586
+      "bytes": 586,
+      "compressed_file": "680.idx.gz",
+      "compressed_bytes": 357
     },
     "681": {
       "total": 327,
       "file": "681.idx",
-      "bytes": 812
+      "bytes": 812,
+      "compressed_file": "681.idx.gz",
+      "compressed_bytes": 466
     },
     "682": {
       "total": 182,
       "file": "682.idx",
-      "bytes": 490
+      "bytes": 490,
+      "compressed_file": "682.idx.gz",
+      "compressed_bytes": 394
     },
     "683": {
       "total": 65,
@@ -3379,7 +4659,9 @@
     "684": {
       "total": 329,
       "file": "684.idx",
-      "bytes": 625
+      "bytes": 625,
+      "compressed_file": "684.idx.gz",
+      "compressed_bytes": 436
     },
     "685": {
       "total": 99,
@@ -3394,12 +4676,16 @@
     "687": {
       "total": 914,
       "file": "687.idx",
-      "bytes": 1501
+      "bytes": 1501,
+      "compressed_file": "687.idx.gz",
+      "compressed_bytes": 488
     },
     "688": {
       "total": 288,
       "file": "688.idx",
-      "bytes": 579
+      "bytes": 579,
+      "compressed_file": "688.idx.gz",
+      "compressed_bytes": 334
     },
     "689": {
       "total": 60,
@@ -3409,27 +4695,37 @@
     "690": {
       "total": 658,
       "file": "690.idx",
-      "bytes": 1313
+      "bytes": 1313,
+      "compressed_file": "690.idx.gz",
+      "compressed_bytes": 565
     },
     "691": {
       "total": 346,
       "file": "691.idx",
-      "bytes": 737
+      "bytes": 737,
+      "compressed_file": "691.idx.gz",
+      "compressed_bytes": 455
     },
     "692": {
       "total": 151,
       "file": "692.idx",
-      "bytes": 398
+      "bytes": 398,
+      "compressed_file": "692.idx.gz",
+      "compressed_bytes": 350
     },
     "693": {
       "total": 161,
       "file": "693.idx",
-      "bytes": 472
+      "bytes": 472,
+      "compressed_file": "693.idx.gz",
+      "compressed_bytes": 309
     },
     "694": {
       "total": 280,
       "file": "694.idx",
-      "bytes": 632
+      "bytes": 632,
+      "compressed_file": "694.idx.gz",
+      "compressed_bytes": 342
     },
     "695": {
       "total": 95,
@@ -3444,7 +4740,9 @@
     "697": {
       "total": 168,
       "file": "697.idx",
-      "bytes": 333
+      "bytes": 333,
+      "compressed_file": "697.idx.gz",
+      "compressed_bytes": 254
     },
     "698": {
       "total": 105,
@@ -3459,12 +4757,16 @@
     "700": {
       "total": 705,
       "file": "700.idx",
-      "bytes": 1238
+      "bytes": 1238,
+      "compressed_file": "700.idx.gz",
+      "compressed_bytes": 567
     },
     "701": {
       "total": 305,
       "file": "701.idx",
-      "bytes": 764
+      "bytes": 764,
+      "compressed_file": "701.idx.gz",
+      "compressed_bytes": 475
     },
     "702": {
       "total": 55,
@@ -3474,7 +4776,9 @@
     "703": {
       "total": 255,
       "file": "703.idx",
-      "bytes": 536
+      "bytes": 536,
+      "compressed_file": "703.idx.gz",
+      "compressed_bytes": 300
     },
     "704": {
       "total": 62,
@@ -3504,12 +4808,16 @@
     "709": {
       "total": 187,
       "file": "709.idx",
-      "bytes": 417
+      "bytes": 417,
+      "compressed_file": "709.idx.gz",
+      "compressed_bytes": 282
     },
     "710": {
       "total": 158,
       "file": "710.idx",
-      "bytes": 394
+      "bytes": 394,
+      "compressed_file": "710.idx.gz",
+      "compressed_bytes": 242
     },
     "711": {
       "total": 52,
@@ -3524,7 +4832,9 @@
     "713": {
       "total": 194,
       "file": "713.idx",
-      "bytes": 472
+      "bytes": 472,
+      "compressed_file": "713.idx.gz",
+      "compressed_bytes": 274
     },
     "714": {
       "total": 23,
@@ -3559,42 +4869,58 @@
     "720": {
       "total": 4797,
       "file": "720.idx",
-      "bytes": 6401
+      "bytes": 6401,
+      "compressed_file": "720.idx.gz",
+      "compressed_bytes": 1301
     },
     "721": {
       "total": 630,
       "file": "721.idx",
-      "bytes": 1306
+      "bytes": 1306,
+      "compressed_file": "721.idx.gz",
+      "compressed_bytes": 560
     },
     "722": {
       "total": 535,
       "file": "722.idx",
-      "bytes": 1102
+      "bytes": 1102,
+      "compressed_file": "722.idx.gz",
+      "compressed_bytes": 567
     },
     "723": {
       "total": 301,
       "file": "723.idx",
-      "bytes": 616
+      "bytes": 616,
+      "compressed_file": "723.idx.gz",
+      "compressed_bytes": 333
     },
     "724": {
       "total": 626,
       "file": "724.idx",
-      "bytes": 1304
+      "bytes": 1304,
+      "compressed_file": "724.idx.gz",
+      "compressed_bytes": 558
     },
     "725": {
       "total": 164,
       "file": "725.idx",
-      "bytes": 409
+      "bytes": 409,
+      "compressed_file": "725.idx.gz",
+      "compressed_bytes": 314
     },
     "726": {
       "total": 237,
       "file": "726.idx",
-      "bytes": 570
+      "bytes": 570,
+      "compressed_file": "726.idx.gz",
+      "compressed_bytes": 395
     },
     "727": {
       "total": 119,
       "file": "727.idx",
-      "bytes": 357
+      "bytes": 357,
+      "compressed_file": "727.idx.gz",
+      "compressed_bytes": 290
     },
     "728": {
       "total": 64,
@@ -3604,12 +4930,16 @@
     "729": {
       "total": 607,
       "file": "729.idx",
-      "bytes": 1010
+      "bytes": 1010,
+      "compressed_file": "729.idx.gz",
+      "compressed_bytes": 514
     },
     "730": {
       "total": 383,
       "file": "730.idx",
-      "bytes": 865
+      "bytes": 865,
+      "compressed_file": "730.idx.gz",
+      "compressed_bytes": 510
     },
     "731": {
       "total": 61,
@@ -3619,12 +4949,16 @@
     "732": {
       "total": 235,
       "file": "732.idx",
-      "bytes": 388
+      "bytes": 388,
+      "compressed_file": "732.idx.gz",
+      "compressed_bytes": 273
     },
     "733": {
       "total": 357,
       "file": "733.idx",
-      "bytes": 786
+      "bytes": 786,
+      "compressed_file": "733.idx.gz",
+      "compressed_bytes": 450
     },
     "734": {
       "total": 73,
@@ -3639,7 +4973,9 @@
     "736": {
       "total": 98,
       "file": "736.idx",
-      "bytes": 253
+      "bytes": 253,
+      "compressed_file": "736.idx.gz",
+      "compressed_bytes": 214
     },
     "737": {
       "total": 46,
@@ -3649,12 +4985,16 @@
     "738": {
       "total": 149,
       "file": "738.idx",
-      "bytes": 276
+      "bytes": 276,
+      "compressed_file": "738.idx.gz",
+      "compressed_bytes": 184
     },
     "739": {
       "total": 95,
       "file": "739.idx",
-      "bytes": 217
+      "bytes": 217,
+      "compressed_file": "739.idx.gz",
+      "compressed_bytes": 153
     },
     "740": {
       "total": 36,
@@ -3669,7 +5009,9 @@
     "742": {
       "total": 154,
       "file": "742.idx",
-      "bytes": 347
+      "bytes": 347,
+      "compressed_file": "742.idx.gz",
+      "compressed_bytes": 273
     },
     "743": {
       "total": 25,
@@ -3719,12 +5061,16 @@
     "752": {
       "total": 156,
       "file": "752.idx",
-      "bytes": 244
+      "bytes": 244,
+      "compressed_file": "752.idx.gz",
+      "compressed_bytes": 179
     },
     "753": {
       "total": 246,
       "file": "753.idx",
-      "bytes": 583
+      "bytes": 583,
+      "compressed_file": "753.idx.gz",
+      "compressed_bytes": 330
     },
     "754": {
       "total": 59,
@@ -3739,7 +5085,9 @@
     "756": {
       "total": 92,
       "file": "756.idx",
-      "bytes": 177
+      "bytes": 177,
+      "compressed_file": "756.idx.gz",
+      "compressed_bytes": 129
     },
     "757": {
       "total": 77,
@@ -3764,7 +5112,9 @@
     "761": {
       "total": 164,
       "file": "761.idx",
-      "bytes": 405
+      "bytes": 405,
+      "compressed_file": "761.idx.gz",
+      "compressed_bytes": 226
     },
     "762": {
       "total": 94,
@@ -3809,7 +5159,9 @@
     "770": {
       "total": 137,
       "file": "770.idx",
-      "bytes": 283
+      "bytes": 283,
+      "compressed_file": "770.idx.gz",
+      "compressed_bytes": 227
     },
     "771": {
       "total": 30,
@@ -3819,17 +5171,23 @@
     "772": {
       "total": 87,
       "file": "772.idx",
-      "bytes": 226
+      "bytes": 226,
+      "compressed_file": "772.idx.gz",
+      "compressed_bytes": 160
     },
     "773": {
       "total": 130,
       "file": "773.idx",
-      "bytes": 271
+      "bytes": 271,
+      "compressed_file": "773.idx.gz",
+      "compressed_bytes": 197
     },
     "774": {
       "total": 93,
       "file": "774.idx",
-      "bytes": 203
+      "bytes": 203,
+      "compressed_file": "774.idx.gz",
+      "compressed_bytes": 147
     },
     "775": {
       "total": 12,
@@ -3859,12 +5217,16 @@
     "780": {
       "total": 103,
       "file": "780.idx",
-      "bytes": 207
+      "bytes": 207,
+      "compressed_file": "780.idx.gz",
+      "compressed_bytes": 138
     },
     "781": {
       "total": 100,
       "file": "781.idx",
-      "bytes": 261
+      "bytes": 261,
+      "compressed_file": "781.idx.gz",
+      "compressed_bytes": 217
     },
     "782": {
       "total": 43,
@@ -3879,7 +5241,9 @@
     "784": {
       "total": 74,
       "file": "784.idx",
-      "bytes": 197
+      "bytes": 197,
+      "compressed_file": "784.idx.gz",
+      "compressed_bytes": 164
     },
     "785": {
       "total": 14,
@@ -3919,7 +5283,9 @@
     "792": {
       "total": 64,
       "file": "792.idx",
-      "bytes": 115
+      "bytes": 115,
+      "compressed_file": "792.idx.gz",
+      "compressed_bytes": 67
     },
     "793": {
       "total": 23,
@@ -3959,127 +5325,177 @@
     "800": {
       "total": 70550,
       "file": "800.idx",
-      "bytes": 78958
+      "bytes": 78958,
+      "compressed_file": "800.idx.gz",
+      "compressed_bytes": 3758
     },
     "801": {
       "total": 14914,
       "file": "801.idx",
-      "bytes": 19358
+      "bytes": 19358,
+      "compressed_file": "801.idx.gz",
+      "compressed_bytes": 2191
     },
     "802": {
       "total": 31043,
       "file": "802.idx",
-      "bytes": 38057
+      "bytes": 38057,
+      "compressed_file": "802.idx.gz",
+      "compressed_bytes": 3612
     },
     "803": {
       "total": 4884,
       "file": "803.idx",
-      "bytes": 7583
+      "bytes": 7583,
+      "compressed_file": "803.idx.gz",
+      "compressed_bytes": 1925
     },
     "804": {
       "total": 9798,
       "file": "804.idx",
-      "bytes": 14235
+      "bytes": 14235,
+      "compressed_file": "804.idx.gz",
+      "compressed_bytes": 2946
     },
     "805": {
       "total": 10671,
       "file": "805.idx",
-      "bytes": 16160
+      "bytes": 16160,
+      "compressed_file": "805.idx.gz",
+      "compressed_bytes": 2583
     },
     "806": {
       "total": 12702,
       "file": "806.idx",
-      "bytes": 19855
+      "bytes": 19855,
+      "compressed_file": "806.idx.gz",
+      "compressed_bytes": 3238
     },
     "807": {
       "total": 4003,
       "file": "807.idx",
-      "bytes": 6906
+      "bytes": 6906,
+      "compressed_file": "807.idx.gz",
+      "compressed_bytes": 2091
     },
     "808": {
       "total": 4509,
       "file": "808.idx",
-      "bytes": 7828
+      "bytes": 7828,
+      "compressed_file": "808.idx.gz",
+      "compressed_bytes": 2632
     },
     "809": {
       "total": 5890,
       "file": "809.idx",
-      "bytes": 9127
+      "bytes": 9127,
+      "compressed_file": "809.idx.gz",
+      "compressed_bytes": 2454
     },
     "810": {
       "total": 24026,
       "file": "810.idx",
-      "bytes": 32686
+      "bytes": 32686,
+      "compressed_file": "810.idx.gz",
+      "compressed_bytes": 4879
     },
     "811": {
       "total": 3384,
       "file": "811.idx",
-      "bytes": 5924
+      "bytes": 5924,
+      "compressed_file": "811.idx.gz",
+      "compressed_bytes": 2207
     },
     "812": {
       "total": 4615,
       "file": "812.idx",
-      "bytes": 8027
+      "bytes": 8027,
+      "compressed_file": "812.idx.gz",
+      "compressed_bytes": 2733
     },
     "813": {
       "total": 7114,
       "file": "813.idx",
-      "bytes": 11365
+      "bytes": 11365,
+      "compressed_file": "813.idx.gz",
+      "compressed_bytes": 2378
     },
     "814": {
       "total": 3782,
       "file": "814.idx",
-      "bytes": 6697
+      "bytes": 6697,
+      "compressed_file": "814.idx.gz",
+      "compressed_bytes": 2410
     },
     "815": {
       "total": 1688,
       "file": "815.idx",
-      "bytes": 3423
+      "bytes": 3423,
+      "compressed_file": "815.idx.gz",
+      "compressed_bytes": 1439
     },
     "816": {
       "total": 1787,
       "file": "816.idx",
-      "bytes": 3820
+      "bytes": 3820,
+      "compressed_file": "816.idx.gz",
+      "compressed_bytes": 1689
     },
     "817": {
       "total": 663,
       "file": "817.idx",
-      "bytes": 1687
+      "bytes": 1687,
+      "compressed_file": "817.idx.gz",
+      "compressed_bytes": 965
     },
     "818": {
       "total": 2327,
       "file": "818.idx",
-      "bytes": 4242
+      "bytes": 4242,
+      "compressed_file": "818.idx.gz",
+      "compressed_bytes": 1482
     },
     "819": {
       "total": 427,
       "file": "819.idx",
-      "bytes": 1009
+      "bytes": 1009,
+      "compressed_file": "819.idx.gz",
+      "compressed_bytes": 586
     },
     "820": {
       "total": 1414,
       "file": "820.idx",
-      "bytes": 2804
+      "bytes": 2804,
+      "compressed_file": "820.idx.gz",
+      "compressed_bytes": 1384
     },
     "821": {
       "total": 966,
       "file": "821.idx",
-      "bytes": 2097
+      "bytes": 2097,
+      "compressed_file": "821.idx.gz",
+      "compressed_bytes": 918
     },
     "822": {
       "total": 2458,
       "file": "822.idx",
-      "bytes": 4394
+      "bytes": 4394,
+      "compressed_file": "822.idx.gz",
+      "compressed_bytes": 1591
     },
     "823": {
       "total": 369,
       "file": "823.idx",
-      "bytes": 819
+      "bytes": 819,
+      "compressed_file": "823.idx.gz",
+      "compressed_bytes": 600
     },
     "824": {
       "total": 771,
       "file": "824.idx",
-      "bytes": 1692
+      "bytes": 1692,
+      "compressed_file": "824.idx.gz",
+      "compressed_bytes": 1029
     },
     "825": {
       "total": 161,
@@ -4089,7 +5505,9 @@
     "826": {
       "total": 568,
       "file": "826.idx",
-      "bytes": 1142
+      "bytes": 1142,
+      "compressed_file": "826.idx.gz",
+      "compressed_bytes": 681
     },
     "827": {
       "total": 89,
@@ -4099,27 +5517,37 @@
     "828": {
       "total": 189,
       "file": "828.idx",
-      "bytes": 501
+      "bytes": 501,
+      "compressed_file": "828.idx.gz",
+      "compressed_bytes": 439
     },
     "829": {
       "total": 98,
       "file": "829.idx",
-      "bytes": 284
+      "bytes": 284,
+      "compressed_file": "829.idx.gz",
+      "compressed_bytes": 242
     },
     "830": {
       "total": 412,
       "file": "830.idx",
-      "bytes": 771
+      "bytes": 771,
+      "compressed_file": "830.idx.gz",
+      "compressed_bytes": 508
     },
     "831": {
       "total": 225,
       "file": "831.idx",
-      "bytes": 516
+      "bytes": 516,
+      "compressed_file": "831.idx.gz",
+      "compressed_bytes": 328
     },
     "832": {
       "total": 238,
       "file": "832.idx",
-      "bytes": 593
+      "bytes": 593,
+      "compressed_file": "832.idx.gz",
+      "compressed_bytes": 503
     },
     "833": {
       "total": 39,
@@ -4129,7 +5557,9 @@
     "834": {
       "total": 190,
       "file": "834.idx",
-      "bytes": 456
+      "bytes": 456,
+      "compressed_file": "834.idx.gz",
+      "compressed_bytes": 330
     },
     "835": {
       "total": 44,
@@ -4159,42 +5589,58 @@
     "840": {
       "total": 2777,
       "file": "840.idx",
-      "bytes": 4443
+      "bytes": 4443,
+      "compressed_file": "840.idx.gz",
+      "compressed_bytes": 1280
     },
     "841": {
       "total": 1725,
       "file": "841.idx",
-      "bytes": 3149
+      "bytes": 3149,
+      "compressed_file": "841.idx.gz",
+      "compressed_bytes": 953
     },
     "842": {
       "total": 2280,
       "file": "842.idx",
-      "bytes": 4094
+      "bytes": 4094,
+      "compressed_file": "842.idx.gz",
+      "compressed_bytes": 1286
     },
     "843": {
       "total": 439,
       "file": "843.idx",
-      "bytes": 1221
+      "bytes": 1221,
+      "compressed_file": "843.idx.gz",
+      "compressed_bytes": 601
     },
     "844": {
       "total": 605,
       "file": "844.idx",
-      "bytes": 1431
+      "bytes": 1431,
+      "compressed_file": "844.idx.gz",
+      "compressed_bytes": 862
     },
     "845": {
       "total": 736,
       "file": "845.idx",
-      "bytes": 1240
+      "bytes": 1240,
+      "compressed_file": "845.idx.gz",
+      "compressed_bytes": 637
     },
     "846": {
       "total": 575,
       "file": "846.idx",
-      "bytes": 1110
+      "bytes": 1110,
+      "compressed_file": "846.idx.gz",
+      "compressed_bytes": 669
     },
     "847": {
       "total": 235,
       "file": "847.idx",
-      "bytes": 544
+      "bytes": 544,
+      "compressed_file": "847.idx.gz",
+      "compressed_bytes": 423
     },
     "848": {
       "total": 152,
@@ -4204,37 +5650,51 @@
     "849": {
       "total": 181,
       "file": "849.idx",
-      "bytes": 411
+      "bytes": 411,
+      "compressed_file": "849.idx.gz",
+      "compressed_bytes": 330
     },
     "850": {
       "total": 591,
       "file": "850.idx",
-      "bytes": 1113
+      "bytes": 1113,
+      "compressed_file": "850.idx.gz",
+      "compressed_bytes": 603
     },
     "851": {
       "total": 164,
       "file": "851.idx",
-      "bytes": 392
+      "bytes": 392,
+      "compressed_file": "851.idx.gz",
+      "compressed_bytes": 317
     },
     "852": {
       "total": 138,
       "file": "852.idx",
-      "bytes": 380
+      "bytes": 380,
+      "compressed_file": "852.idx.gz",
+      "compressed_bytes": 312
     },
     "853": {
       "total": 472,
       "file": "853.idx",
-      "bytes": 850
+      "bytes": 850,
+      "compressed_file": "853.idx.gz",
+      "compressed_bytes": 386
     },
     "854": {
       "total": 111,
       "file": "854.idx",
-      "bytes": 294
+      "bytes": 294,
+      "compressed_file": "854.idx.gz",
+      "compressed_bytes": 232
     },
     "855": {
       "total": 51,
       "file": "855.idx",
-      "bytes": 175
+      "bytes": 175,
+      "compressed_file": "855.idx.gz",
+      "compressed_bytes": 135
     },
     "856": {
       "total": 69,
@@ -4249,7 +5709,9 @@
     "858": {
       "total": 68,
       "file": "858.idx",
-      "bytes": 200
+      "bytes": 200,
+      "compressed_file": "858.idx.gz",
+      "compressed_bytes": 154
     },
     "859": {
       "total": 19,
@@ -4264,42 +5726,58 @@
     "861": {
       "total": 3908,
       "file": "861.idx",
-      "bytes": 5848
+      "bytes": 5848,
+      "compressed_file": "861.idx.gz",
+      "compressed_bytes": 841
     },
     "862": {
       "total": 1066,
       "file": "862.idx",
-      "bytes": 1935
+      "bytes": 1935,
+      "compressed_file": "862.idx.gz",
+      "compressed_bytes": 635
     },
     "863": {
       "total": 129,
       "file": "863.idx",
-      "bytes": 319
+      "bytes": 319,
+      "compressed_file": "863.idx.gz",
+      "compressed_bytes": 216
     },
     "864": {
       "total": 154,
       "file": "864.idx",
-      "bytes": 425
+      "bytes": 425,
+      "compressed_file": "864.idx.gz",
+      "compressed_bytes": 245
     },
     "865": {
       "total": 194,
       "file": "865.idx",
-      "bytes": 446
+      "bytes": 446,
+      "compressed_file": "865.idx.gz",
+      "compressed_bytes": 262
     },
     "866": {
       "total": 489,
       "file": "866.idx",
-      "bytes": 1251
+      "bytes": 1251,
+      "compressed_file": "866.idx.gz",
+      "compressed_bytes": 405
     },
     "867": {
       "total": 129,
       "file": "867.idx",
-      "bytes": 415
+      "bytes": 415,
+      "compressed_file": "867.idx.gz",
+      "compressed_bytes": 248
     },
     "868": {
       "total": 128,
       "file": "868.idx",
-      "bytes": 421
+      "bytes": 421,
+      "compressed_file": "868.idx.gz",
+      "compressed_bytes": 260
     },
     "869": {
       "total": 50,
@@ -4309,17 +5787,23 @@
     "870": {
       "total": 161,
       "file": "870.idx",
-      "bytes": 438
+      "bytes": 438,
+      "compressed_file": "870.idx.gz",
+      "compressed_bytes": 288
     },
     "871": {
       "total": 68,
       "file": "871.idx",
-      "bytes": 183
+      "bytes": 183,
+      "compressed_file": "871.idx.gz",
+      "compressed_bytes": 144
     },
     "872": {
       "total": 155,
       "file": "872.idx",
-      "bytes": 381
+      "bytes": 381,
+      "compressed_file": "872.idx.gz",
+      "compressed_bytes": 216
     },
     "873": {
       "total": 55,
@@ -4359,62 +5843,86 @@
     "880": {
       "total": 3937,
       "file": "880.idx",
-      "bytes": 4939
+      "bytes": 4939,
+      "compressed_file": "880.idx.gz",
+      "compressed_bytes": 892
     },
     "881": {
       "total": 1675,
       "file": "881.idx",
-      "bytes": 2609
+      "bytes": 2609,
+      "compressed_file": "881.idx.gz",
+      "compressed_bytes": 712
     },
     "882": {
       "total": 797,
       "file": "882.idx",
-      "bytes": 1459
+      "bytes": 1459,
+      "compressed_file": "882.idx.gz",
+      "compressed_bytes": 769
     },
     "883": {
       "total": 250,
       "file": "883.idx",
-      "bytes": 533
+      "bytes": 533,
+      "compressed_file": "883.idx.gz",
+      "compressed_bytes": 407
     },
     "884": {
       "total": 304,
       "file": "884.idx",
-      "bytes": 569
+      "bytes": 569,
+      "compressed_file": "884.idx.gz",
+      "compressed_bytes": 472
     },
     "885": {
       "total": 449,
       "file": "885.idx",
-      "bytes": 728
+      "bytes": 728,
+      "compressed_file": "885.idx.gz",
+      "compressed_bytes": 380
     },
     "886": {
       "total": 366,
       "file": "886.idx",
-      "bytes": 684
+      "bytes": 684,
+      "compressed_file": "886.idx.gz",
+      "compressed_bytes": 456
     },
     "887": {
       "total": 100,
       "file": "887.idx",
-      "bytes": 260
+      "bytes": 260,
+      "compressed_file": "887.idx.gz",
+      "compressed_bytes": 225
     },
     "888": {
       "total": 754,
       "file": "888.idx",
-      "bytes": 1138
+      "bytes": 1138,
+      "compressed_file": "888.idx.gz",
+      "compressed_bytes": 598
     },
     "889": {
       "total": 499,
       "file": "889.idx",
-      "bytes": 795
+      "bytes": 795,
+      "compressed_file": "889.idx.gz",
+      "compressed_bytes": 408
     },
     "890": {
       "total": 1577,
       "file": "890.idx",
-      "bytes": 2491
+      "bytes": 2491,
+      "compressed_file": "890.idx.gz",
+      "compressed_bytes": 797
     },
     "891": {
       "total": 427,
       "file": "891.idx",
-      "bytes": 776
+      "bytes": 776,
+      "compressed_file": "891.idx.gz",
+      "compressed_bytes": 402
     },
     "892": {
       "total": 160,
@@ -4424,17 +5932,23 @@
     "893": {
       "total": 1590,
       "file": "893.idx",
-      "bytes": 2480
+      "bytes": 2480,
+      "compressed_file": "893.idx.gz",
+      "compressed_bytes": 740
     },
     "894": {
       "total": 533,
       "file": "894.idx",
-      "bytes": 991
+      "bytes": 991,
+      "compressed_file": "894.idx.gz",
+      "compressed_bytes": 539
     },
     "895": {
       "total": 283,
       "file": "895.idx",
-      "bytes": 609
+      "bytes": 609,
+      "compressed_file": "895.idx.gz",
+      "compressed_bytes": 396
     },
     "896": {
       "total": 130,
@@ -4449,7 +5963,9 @@
     "898": {
       "total": 306,
       "file": "898.idx",
-      "bytes": 641
+      "bytes": 641,
+      "compressed_file": "898.idx.gz",
+      "compressed_bytes": 426
     },
     "899": {
       "total": 114,
@@ -4459,77 +5975,107 @@
     "900": {
       "total": 2306,
       "file": "900.idx",
-      "bytes": 3719
+      "bytes": 3719,
+      "compressed_file": "900.idx.gz",
+      "compressed_bytes": 762
     },
     "901": {
       "total": 885,
       "file": "901.idx",
-      "bytes": 1707
+      "bytes": 1707,
+      "compressed_file": "901.idx.gz",
+      "compressed_bytes": 669
     },
     "902": {
       "total": 168,
       "file": "902.idx",
-      "bytes": 444
+      "bytes": 444,
+      "compressed_file": "902.idx.gz",
+      "compressed_bytes": 399
     },
     "903": {
       "total": 588,
       "file": "903.idx",
-      "bytes": 1056
+      "bytes": 1056,
+      "compressed_file": "903.idx.gz",
+      "compressed_bytes": 464
     },
     "904": {
       "total": 1085,
       "file": "904.idx",
-      "bytes": 2276
+      "bytes": 2276,
+      "compressed_file": "904.idx.gz",
+      "compressed_bytes": 554
     },
     "905": {
       "total": 444,
       "file": "905.idx",
-      "bytes": 954
+      "bytes": 954,
+      "compressed_file": "905.idx.gz",
+      "compressed_bytes": 461
     },
     "906": {
       "total": 756,
       "file": "906.idx",
-      "bytes": 1501
+      "bytes": 1501,
+      "compressed_file": "906.idx.gz",
+      "compressed_bytes": 577
     },
     "907": {
       "total": 260,
       "file": "907.idx",
-      "bytes": 507
+      "bytes": 507,
+      "compressed_file": "907.idx.gz",
+      "compressed_bytes": 361
     },
     "908": {
       "total": 334,
       "file": "908.idx",
-      "bytes": 713
+      "bytes": 713,
+      "compressed_file": "908.idx.gz",
+      "compressed_bytes": 424
     },
     "909": {
       "total": 1489,
       "file": "909.idx",
-      "bytes": 2553
+      "bytes": 2553,
+      "compressed_file": "909.idx.gz",
+      "compressed_bytes": 871
     },
     "910": {
       "total": 1436,
       "file": "910.idx",
-      "bytes": 2669
+      "bytes": 2669,
+      "compressed_file": "910.idx.gz",
+      "compressed_bytes": 820
     },
     "911": {
       "total": 278,
       "file": "911.idx",
-      "bytes": 773
+      "bytes": 773,
+      "compressed_file": "911.idx.gz",
+      "compressed_bytes": 450
     },
     "912": {
       "total": 249,
       "file": "912.idx",
-      "bytes": 501
+      "bytes": 501,
+      "compressed_file": "912.idx.gz",
+      "compressed_bytes": 442
     },
     "913": {
       "total": 1129,
       "file": "913.idx",
-      "bytes": 2167
+      "bytes": 2167,
+      "compressed_file": "913.idx.gz",
+      "compressed_bytes": 603
     },
     "914": {
       "total": 385,
       "file": "914.idx",
-      "bytes": 1027
+      "bytes": 1027,
+      "compressed_file": "914.idx.gz",
+      "compressed_bytes": 551
     },
     "915": {
       "total": 115,
@@ -4544,7 +6090,9 @@
     "917": {
       "total": 175,
       "file": "917.idx",
-      "bytes": 434
+      "bytes": 434,
+      "compressed_file": "917.idx.gz",
+      "compressed_bytes": 340
     },
     "918": {
       "total": 73,
@@ -4559,17 +6107,23 @@
     "920": {
       "total": 494,
       "file": "920.idx",
-      "bytes": 912
+      "bytes": 912,
+      "compressed_file": "920.idx.gz",
+      "compressed_bytes": 500
     },
     "921": {
       "total": 177,
       "file": "921.idx",
-      "bytes": 453
+      "bytes": 453,
+      "compressed_file": "921.idx.gz",
+      "compressed_bytes": 341
     },
     "922": {
       "total": 279,
       "file": "922.idx",
-      "bytes": 672
+      "bytes": 672,
+      "compressed_file": "922.idx.gz",
+      "compressed_bytes": 414
     },
     "923": {
       "total": 96,
@@ -4584,7 +6138,9 @@
     "925": {
       "total": 202,
       "file": "925.idx",
-      "bytes": 385
+      "bytes": 385,
+      "compressed_file": "925.idx.gz",
+      "compressed_bytes": 283
     },
     "926": {
       "total": 64,
@@ -4604,37 +6160,51 @@
     "929": {
       "total": 121,
       "file": "929.idx",
-      "bytes": 268
+      "bytes": 268,
+      "compressed_file": "929.idx.gz",
+      "compressed_bytes": 200
     },
     "930": {
       "total": 458,
       "file": "930.idx",
-      "bytes": 930
+      "bytes": 930,
+      "compressed_file": "930.idx.gz",
+      "compressed_bytes": 425
     },
     "931": {
       "total": 454,
       "file": "931.idx",
-      "bytes": 1082
+      "bytes": 1082,
+      "compressed_file": "931.idx.gz",
+      "compressed_bytes": 325
     },
     "932": {
       "total": 243,
       "file": "932.idx",
-      "bytes": 595
+      "bytes": 595,
+      "compressed_file": "932.idx.gz",
+      "compressed_bytes": 283
     },
     "933": {
       "total": 432,
       "file": "933.idx",
-      "bytes": 868
+      "bytes": 868,
+      "compressed_file": "933.idx.gz",
+      "compressed_bytes": 470
     },
     "934": {
       "total": 112,
       "file": "934.idx",
-      "bytes": 319
+      "bytes": 319,
+      "compressed_file": "934.idx.gz",
+      "compressed_bytes": 212
     },
     "935": {
       "total": 86,
       "file": "935.idx",
-      "bytes": 244
+      "bytes": 244,
+      "compressed_file": "935.idx.gz",
+      "compressed_bytes": 175
     },
     "936": {
       "total": 87,
@@ -4644,12 +6214,16 @@
     "937": {
       "total": 96,
       "file": "937.idx",
-      "bytes": 309
+      "bytes": 309,
+      "compressed_file": "937.idx.gz",
+      "compressed_bytes": 180
     },
     "938": {
       "total": 61,
       "file": "938.idx",
-      "bytes": 208
+      "bytes": 208,
+      "compressed_file": "938.idx.gz",
+      "compressed_bytes": 168
     },
     "939": {
       "total": 50,
@@ -4659,7 +6233,9 @@
     "940": {
       "total": 76,
       "file": "940.idx",
-      "bytes": 267
+      "bytes": 267,
+      "compressed_file": "940.idx.gz",
+      "compressed_bytes": 186
     },
     "941": {
       "total": 81,
@@ -4674,7 +6250,9 @@
     "943": {
       "total": 51,
       "file": "943.idx",
-      "bytes": 198
+      "bytes": 198,
+      "compressed_file": "943.idx.gz",
+      "compressed_bytes": 118
     },
     "944": {
       "total": 21,
@@ -4714,17 +6292,23 @@
     "951": {
       "total": 840,
       "file": "951.idx",
-      "bytes": 1626
+      "bytes": 1626,
+      "compressed_file": "951.idx.gz",
+      "compressed_bytes": 253
     },
     "952": {
       "total": 107,
       "file": "952.idx",
-      "bytes": 398
+      "bytes": 398,
+      "compressed_file": "952.idx.gz",
+      "compressed_bytes": 152
     },
     "953": {
       "total": 204,
       "file": "953.idx",
-      "bytes": 436
+      "bytes": 436,
+      "compressed_file": "953.idx.gz",
+      "compressed_bytes": 234
     },
     "954": {
       "total": 32,
@@ -4759,17 +6343,23 @@
     "960": {
       "total": 744,
       "file": "960.idx",
-      "bytes": 1190
+      "bytes": 1190,
+      "compressed_file": "960.idx.gz",
+      "compressed_bytes": 509
     },
     "961": {
       "total": 260,
       "file": "961.idx",
-      "bytes": 548
+      "bytes": 548,
+      "compressed_file": "961.idx.gz",
+      "compressed_bytes": 321
     },
     "962": {
       "total": 213,
       "file": "962.idx",
-      "bytes": 557
+      "bytes": 557,
+      "compressed_file": "962.idx.gz",
+      "compressed_bytes": 368
     },
     "963": {
       "total": 83,
@@ -4779,17 +6369,23 @@
     "964": {
       "total": 169,
       "file": "964.idx",
-      "bytes": 365
+      "bytes": 365,
+      "compressed_file": "964.idx.gz",
+      "compressed_bytes": 221
     },
     "965": {
       "total": 152,
       "file": "965.idx",
-      "bytes": 276
+      "bytes": 276,
+      "compressed_file": "965.idx.gz",
+      "compressed_bytes": 173
     },
     "966": {
       "total": 138,
       "file": "966.idx",
-      "bytes": 342
+      "bytes": 342,
+      "compressed_file": "966.idx.gz",
+      "compressed_bytes": 287
     },
     "967": {
       "total": 15,
@@ -4804,12 +6400,16 @@
     "969": {
       "total": 178,
       "file": "969.idx",
-      "bytes": 356
+      "bytes": 356,
+      "compressed_file": "969.idx.gz",
+      "compressed_bytes": 253
     },
     "970": {
       "total": 372,
       "file": "970.idx",
-      "bytes": 799
+      "bytes": 799,
+      "compressed_file": "970.idx.gz",
+      "compressed_bytes": 372
     },
     "971": {
       "total": 56,
@@ -4824,22 +6424,30 @@
     "973": {
       "total": 368,
       "file": "973.idx",
-      "bytes": 785
+      "bytes": 785,
+      "compressed_file": "973.idx.gz",
+      "compressed_bytes": 341
     },
     "974": {
       "total": 89,
       "file": "974.idx",
-      "bytes": 234
+      "bytes": 234,
+      "compressed_file": "974.idx.gz",
+      "compressed_bytes": 181
     },
     "975": {
       "total": 43,
       "file": "975.idx",
-      "bytes": 150
+      "bytes": 150,
+      "compressed_file": "975.idx.gz",
+      "compressed_bytes": 101
     },
     "976": {
       "total": 220,
       "file": "976.idx",
-      "bytes": 376
+      "bytes": 376,
+      "compressed_file": "976.idx.gz",
+      "compressed_bytes": 206
     },
     "977": {
       "total": 37,
@@ -4849,7 +6457,9 @@
     "978": {
       "total": 52,
       "file": "978.idx",
-      "bytes": 177
+      "bytes": 177,
+      "compressed_file": "978.idx.gz",
+      "compressed_bytes": 126
     },
     "979": {
       "total": 13,
@@ -4864,7 +6474,9 @@
     "981": {
       "total": 151,
       "file": "981.idx",
-      "bytes": 449
+      "bytes": 449,
+      "compressed_file": "981.idx.gz",
+      "compressed_bytes": 248
     },
     "982": {
       "total": 18,
@@ -4909,12 +6521,16 @@
     "990": {
       "total": 112,
       "file": "990.idx",
-      "bytes": 214
+      "bytes": 214,
+      "compressed_file": "990.idx.gz",
+      "compressed_bytes": 177
     },
     "991": {
       "total": 48,
       "file": "991.idx",
-      "bytes": 173
+      "bytes": 173,
+      "compressed_file": "991.idx.gz",
+      "compressed_bytes": 134
     },
     "992": {
       "total": 16,
@@ -4944,7 +6560,9 @@
     "997": {
       "total": 198,
       "file": "997.idx",
-      "bytes": 425
+      "bytes": 425,
+      "compressed_file": "997.idx.gz",
+      "compressed_bytes": 218
     },
     "998": {
       "total": 33,
@@ -4959,12 +6577,16 @@
     "1000": {
       "total": 146,
       "file": "1000.idx",
-      "bytes": 439
+      "bytes": 439,
+      "compressed_file": "1000.idx.gz",
+      "compressed_bytes": 202
     },
     "1001": {
       "total": 102,
       "file": "1001.idx",
-      "bytes": 251
+      "bytes": 251,
+      "compressed_file": "1001.idx.gz",
+      "compressed_bytes": 199
     },
     "1002": {
       "total": 36,
@@ -4974,7 +6596,9 @@
     "1003": {
       "total": 89,
       "file": "1003.idx",
-      "bytes": 323
+      "bytes": 323,
+      "compressed_file": "1003.idx.gz",
+      "compressed_bytes": 108
     },
     "1004": {
       "total": 23,
@@ -5004,7 +6628,9 @@
     "1009": {
       "total": 108,
       "file": "1009.idx",
-      "bytes": 217
+      "bytes": 217,
+      "compressed_file": "1009.idx.gz",
+      "compressed_bytes": 165
     },
     "1010": {
       "total": 30,
@@ -5014,7 +6640,9 @@
     "1011": {
       "total": 51,
       "file": "1011.idx",
-      "bytes": 202
+      "bytes": 202,
+      "compressed_file": "1011.idx.gz",
+      "compressed_bytes": 94
     },
     "1012": {
       "total": 9,
@@ -5059,12 +6687,16 @@
     "1020": {
       "total": 65,
       "file": "1020.idx",
-      "bytes": 235
+      "bytes": 235,
+      "compressed_file": "1020.idx.gz",
+      "compressed_bytes": 158
     },
     "1021": {
       "total": 41,
       "file": "1021.idx",
-      "bytes": 160
+      "bytes": 160,
+      "compressed_file": "1021.idx.gz",
+      "compressed_bytes": 116
     },
     "1022": {
       "total": 12,
@@ -5104,7 +6736,9 @@
     "1030": {
       "total": 82,
       "file": "1030.idx",
-      "bytes": 313
+      "bytes": 313,
+      "compressed_file": "1030.idx.gz",
+      "compressed_bytes": 98
     },
     "1031": {
       "total": 6,
@@ -5114,7 +6748,9 @@
     "1033": {
       "total": 82,
       "file": "1033.idx",
-      "bytes": 313
+      "bytes": 313,
+      "compressed_file": "1033.idx.gz",
+      "compressed_bytes": 98
     },
     "1034": {
       "total": 9,
@@ -5149,7 +6785,9 @@
     "1041": {
       "total": 80,
       "file": "1041.idx",
-      "bytes": 287
+      "bytes": 287,
+      "compressed_file": "1041.idx.gz",
+      "compressed_bytes": 162
     },
     "1042": {
       "total": 12,
@@ -5199,7 +6837,9 @@
     "1053": {
       "total": 46,
       "file": "1053.idx",
-      "bytes": 188
+      "bytes": 188,
+      "compressed_file": "1053.idx.gz",
+      "compressed_bytes": 98
     },
     "1054": {
       "total": 5,
@@ -5234,7 +6874,9 @@
     "1071": {
       "total": 40,
       "file": "1071.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1071.idx.gz",
+      "compressed_bytes": 74
     },
     "1074": {
       "total": 9,
@@ -5254,7 +6896,9 @@
     "1080": {
       "total": 88,
       "file": "1080.idx",
-      "bytes": 164
+      "bytes": 164,
+      "compressed_file": "1080.idx.gz",
+      "compressed_bytes": 115
     },
     "1082": {
       "total": 8,
@@ -5469,107 +7113,149 @@
     "1200": {
       "total": 4432,
       "file": "1200.idx",
-      "bytes": 5381
+      "bytes": 5381,
+      "compressed_file": "1200.idx.gz",
+      "compressed_bytes": 707
     },
     "1201": {
       "total": 127,
       "file": "1201.idx",
-      "bytes": 253
+      "bytes": 253,
+      "compressed_file": "1201.idx.gz",
+      "compressed_bytes": 173
     },
     "1202": {
       "total": 1692,
       "file": "1202.idx",
-      "bytes": 2358
+      "bytes": 2358,
+      "compressed_file": "1202.idx.gz",
+      "compressed_bytes": 672
     },
     "1203": {
       "total": 979,
       "file": "1203.idx",
-      "bytes": 1968
+      "bytes": 1968,
+      "compressed_file": "1203.idx.gz",
+      "compressed_bytes": 539
     },
     "1204": {
       "total": 1327,
       "file": "1204.idx",
-      "bytes": 2060
+      "bytes": 2060,
+      "compressed_file": "1204.idx.gz",
+      "compressed_bytes": 806
     },
     "1205": {
       "total": 1286,
       "file": "1205.idx",
-      "bytes": 2050
+      "bytes": 2050,
+      "compressed_file": "1205.idx.gz",
+      "compressed_bytes": 612
     },
     "1206": {
       "total": 590,
       "file": "1206.idx",
-      "bytes": 1170
+      "bytes": 1170,
+      "compressed_file": "1206.idx.gz",
+      "compressed_bytes": 708
     },
     "1207": {
       "total": 810,
       "file": "1207.idx",
-      "bytes": 1546
+      "bytes": 1546,
+      "compressed_file": "1207.idx.gz",
+      "compressed_bytes": 651
     },
     "1208": {
       "total": 1216,
       "file": "1208.idx",
-      "bytes": 2074
+      "bytes": 2074,
+      "compressed_file": "1208.idx.gz",
+      "compressed_bytes": 841
     },
     "1209": {
       "total": 898,
       "file": "1209.idx",
-      "bytes": 1694
+      "bytes": 1694,
+      "compressed_file": "1209.idx.gz",
+      "compressed_bytes": 644
     },
     "1210": {
       "total": 2455,
       "file": "1210.idx",
-      "bytes": 4292
+      "bytes": 4292,
+      "compressed_file": "1210.idx.gz",
+      "compressed_bytes": 1155
     },
     "1211": {
       "total": 402,
       "file": "1211.idx",
-      "bytes": 872
+      "bytes": 872,
+      "compressed_file": "1211.idx.gz",
+      "compressed_bytes": 448
     },
     "1212": {
       "total": 275,
       "file": "1212.idx",
-      "bytes": 624
+      "bytes": 624,
+      "compressed_file": "1212.idx.gz",
+      "compressed_bytes": 505
     },
     "1213": {
       "total": 1529,
       "file": "1213.idx",
-      "bytes": 2751
+      "bytes": 2751,
+      "compressed_file": "1213.idx.gz",
+      "compressed_bytes": 625
     },
     "1214": {
       "total": 422,
       "file": "1214.idx",
-      "bytes": 977
+      "bytes": 977,
+      "compressed_file": "1214.idx.gz",
+      "compressed_bytes": 463
     },
     "1215": {
       "total": 294,
       "file": "1215.idx",
-      "bytes": 884
+      "bytes": 884,
+      "compressed_file": "1215.idx.gz",
+      "compressed_bytes": 352
     },
     "1216": {
       "total": 215,
       "file": "1216.idx",
-      "bytes": 519
+      "bytes": 519,
+      "compressed_file": "1216.idx.gz",
+      "compressed_bytes": 341
     },
     "1217": {
       "total": 118,
       "file": "1217.idx",
-      "bytes": 336
+      "bytes": 336,
+      "compressed_file": "1217.idx.gz",
+      "compressed_bytes": 222
     },
     "1218": {
       "total": 296,
       "file": "1218.idx",
-      "bytes": 861
+      "bytes": 861,
+      "compressed_file": "1218.idx.gz",
+      "compressed_bytes": 307
     },
     "1219": {
       "total": 79,
       "file": "1219.idx",
-      "bytes": 260
+      "bytes": 260,
+      "compressed_file": "1219.idx.gz",
+      "compressed_bytes": 134
     },
     "1220": {
       "total": 124,
       "file": "1220.idx",
-      "bytes": 378
+      "bytes": 378,
+      "compressed_file": "1220.idx.gz",
+      "compressed_bytes": 287
     },
     "1221": {
       "total": 25,
@@ -5579,7 +7265,9 @@
     "1222": {
       "total": 131,
       "file": "1222.idx",
-      "bytes": 345
+      "bytes": 345,
+      "compressed_file": "1222.idx.gz",
+      "compressed_bytes": 273
     },
     "1223": {
       "total": 49,
@@ -5589,7 +7277,9 @@
     "1224": {
       "total": 116,
       "file": "1224.idx",
-      "bytes": 279
+      "bytes": 279,
+      "compressed_file": "1224.idx.gz",
+      "compressed_bytes": 227
     },
     "1225": {
       "total": 18,
@@ -5619,12 +7309,16 @@
     "1230": {
       "total": 62,
       "file": "1230.idx",
-      "bytes": 191
+      "bytes": 191,
+      "compressed_file": "1230.idx.gz",
+      "compressed_bytes": 137
     },
     "1231": {
       "total": 40,
       "file": "1231.idx",
-      "bytes": 162
+      "bytes": 162,
+      "compressed_file": "1231.idx.gz",
+      "compressed_bytes": 65
     },
     "1232": {
       "total": 33,
@@ -5639,7 +7333,9 @@
     "1234": {
       "total": 30,
       "file": "1234.idx",
-      "bytes": 117
+      "bytes": 117,
+      "compressed_file": "1234.idx.gz",
+      "compressed_bytes": 80
     },
     "1236": {
       "total": 4,
@@ -5664,22 +7360,30 @@
     "1240": {
       "total": 639,
       "file": "1240.idx",
-      "bytes": 1236
+      "bytes": 1236,
+      "compressed_file": "1240.idx.gz",
+      "compressed_bytes": 207
     },
     "1241": {
       "total": 476,
       "file": "1241.idx",
-      "bytes": 1084
+      "bytes": 1084,
+      "compressed_file": "1241.idx.gz",
+      "compressed_bytes": 164
     },
     "1242": {
       "total": 162,
       "file": "1242.idx",
-      "bytes": 442
+      "bytes": 442,
+      "compressed_file": "1242.idx.gz",
+      "compressed_bytes": 190
     },
     "1243": {
       "total": 87,
       "file": "1243.idx",
-      "bytes": 228
+      "bytes": 228,
+      "compressed_file": "1243.idx.gz",
+      "compressed_bytes": 190
     },
     "1244": {
       "total": 74,
@@ -5689,17 +7393,23 @@
     "1245": {
       "total": 229,
       "file": "1245.idx",
-      "bytes": 673
+      "bytes": 673,
+      "compressed_file": "1245.idx.gz",
+      "compressed_bytes": 122
     },
     "1246": {
       "total": 82,
       "file": "1246.idx",
-      "bytes": 276
+      "bytes": 276,
+      "compressed_file": "1246.idx.gz",
+      "compressed_bytes": 166
     },
     "1247": {
       "total": 94,
       "file": "1247.idx",
-      "bytes": 278
+      "bytes": 278,
+      "compressed_file": "1247.idx.gz",
+      "compressed_bytes": 179
     },
     "1248": {
       "total": 9,
@@ -5714,12 +7424,16 @@
     "1250": {
       "total": 72,
       "file": "1250.idx",
-      "bytes": 239
+      "bytes": 239,
+      "compressed_file": "1250.idx.gz",
+      "compressed_bytes": 120
     },
     "1251": {
       "total": 69,
       "file": "1251.idx",
-      "bytes": 251
+      "bytes": 251,
+      "compressed_file": "1251.idx.gz",
+      "compressed_bytes": 103
     },
     "1252": {
       "total": 9,
@@ -5729,7 +7443,9 @@
     "1253": {
       "total": 68,
       "file": "1253.idx",
-      "bytes": 228
+      "bytes": 228,
+      "compressed_file": "1253.idx.gz",
+      "compressed_bytes": 105
     },
     "1255": {
       "total": 1,
@@ -5759,17 +7475,23 @@
     "1260": {
       "total": 459,
       "file": "1260.idx",
-      "bytes": 793
+      "bytes": 793,
+      "compressed_file": "1260.idx.gz",
+      "compressed_bytes": 254
     },
     "1261": {
       "total": 989,
       "file": "1261.idx",
-      "bytes": 1899
+      "bytes": 1899,
+      "compressed_file": "1261.idx.gz",
+      "compressed_bytes": 338
     },
     "1262": {
       "total": 193,
       "file": "1262.idx",
-      "bytes": 583
+      "bytes": 583,
+      "compressed_file": "1262.idx.gz",
+      "compressed_bytes": 262
     },
     "1263": {
       "total": 11,
@@ -5779,17 +7501,23 @@
     "1264": {
       "total": 166,
       "file": "1264.idx",
-      "bytes": 372
+      "bytes": 372,
+      "compressed_file": "1264.idx.gz",
+      "compressed_bytes": 144
     },
     "1265": {
       "total": 81,
       "file": "1265.idx",
-      "bytes": 241
+      "bytes": 241,
+      "compressed_file": "1265.idx.gz",
+      "compressed_bytes": 174
     },
     "1266": {
       "total": 81,
       "file": "1266.idx",
-      "bytes": 192
+      "bytes": 192,
+      "compressed_file": "1266.idx.gz",
+      "compressed_bytes": 117
     },
     "1267": {
       "total": 6,
@@ -5809,7 +7537,9 @@
     "1270": {
       "total": 227,
       "file": "1270.idx",
-      "bytes": 501
+      "bytes": 501,
+      "compressed_file": "1270.idx.gz",
+      "compressed_bytes": 217
     },
     "1271": {
       "total": 25,
@@ -5824,7 +7554,9 @@
     "1273": {
       "total": 214,
       "file": "1273.idx",
-      "bytes": 446
+      "bytes": 446,
+      "compressed_file": "1273.idx.gz",
+      "compressed_bytes": 212
     },
     "1274": {
       "total": 28,
@@ -5869,7 +7601,9 @@
     "1282": {
       "total": 32,
       "file": "1282.idx",
-      "bytes": 123
+      "bytes": 123,
+      "compressed_file": "1282.idx.gz",
+      "compressed_bytes": 84
     },
     "1283": {
       "total": 11,
@@ -5879,7 +7613,9 @@
     "1284": {
       "total": 78,
       "file": "1284.idx",
-      "bytes": 183
+      "bytes": 183,
+      "compressed_file": "1284.idx.gz",
+      "compressed_bytes": 145
     },
     "1285": {
       "total": 1,
@@ -5894,7 +7630,9 @@
     "1287": {
       "total": 163,
       "file": "1287.idx",
-      "bytes": 382
+      "bytes": 382,
+      "compressed_file": "1287.idx.gz",
+      "compressed_bytes": 203
     },
     "1288": {
       "total": 41,
@@ -5909,7 +7647,9 @@
     "1290": {
       "total": 40,
       "file": "1290.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1290.idx.gz",
+      "compressed_bytes": 74
     },
     "1291": {
       "total": 18,
@@ -5924,7 +7664,9 @@
     "1293": {
       "total": 40,
       "file": "1293.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1293.idx.gz",
+      "compressed_bytes": 74
     },
     "1294": {
       "total": 14,
@@ -5954,7 +7696,9 @@
     "1301": {
       "total": 40,
       "file": "1301.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1301.idx.gz",
+      "compressed_bytes": 74
     },
     "1303": {
       "total": 6,
@@ -5994,12 +7738,16 @@
     "1320": {
       "total": 180,
       "file": "1320.idx",
-      "bytes": 340
+      "bytes": 340,
+      "compressed_file": "1320.idx.gz",
+      "compressed_bytes": 86
     },
     "1321": {
       "total": 24,
       "file": "1321.idx",
-      "bytes": 98
+      "bytes": 98,
+      "compressed_file": "1321.idx.gz",
+      "compressed_bytes": 54
     },
     "1322": {
       "total": 14,
@@ -6019,7 +7767,9 @@
     "1325": {
       "total": 62,
       "file": "1325.idx",
-      "bytes": 173
+      "bytes": 173,
+      "compressed_file": "1325.idx.gz",
+      "compressed_bytes": 65
     },
     "1326": {
       "total": 1,
@@ -6044,7 +7794,9 @@
     "1330": {
       "total": 89,
       "file": "1330.idx",
-      "bytes": 320
+      "bytes": 320,
+      "compressed_file": "1330.idx.gz",
+      "compressed_bytes": 128
     },
     "1331": {
       "total": 1,
@@ -6059,7 +7811,9 @@
     "1333": {
       "total": 80,
       "file": "1333.idx",
-      "bytes": 296
+      "bytes": 296,
+      "compressed_file": "1333.idx.gz",
+      "compressed_bytes": 81
     },
     "1334": {
       "total": 2,
@@ -6074,7 +7828,9 @@
     "1341": {
       "total": 40,
       "file": "1341.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1341.idx.gz",
+      "compressed_bytes": 74
     },
     "1342": {
       "total": 9,
@@ -6094,7 +7850,9 @@
     "1353": {
       "total": 40,
       "file": "1353.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1353.idx.gz",
+      "compressed_bytes": 74
     },
     "1357": {
       "total": 5,
@@ -6104,12 +7862,16 @@
     "1360": {
       "total": 132,
       "file": "1360.idx",
-      "bytes": 254
+      "bytes": 254,
+      "compressed_file": "1360.idx.gz",
+      "compressed_bytes": 66
     },
     "1361": {
       "total": 20,
       "file": "1361.idx",
-      "bytes": 85
+      "bytes": 85,
+      "compressed_file": "1361.idx.gz",
+      "compressed_bytes": 47
     },
     "1362": {
       "total": 4,
@@ -6124,7 +7886,9 @@
     "1365": {
       "total": 60,
       "file": "1365.idx",
-      "bytes": 165
+      "bytes": 165,
+      "compressed_file": "1365.idx.gz",
+      "compressed_bytes": 51
     },
     "1367": {
       "total": 2,
@@ -6134,27 +7898,37 @@
     "1370": {
       "total": 80,
       "file": "1370.idx",
-      "bytes": 306
+      "bytes": 306,
+      "compressed_file": "1370.idx.gz",
+      "compressed_bytes": 84
     },
     "1373": {
       "total": 80,
       "file": "1373.idx",
-      "bytes": 306
+      "bytes": 306,
+      "compressed_file": "1373.idx.gz",
+      "compressed_bytes": 84
     },
     "1381": {
       "total": 40,
       "file": "1381.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1381.idx.gz",
+      "compressed_bytes": 74
     },
     "1397": {
       "total": 40,
       "file": "1397.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1397.idx.gz",
+      "compressed_bytes": 74
     },
     "1421": {
       "total": 40,
       "file": "1421.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1421.idx.gz",
+      "compressed_bytes": 74
     },
     "1440": {
       "total": 60,
@@ -6244,17 +8018,23 @@
     "1600": {
       "total": 3263,
       "file": "1600.idx",
-      "bytes": 4021
+      "bytes": 4021,
+      "compressed_file": "1600.idx.gz",
+      "compressed_bytes": 507
     },
     "1601": {
       "total": 124,
       "file": "1601.idx",
-      "bytes": 244
+      "bytes": 244,
+      "compressed_file": "1601.idx.gz",
+      "compressed_bytes": 168
     },
     "1602": {
       "total": 1679,
       "file": "1602.idx",
-      "bytes": 2331
+      "bytes": 2331,
+      "compressed_file": "1602.idx.gz",
+      "compressed_bytes": 631
     },
     "1603": {
       "total": 114,
@@ -6264,17 +8044,23 @@
     "1604": {
       "total": 1121,
       "file": "1604.idx",
-      "bytes": 1768
+      "bytes": 1768,
+      "compressed_file": "1604.idx.gz",
+      "compressed_bytes": 645
     },
     "1605": {
       "total": 221,
       "file": "1605.idx",
-      "bytes": 463
+      "bytes": 463,
+      "compressed_file": "1605.idx.gz",
+      "compressed_bytes": 253
     },
     "1606": {
       "total": 713,
       "file": "1606.idx",
-      "bytes": 1342
+      "bytes": 1342,
+      "compressed_file": "1606.idx.gz",
+      "compressed_bytes": 593
     },
     "1607": {
       "total": 156,
@@ -6284,17 +8070,23 @@
     "1608": {
       "total": 322,
       "file": "1608.idx",
-      "bytes": 663
+      "bytes": 663,
+      "compressed_file": "1608.idx.gz",
+      "compressed_bytes": 480
     },
     "1609": {
       "total": 424,
       "file": "1609.idx",
-      "bytes": 776
+      "bytes": 776,
+      "compressed_file": "1609.idx.gz",
+      "compressed_bytes": 380
     },
     "1610": {
       "total": 1155,
       "file": "1610.idx",
-      "bytes": 2040
+      "bytes": 2040,
+      "compressed_file": "1610.idx.gz",
+      "compressed_bytes": 692
     },
     "1611": {
       "total": 50,
@@ -6304,17 +8096,23 @@
     "1612": {
       "total": 961,
       "file": "1612.idx",
-      "bytes": 1712
+      "bytes": 1712,
+      "compressed_file": "1612.idx.gz",
+      "compressed_bytes": 644
     },
     "1613": {
       "total": 98,
       "file": "1613.idx",
-      "bytes": 355
+      "bytes": 355,
+      "compressed_file": "1613.idx.gz",
+      "compressed_bytes": 155
     },
     "1614": {
       "total": 232,
       "file": "1614.idx",
-      "bytes": 540
+      "bytes": 540,
+      "compressed_file": "1614.idx.gz",
+      "compressed_bytes": 380
     },
     "1615": {
       "total": 17,
@@ -6324,7 +8122,9 @@
     "1616": {
       "total": 156,
       "file": "1616.idx",
-      "bytes": 351
+      "bytes": 351,
+      "compressed_file": "1616.idx.gz",
+      "compressed_bytes": 274
     },
     "1617": {
       "total": 7,
@@ -6344,7 +8144,9 @@
     "1620": {
       "total": 144,
       "file": "1620.idx",
-      "bytes": 309
+      "bytes": 309,
+      "compressed_file": "1620.idx.gz",
+      "compressed_bytes": 262
     },
     "1622": {
       "total": 105,
@@ -6404,17 +8206,23 @@
     "1640": {
       "total": 24,
       "file": "1640.idx",
-      "bytes": 97
+      "bytes": 97,
+      "compressed_file": "1640.idx.gz",
+      "compressed_bytes": 64
     },
     "1641": {
       "total": 20,
       "file": "1641.idx",
-      "bytes": 85
+      "bytes": 85,
+      "compressed_file": "1641.idx.gz",
+      "compressed_bytes": 48
     },
     "1642": {
       "total": 66,
       "file": "1642.idx",
-      "bytes": 194
+      "bytes": 194,
+      "compressed_file": "1642.idx.gz",
+      "compressed_bytes": 137
     },
     "1643": {
       "total": 14,
@@ -6459,7 +8267,9 @@
     "1661": {
       "total": 60,
       "file": "1661.idx",
-      "bytes": 231
+      "bytes": 231,
+      "compressed_file": "1661.idx.gz",
+      "compressed_bytes": 76
     },
     "1664": {
       "total": 1,
@@ -6474,17 +8284,23 @@
     "1680": {
       "total": 269,
       "file": "1680.idx",
-      "bytes": 433
+      "bytes": 433,
+      "compressed_file": "1680.idx.gz",
+      "compressed_bytes": 197
     },
     "1681": {
       "total": 91,
       "file": "1681.idx",
-      "bytes": 221
+      "bytes": 221,
+      "compressed_file": "1681.idx.gz",
+      "compressed_bytes": 134
     },
     "1682": {
       "total": 93,
       "file": "1682.idx",
-      "bytes": 233
+      "bytes": 233,
+      "compressed_file": "1682.idx.gz",
+      "compressed_bytes": 197
     },
     "1683": {
       "total": 9,
@@ -6499,7 +8315,9 @@
     "1685": {
       "total": 91,
       "file": "1685.idx",
-      "bytes": 140
+      "bytes": 140,
+      "compressed_file": "1685.idx.gz",
+      "compressed_bytes": 88
     },
     "1686": {
       "total": 26,
@@ -6514,17 +8332,23 @@
     "1688": {
       "total": 112,
       "file": "1688.idx",
-      "bytes": 230
+      "bytes": 230,
+      "compressed_file": "1688.idx.gz",
+      "compressed_bytes": 118
     },
     "1689": {
       "total": 75,
       "file": "1689.idx",
-      "bytes": 154
+      "bytes": 154,
+      "compressed_file": "1689.idx.gz",
+      "compressed_bytes": 95
     },
     "1690": {
       "total": 281,
       "file": "1690.idx",
-      "bytes": 511
+      "bytes": 511,
+      "compressed_file": "1690.idx.gz",
+      "compressed_bytes": 227
     },
     "1691": {
       "total": 50,
@@ -6539,17 +8363,23 @@
     "1693": {
       "total": 324,
       "file": "1693.idx",
-      "bytes": 586
+      "bytes": 586,
+      "compressed_file": "1693.idx.gz",
+      "compressed_bytes": 237
     },
     "1694": {
       "total": 68,
       "file": "1694.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1694.idx.gz",
+      "compressed_bytes": 118
     },
     "1695": {
       "total": 50,
       "file": "1695.idx",
-      "bytes": 171
+      "bytes": 171,
+      "compressed_file": "1695.idx.gz",
+      "compressed_bytes": 108
     },
     "1696": {
       "total": 8,
@@ -6564,7 +8394,9 @@
     "1698": {
       "total": 49,
       "file": "1698.idx",
-      "bytes": 162
+      "bytes": 162,
+      "compressed_file": "1698.idx.gz",
+      "compressed_bytes": 111
     },
     "1699": {
       "total": 12,
@@ -6599,7 +8431,9 @@
     "1709": {
       "total": 203,
       "file": "1709.idx",
-      "bytes": 426
+      "bytes": 426,
+      "compressed_file": "1709.idx.gz",
+      "compressed_bytes": 191
     },
     "1710": {
       "total": 24,
@@ -6749,7 +8583,9 @@
     "1800": {
       "total": 160,
       "file": "1800.idx",
-      "bytes": 285
+      "bytes": 285,
+      "compressed_file": "1800.idx.gz",
+      "compressed_bytes": 56
     },
     "1801": {
       "total": 9,
@@ -6764,7 +8600,9 @@
     "1804": {
       "total": 86,
       "file": "1804.idx",
-      "bytes": 223
+      "bytes": 223,
+      "compressed_file": "1804.idx.gz",
+      "compressed_bytes": 74
     },
     "1805": {
       "total": 8,
@@ -6789,7 +8627,9 @@
     "1809": {
       "total": 46,
       "file": "1809.idx",
-      "bytes": 184
+      "bytes": 184,
+      "compressed_file": "1809.idx.gz",
+      "compressed_bytes": 101
     },
     "1810": {
       "total": 7,
@@ -6864,7 +8704,9 @@
     "1861": {
       "total": 20,
       "file": "1861.idx",
-      "bytes": 85
+      "bytes": 85,
+      "compressed_file": "1861.idx.gz",
+      "compressed_bytes": 47
     },
     "1862": {
       "total": 4,
@@ -6884,17 +8726,23 @@
     "1870": {
       "total": 40,
       "file": "1870.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1870.idx.gz",
+      "compressed_bytes": 74
     },
     "1873": {
       "total": 40,
       "file": "1873.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1873.idx.gz",
+      "compressed_bytes": 74
     },
     "1887": {
       "total": 40,
       "file": "1887.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "1887.idx.gz",
+      "compressed_bytes": 74
     },
     "1926": {
       "total": 2,
@@ -6949,7 +8797,9 @@
     "2409": {
       "total": 88,
       "file": "2409.idx",
-      "bytes": 227
+      "bytes": 227,
+      "compressed_file": "2409.idx.gz",
+      "compressed_bytes": 103
     },
     "2410": {
       "total": 42,
@@ -6974,7 +8824,9 @@
     "2414": {
       "total": 60,
       "file": "2414.idx",
-      "bytes": 180
+      "bytes": 180,
+      "compressed_file": "2414.idx.gz",
+      "compressed_bytes": 127
     },
     "2415": {
       "total": 1,
@@ -7044,12 +8896,16 @@
     "2480": {
       "total": 132,
       "file": "2480.idx",
-      "bytes": 254
+      "bytes": 254,
+      "compressed_file": "2480.idx.gz",
+      "compressed_bytes": 66
     },
     "2481": {
       "total": 20,
       "file": "2481.idx",
-      "bytes": 85
+      "bytes": 85,
+      "compressed_file": "2481.idx.gz",
+      "compressed_bytes": 47
     },
     "2482": {
       "total": 4,
@@ -7064,7 +8920,9 @@
     "2485": {
       "total": 60,
       "file": "2485.idx",
-      "bytes": 165
+      "bytes": 165,
+      "compressed_file": "2485.idx.gz",
+      "compressed_bytes": 51
     },
     "2487": {
       "total": 2,
@@ -7074,17 +8932,23 @@
     "2490": {
       "total": 40,
       "file": "2490.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "2490.idx.gz",
+      "compressed_bytes": 74
     },
     "2493": {
       "total": 40,
       "file": "2493.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "2493.idx.gz",
+      "compressed_bytes": 74
     },
     "2509": {
       "total": 40,
       "file": "2509.idx",
-      "bytes": 166
+      "bytes": 166,
+      "compressed_file": "2509.idx.gz",
+      "compressed_bytes": 74
     },
     "3202": {
       "total": 2,
@@ -7181,5 +9045,9 @@
       "file": "4814.idx",
       "bytes": 5
     }
-  }
+  },
+  "transport_compression": "gzip",
+  "compressed_counts": 932,
+  "compressed_indexed_bytes": 62527211,
+  "compressed_saved_bytes": 488036844
 }

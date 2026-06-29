@@ -200,6 +200,49 @@ const makeResult = (count, entry, results, matchTotal, mode, missing = false) =>
     mode
 });
 
+const fetchIndexByteStream = async (entry) => {
+    const candidates = [];
+    if (entry.compressed_file && self.DecompressionStream) {
+        candidates.push({ file: entry.compressed_file, compressed: true });
+    }
+    candidates.push({ file: entry.file, compressed: false });
+
+    for (const candidate of candidates) {
+        const response = await fetch(`${FULL_HITS_DIR}/${candidate.file}`);
+        if (!response.ok) continue;
+
+        if (!candidate.compressed) {
+            return {
+                file: candidate.file,
+                stream: response.body || null,
+                arrayBuffer: () => response.arrayBuffer()
+            };
+        }
+
+        const alreadyDecoded = response.headers.get('content-encoding') === 'gzip';
+        if (alreadyDecoded) {
+            return {
+                file: candidate.file,
+                stream: response.body || null,
+                arrayBuffer: () => response.arrayBuffer()
+            };
+        }
+        if (!response.body?.pipeThrough) continue;
+
+        try {
+            return {
+                file: candidate.file,
+                stream: response.body.pipeThrough(new DecompressionStream('gzip')),
+                arrayBuffer: null
+            };
+        } catch (_error) {
+            continue;
+        }
+    }
+
+    return null;
+};
+
 const scanIndexStream = async (queryId, count, entry, filters, onPartial) => {
     const allPass = isDefaultAllPassFilter(filters);
     let candidateSet = null;
@@ -212,8 +255,8 @@ const scanIndexStream = async (queryId, count, entry, filters, onPartial) => {
         }
     }
 
-    const response = await fetch(`${FULL_HITS_DIR}/${entry.file}`);
-    if (!response.ok) return null;
+    const source = await fetchIndexByteStream(entry);
+    if (!source) return null;
 
     const results = [];
     let previous = -1;
@@ -256,8 +299,8 @@ const scanIndexStream = async (queryId, count, entry, filters, onPartial) => {
         return false;
     };
 
-    if (response.body?.getReader) {
-        const reader = response.body.getReader();
+    if (source.stream?.getReader) {
+        const reader = source.stream.getReader();
         while (true) {
             if (activeQueryId !== queryId) {
                 await reader.cancel();
@@ -271,17 +314,19 @@ const scanIndexStream = async (queryId, count, entry, filters, onPartial) => {
                 break;
             }
         }
-    } else {
-        const bytes = new Uint8Array(await response.arrayBuffer());
+    } else if (source.arrayBuffer) {
+        const bytes = new Uint8Array(await source.arrayBuffer());
         processBytes(bytes);
+    } else {
+        return null;
     }
 
     if (activeQueryId !== queryId) return null;
     if (value !== 0 || multiplier !== 1) {
-        throw new Error(`Partial varint at end of ${entry.file}`);
+        throw new Error(`Partial varint at end of ${source.file}`);
     }
     if (!allPass && decoded !== entry.total) {
-        throw new Error(`Decoded ${decoded} rows for ${entry.file}, expected ${entry.total}`);
+        throw new Error(`Decoded ${decoded} rows for ${source.file}, expected ${entry.total}`);
     }
     if (allPass) matchTotal = entry.total;
 
