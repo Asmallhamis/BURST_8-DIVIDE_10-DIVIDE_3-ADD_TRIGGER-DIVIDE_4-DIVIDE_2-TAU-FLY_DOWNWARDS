@@ -14,12 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
             table_slots: "槽位",
             twwe_btn: "打开 TWWE",
             status_ready: "已准备就绪：13 法术 / 9 槽静态索引",
-            status_fetching: (count) => `正在读取产出量为 ${count} 的本地索引...`,
-            status_fetching_range: (total) => `正在查询 ${total} 个目标产出量的本地索引...`,
+            status_fetching: (count) => `正在读取产出量为 ${count} 的索引...`,
+            status_fetching_range: (total) => `正在查询 ${total} 个目标产出量的索引...`,
             status_no_results: (count) => `索引中未找到产出量为 ${count} 的法术组合。`,
-            status_no_matches: (indexed, total) => `样本索引 ${formatNumber(indexed)} 组中没有匹配当前筛选条件的组合；全量命中 ${formatNumber(total)} 组。`,
-            status_complete: (matches, limit, indexed, total) => `筛选完成：索引样本 ${formatNumber(indexed)} / 全量 ${formatNumber(total)} 组，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`,
-            status_complete_range: (matches, limit, totalTargets, indexed, total) => `查询完成：${totalTargets} 个目标，索引样本 ${formatNumber(indexed)} / 全量 ${formatNumber(total)} 组，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`,
+            status_no_matches: (indexed, total, mode) => mode === 'full'
+                ? `全量筛选完成：已检查 ${formatNumber(total)} 组真实命中，没有符合当前筛选的配方。`
+                : `当前目标过大，网页只筛选 ${formatNumber(indexed)} 条预览样本；这些样本里没有匹配项。全量运行有 ${formatNumber(total)} 组命中。`,
+            status_complete: (matches, limit, indexed, total, mode) => mode === 'full'
+                ? `全量筛选完成：已检查 ${formatNumber(total)} 组真实命中，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`
+                : `样本筛选完成：网页可筛选样本 ${formatNumber(indexed)} / 全量 ${formatNumber(total)} 组，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`,
+            status_complete_range: (matches, limit, totalTargets, indexed, total, mode) => mode === 'full'
+                ? `全量筛选完成：${totalTargets} 个目标，已检查 ${formatNumber(total)} 组真实命中，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`
+                : `查询完成：${totalTargets} 个目标，网页可筛选样本 ${formatNumber(indexed)} / 全量 ${formatNumber(total)} 组，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`,
             status_range_empty: "请输入有效的范围或数字列表。",
             status_error: "⚠️ 查询出错，请确认网络连接或数据是否存在。",
             min_lbl: "Min",
@@ -38,12 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
             table_slots: "Slots",
             twwe_btn: "Open TWWE",
             status_ready: "Ready: 13-spell / 9-slot static index",
-            status_fetching: (count) => `Reading local index for target count ${count}...`,
-            status_fetching_range: (total) => `Reading local indexes for ${total} target counts...`,
+            status_fetching: (count) => `Reading index for target count ${count}...`,
+            status_fetching_range: (total) => `Reading indexes for ${total} target counts...`,
             status_no_results: (count) => `No indexed combinations found for count ${count}.`,
-            status_no_matches: (indexed, total) => `No matching combinations among ${formatNumber(indexed)} indexed samples; full run has ${formatNumber(total)} hits.`,
-            status_complete: (matches, limit, indexed, total) => `Filtering complete: ${formatNumber(indexed)} indexed / ${formatNumber(total)} full hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`,
-            status_complete_range: (matches, limit, totalTargets, indexed, total) => `Search complete: ${totalTargets} targets, ${formatNumber(indexed)} indexed / ${formatNumber(total)} full hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`,
+            status_no_matches: (indexed, total, mode) => mode === 'full'
+                ? `Full filtering complete: checked ${formatNumber(total)} real hits; none match the current filters.`
+                : `This target is too large for the full static index, so the page filtered ${formatNumber(indexed)} preview rows; none match. The full run has ${formatNumber(total)} hits.`,
+            status_complete: (matches, limit, indexed, total, mode) => mode === 'full'
+                ? `Full filtering complete: checked ${formatNumber(total)} real hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`
+                : `Sample filtering complete: ${formatNumber(indexed)} preview rows / ${formatNumber(total)} full hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`,
+            status_complete_range: (matches, limit, totalTargets, indexed, total, mode) => mode === 'full'
+                ? `Full filtering complete: ${totalTargets} targets, checked ${formatNumber(total)} real hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`
+                : `Search complete: ${totalTargets} targets, ${formatNumber(indexed)} preview rows / ${formatNumber(total)} full hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`,
             status_range_empty: "Enter a valid range or number list.",
             status_error: "⚠️ Search error. Check network or data existence.",
             min_lbl: "Min",
@@ -74,8 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Configuration & Data ---
     const DATA_DIR = './data13';
+    const FULL_HITS_DIR = `${DATA_DIR}/full_hits`;
     const MAX_SLOTS = 9;
+    const RESULT_LIMIT = 500;
     let datasetManifest = null;
+    let fullHitManifest = null;
+    const fullHitCache = new Map();
 
     const formatNumber = (value) => {
         if (value === undefined || value === null || Number.isNaN(Number(value))) return '?';
@@ -97,6 +113,42 @@ document.addEventListener('DOMContentLoaded', () => {
         "IF_END": { icon: "if_end.png", label: "END", zh: "条件结束", en: "If End" },
         "BLACK_HOLE#0": { icon: "black_hole.png", label: "BH0", zh: "黑洞（0 次）", en: "Black Hole (0 charges)" }
     };
+    const CORE_CODES = ["0", "3", "+", "4", "2", "T", "F", "E", "R", "H", "N", "K"];
+    const CODE_TO_SPELL = {
+        "B": "BURST_8",
+        "0": "DIVIDE_10",
+        "3": "DIVIDE_3",
+        "+": "ADD_TRIGGER",
+        "4": "DIVIDE_4",
+        "2": "DIVIDE_2",
+        "T": "TAU",
+        "F": "FLY_DOWNWARDS",
+        "E": "IF_ELSE",
+        "R": "RESET",
+        "H": "IF_HP",
+        "N": "IF_END",
+        "K": "BLACK_HOLE#0"
+    };
+    const COUNT_SEGMENTS = (() => {
+        const segments = [];
+        let cursor = 0;
+        for (let length = 1; length <= MAX_SLOTS; length++) {
+            [
+                { prefix: "", remLen: length },
+                { prefix: "B", remLen: length - 1 }
+            ].forEach(segment => {
+                const size = CORE_CODES.length ** segment.remLen;
+                segments.push({
+                    start: cursor,
+                    end: cursor + size,
+                    prefix: segment.prefix,
+                    remLen: segment.remLen
+                });
+                cursor += size;
+            });
+        }
+        return segments;
+    })();
     const SIMULATOR_BASE_URL = 'https://asmallhamis.github.io/TheWebWandEngine/';
     const TWWE_WAND_PREFIX = 'NOLLA,HORIZONTAL_ARC,DELAYED_SPELL,BURST_8,TENTACLE_TIMER,CASTER_CAST,TELEPORT_PROJECTILE_CLOSER,,,';
     const formatTwweSpellToken = (spellId) => {
@@ -274,8 +326,121 @@ document.addEventListener('DOMContentLoaded', () => {
         maxS: parseInt(elements.maxSlots.value) || 99
     });
 
-    const loadCountResults = async (count, filters) => {
-        const meta = datasetManifest?.counts?.[String(count)] || { total: 0, indexed: 0 };
+    const indexToCode = (index) => {
+        const segment = COUNT_SEGMENTS.find(item => index >= item.start && index < item.end);
+        if (!segment) return "";
+        let offset = index - segment.start;
+        const digits = new Array(segment.remLen);
+        for (let pos = segment.remLen - 1; pos >= 0; pos--) {
+            const digit = offset % CORE_CODES.length;
+            digits[pos] = CORE_CODES[digit];
+            offset = Math.floor(offset / CORE_CODES.length);
+        }
+        return segment.prefix + digits.join("");
+    };
+
+    const buildResultItemFromCode = (count, code) => {
+        const parts = Array.from(code).map(ch => CODE_TO_SPELL[ch]);
+        const spellCounts = {};
+        parts.forEach(p => spellCounts[p] = (spellCounts[p] || 0) + 1);
+        const wand = parts.join(',');
+        return {
+            target: count,
+            wand,
+            parts,
+            length: parts.length,
+            counts: spellCounts
+        };
+    };
+
+    const itemMatchesFilters = (item, filters) => {
+        if (item.length < filters.minS || item.length > filters.maxS) return false;
+
+        for (const [sid, config] of Object.entries(filterState.spells)) {
+            const actualCount = item.counts[sid] || 0;
+            if (actualCount < config.min || actualCount > config.max) {
+                return false;
+            }
+        }
+        return true;
+    };
+
+    const decodeVarintGapIndexes = (buffer, expectedTotal) => {
+        const bytes = new Uint8Array(buffer);
+        const indexes = new Float64Array(expectedTotal);
+        let previous = -1;
+        let value = 0;
+        let multiplier = 1;
+        let out = 0;
+
+        for (const byte of bytes) {
+            value += (byte & 0x7F) * multiplier;
+            if (byte & 0x80) {
+                multiplier *= 128;
+                continue;
+            }
+
+            previous += value + 1;
+            if (out < indexes.length) indexes[out] = previous;
+            out += 1;
+            value = 0;
+            multiplier = 1;
+        }
+
+        if (out !== expectedTotal) {
+            console.warn(`Full hit index decoded ${out} rows, expected ${expectedTotal}.`);
+        }
+        return out === indexes.length ? indexes : indexes.slice(0, out);
+    };
+
+    const loadFullHitIndexes = async (count) => {
+        const key = String(count);
+        if (fullHitCache.has(key)) return fullHitCache.get(key);
+
+        const entry = fullHitManifest?.counts?.[key];
+        if (!entry) return null;
+
+        const response = await fetch(`${FULL_HITS_DIR}/${entry.file}`);
+        if (!response.ok) return null;
+
+        const indexes = decodeVarintGapIndexes(await response.arrayBuffer(), entry.total);
+        const loaded = { entry, indexes };
+        fullHitCache.set(key, loaded);
+        return loaded;
+    };
+
+    const loadFullCountResults = async (count, filters, meta) => {
+        const loaded = await loadFullHitIndexes(count);
+        if (!loaded) return null;
+
+        const results = [];
+        let matchTotal = 0;
+        for (const index of loaded.indexes) {
+            const code = indexToCode(index);
+            if (!code) continue;
+            const item = buildResultItemFromCode(count, code);
+            if (!itemMatchesFilters(item, filters)) continue;
+
+            matchTotal += 1;
+            if (results.length < RESULT_LIMIT) {
+                results.push(item);
+            }
+        }
+
+        const fullTotal = meta.total || loaded.entry.total;
+        return {
+            count,
+            rawTotal: loaded.entry.total,
+            indexedTotal: loaded.entry.total,
+            fullTotal,
+            matchTotal,
+            results,
+            missing: false,
+            mode: 'full'
+        };
+    };
+
+    const loadSampleCountResults = async (count, filters, meta) => {
         const response = await fetch(`${DATA_DIR}/${count}.txt`);
         if (!response.ok) {
             return {
@@ -290,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const text = await response.text();
         const rawWands = text.trim().split('\n').filter(Boolean);
-        const indexedTotal = meta.indexed || rawWands.length;
+        const indexedTotal = rawWands.length;
         const fullTotal = meta.total || rawWands.length;
 
         const results = rawWands.map(w => {
@@ -305,19 +470,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 length: parts.length,
                 counts: spellCounts
             };
-        }).filter(item => {
-            if (item.length < filters.minS || item.length > filters.maxS) return false;
+        }).filter(item => itemMatchesFilters(item, filters)).sort((a, b) => a.length - b.length);
 
-            for (const [sid, config] of Object.entries(filterState.spells)) {
-                const actualCount = item.counts[sid] || 0;
-                if (actualCount < config.min || actualCount > config.max) {
-                    return false;
-                }
-            }
-            return true;
-        }).sort((a, b) => a.length - b.length);
+        return {
+            count,
+            rawTotal: rawWands.length,
+            indexedTotal,
+            fullTotal,
+            matchTotal: results.length,
+            results,
+            missing: false,
+            mode: 'sample'
+        };
+    };
 
-        return { count, rawTotal: rawWands.length, indexedTotal, fullTotal, results, missing: false };
+    const loadCountResults = async (count, filters) => {
+        const meta = datasetManifest?.counts?.[String(count)] || { total: 0, indexed: 0 };
+        const fullResults = await loadFullCountResults(count, filters, meta);
+        if (fullResults) return fullResults;
+        return loadSampleCountResults(count, filters, meta);
+    };
+
+    const getResultMode = (loaded) => {
+        const present = loaded.filter(item => !item.missing);
+        if (present.length === 0) return 'sample';
+        return present.every(item => item.mode === 'full') ? 'full' : 'sample';
     };
 
     const utf8ToBase64 = (value) => window.btoa(unescape(encodeURIComponent(value)));
@@ -382,7 +559,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="count-badge">${item.length} ${t('table_slots')}</span>
                     </div>
                 `).join('')
-                : `<div class="range-empty">${group.missing ? t('status_no_results', group.count) : t('status_no_matches', group.indexedTotal, group.fullTotal)}</div>`;
+                : `<div class="range-empty">${group.missing ? t('status_no_results', group.count) : t('status_no_matches', group.indexedTotal, group.fullTotal, group.mode)}</div>`;
 
             return `
                 <section class="range-column">
@@ -419,14 +596,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const loaded = await Promise.all(counts.map(count => loadCountResults(count, filters)));
             const indexedTotal = loaded.reduce((total, item) => total + item.indexedTotal, 0);
             const fullTotal = loaded.reduce((total, item) => total + item.fullTotal, 0);
+            const matchTotal = loaded.reduce((total, item) => total + (item.matchTotal ?? item.results.length), 0);
+            const resultMode = getResultMode(loaded);
             const results = loaded.flatMap(item => item.results);
-            const limit = 500;
+            const limit = RESULT_LIMIT;
             const displayed = counts.length === 1
                 ? results.slice(0, limit)
                 : loaded.flatMap(item => item.results.slice(0, Math.max(1, Math.floor(limit / counts.length)))).slice(0, limit);
 
             if (displayed.length === 0) {
-                elements.status.textContent = indexedTotal === 0 ? t('status_no_results', counts.join(', ')) : t('status_no_matches', indexedTotal, fullTotal);
+                elements.status.textContent = indexedTotal === 0 ? t('status_no_results', counts.join(', ')) : t('status_no_matches', indexedTotal, fullTotal, resultMode);
                 return;
             }
 
@@ -436,8 +615,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderRangeResults(loaded, Math.max(1, Math.floor(limit / counts.length)), limit);
             }
             elements.status.textContent = counts.length === 1
-                ? t('status_complete', results.length, displayed.length, indexedTotal, fullTotal)
-                : t('status_complete_range', results.length, displayed.length, counts.length, indexedTotal, fullTotal);
+                ? t('status_complete', matchTotal, displayed.length, indexedTotal, fullTotal, resultMode)
+                : t('status_complete_range', matchTotal, displayed.length, counts.length, indexedTotal, fullTotal, resultMode);
             elements.resultsContainer.classList.add('visible');
             closeSidebarOnMobile();
         } catch (error) {
@@ -468,6 +647,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const loadFullHitManifest = async () => {
+        try {
+            const response = await fetch(`${FULL_HITS_DIR}/_manifest.json`);
+            if (response.ok) {
+                fullHitManifest = await response.json();
+            }
+        } catch (error) {
+            console.warn('Full hit index manifest unavailable.', error);
+        }
+    };
+
     // --- Initialization ---
     elements.searchBtn.addEventListener('click', handleSearch);
     elements.targetCount.addEventListener('keypress', (e) => {
@@ -476,5 +666,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elements.minSlots.max = String(MAX_SLOTS);
     elements.maxSlots.max = String(MAX_SLOTS);
-    loadManifest().finally(updateUIStrings);
+    Promise.all([loadManifest(), loadFullHitManifest()]).finally(updateUIStrings);
 });
