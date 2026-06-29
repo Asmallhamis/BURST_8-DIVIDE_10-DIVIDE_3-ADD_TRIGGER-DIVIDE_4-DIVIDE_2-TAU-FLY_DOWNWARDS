@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             status_no_matches: (indexed, total, mode) => mode === 'full'
                 ? `全量筛选完成：已检查 ${formatNumber(total)} 组真实命中，没有符合当前筛选的配方。`
                 : `当前目标过大，网页只筛选 ${formatNumber(indexed)} 条预览样本；这些样本里没有匹配项。全量运行有 ${formatNumber(total)} 组命中。`,
+            status_partial: (shown) => `已先展示 ${formatNumber(shown)} 组，正在后台统计完整匹配数...`,
             status_complete: (matches, limit, indexed, total, mode) => mode === 'full'
                 ? `全量筛选完成：已检查 ${formatNumber(total)} 组真实命中，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`
                 : `样本筛选完成：网页可筛选样本 ${formatNumber(indexed)} / 全量 ${formatNumber(total)} 组，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`,
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             status_no_matches: (indexed, total, mode) => mode === 'full'
                 ? `Full filtering complete: checked ${formatNumber(total)} real hits; none match the current filters.`
                 : `This target is too large for the full static index, so the page filtered ${formatNumber(indexed)} preview rows; none match. The full run has ${formatNumber(total)} hits.`,
+            status_partial: (shown) => `Showing the first ${formatNumber(shown)} matches while the full count continues in the background...`,
             status_complete: (matches, limit, indexed, total, mode) => mode === 'full'
                 ? `Full filtering complete: checked ${formatNumber(total)} real hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`
                 : `Sample filtering complete: ${formatNumber(indexed)} preview rows / ${formatNumber(total)} full hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`,
@@ -92,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let datasetManifest = null;
     let fullHitManifest = null;
     const fullHitCache = new Map();
+    let activeWorker = null;
+    let activeSearchId = 0;
 
     const formatNumber = (value) => {
         if (value === undefined || value === null || Number.isNaN(Number(value))) return '?';
@@ -321,10 +325,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return counts;
     };
 
-    const getActiveFilters = () => ({
-        minS: parseInt(elements.minSlots.value) || 0,
-        maxS: parseInt(elements.maxSlots.value) || 99
-    });
+    const getActiveFilters = () => {
+        const spells = {};
+        Object.entries(filterState.spells).forEach(([id, config]) => {
+            spells[id] = {
+                min: config.min,
+                max: config.max === Infinity ? null : config.max
+            };
+        });
+        return {
+            minS: parseInt(elements.minSlots.value) || 0,
+            maxS: parseInt(elements.maxSlots.value) || 99,
+            spells
+        };
+    };
 
     const indexToCode = (index) => {
         const segment = COUNT_SEGMENTS.find(item => index >= item.start && index < item.end);
@@ -356,9 +370,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const itemMatchesFilters = (item, filters) => {
         if (item.length < filters.minS || item.length > filters.maxS) return false;
 
-        for (const [sid, config] of Object.entries(filterState.spells)) {
+        for (const [sid, config] of Object.entries(filters.spells || filterState.spells)) {
             const actualCount = item.counts[sid] || 0;
-            if (actualCount < config.min || actualCount > config.max) {
+            const max = config.max === null || config.max === undefined ? Infinity : config.max;
+            if (actualCount < config.min || actualCount > max) {
                 return false;
             }
         }
@@ -580,45 +595,115 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const renderLoadedResults = (counts, loaded, isFinal) => {
+        const indexedTotal = loaded.reduce((total, item) => total + item.indexedTotal, 0);
+        const fullTotal = loaded.reduce((total, item) => total + item.fullTotal, 0);
+        const matchTotal = loaded.reduce((total, item) => {
+            if (item.matchTotal === null || item.matchTotal === undefined) return total;
+            return total + item.matchTotal;
+        }, 0);
+        const resultMode = getResultMode(loaded);
+        const results = loaded.flatMap(item => item.results);
+        const limit = RESULT_LIMIT;
+        const displayed = counts.length === 1
+            ? results.slice(0, limit)
+            : loaded.flatMap(item => item.results.slice(0, Math.max(1, Math.floor(limit / counts.length)))).slice(0, limit);
+
+        if (displayed.length === 0) {
+            if (isFinal) {
+                elements.status.textContent = indexedTotal === 0 ? t('status_no_results', counts.join(', ')) : t('status_no_matches', indexedTotal, fullTotal, resultMode);
+            }
+            return;
+        }
+
+        if (counts.length === 1) {
+            renderResults(displayed);
+        } else {
+            renderRangeResults(loaded, Math.max(1, Math.floor(limit / counts.length)), limit);
+        }
+        elements.resultsContainer.classList.add('visible');
+
+        if (!isFinal) {
+            elements.status.textContent = t('status_partial', displayed.length);
+            return;
+        }
+
+        elements.status.textContent = counts.length === 1
+            ? t('status_complete', matchTotal, displayed.length, indexedTotal, fullTotal, resultMode)
+            : t('status_complete_range', matchTotal, displayed.length, counts.length, indexedTotal, fullTotal, resultMode);
+        closeSidebarOnMobile();
+    };
+
+    const runSearchOnMainThread = async (counts, filters) => {
+        const loaded = await Promise.all(counts.map(count => loadCountResults(count, filters)));
+        renderLoadedResults(counts, loaded, true);
+    };
+
     const runSearch = async (counts) => {
         if (counts.length === 0) {
             elements.status.textContent = t('status_range_empty');
             return;
         }
 
+        if (activeWorker) {
+            activeWorker.terminate();
+            activeWorker = null;
+        }
+        const queryId = ++activeSearchId;
         elements.status.textContent = counts.length === 1 ? t('status_fetching', counts[0]) : t('status_fetching_range', counts.length);
         elements.resultsBody.innerHTML = '';
         elements.rangeResults.innerHTML = '';
         elements.resultsContainer.classList.remove('visible');
 
+        const filters = getActiveFilters();
+        if (!window.Worker) {
+            try {
+                await runSearchOnMainThread(counts, filters);
+            } catch (error) {
+                console.error(error);
+                elements.status.textContent = t('status_error');
+            }
+            return;
+        }
+
         try {
-            const filters = getActiveFilters();
-            const loaded = await Promise.all(counts.map(count => loadCountResults(count, filters)));
-            const indexedTotal = loaded.reduce((total, item) => total + item.indexedTotal, 0);
-            const fullTotal = loaded.reduce((total, item) => total + item.fullTotal, 0);
-            const matchTotal = loaded.reduce((total, item) => total + (item.matchTotal ?? item.results.length), 0);
-            const resultMode = getResultMode(loaded);
-            const results = loaded.flatMap(item => item.results);
-            const limit = RESULT_LIMIT;
-            const displayed = counts.length === 1
-                ? results.slice(0, limit)
-                : loaded.flatMap(item => item.results.slice(0, Math.max(1, Math.floor(limit / counts.length)))).slice(0, limit);
-
-            if (displayed.length === 0) {
-                elements.status.textContent = indexedTotal === 0 ? t('status_no_results', counts.join(', ')) : t('status_no_matches', indexedTotal, fullTotal, resultMode);
-                return;
-            }
-
-            if (counts.length === 1) {
-                renderResults(displayed);
-            } else {
-                renderRangeResults(loaded, Math.max(1, Math.floor(limit / counts.length)), limit);
-            }
-            elements.status.textContent = counts.length === 1
-                ? t('status_complete', matchTotal, displayed.length, indexedTotal, fullTotal, resultMode)
-                : t('status_complete_range', matchTotal, displayed.length, counts.length, indexedTotal, fullTotal, resultMode);
-            elements.resultsContainer.classList.add('visible');
-            closeSidebarOnMobile();
+            const worker = new Worker('search-worker.js');
+            activeWorker = worker;
+            worker.onmessage = (event) => {
+                const message = event.data;
+                if (message.queryId !== queryId) return;
+                if (message.type === 'partial') {
+                    renderLoadedResults(counts, message.loaded, false);
+                    return;
+                }
+                if (message.type === 'complete') {
+                    renderLoadedResults(counts, message.loaded, true);
+                    worker.terminate();
+                    if (activeWorker === worker) activeWorker = null;
+                    return;
+                }
+                if (message.type === 'error') {
+                    console.error(message.message);
+                    elements.status.textContent = t('status_error');
+                    worker.terminate();
+                    if (activeWorker === worker) activeWorker = null;
+                }
+            };
+            worker.onerror = (error) => {
+                if (queryId !== activeSearchId) return;
+                console.error(error);
+                elements.status.textContent = t('status_error');
+                worker.terminate();
+                if (activeWorker === worker) activeWorker = null;
+            };
+            worker.postMessage({
+                type: 'query',
+                queryId,
+                counts,
+                filters,
+                datasetManifest,
+                fullHitManifest
+            });
         } catch (error) {
             console.error(error);
             elements.status.textContent = t('status_error');

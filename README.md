@@ -7,6 +7,8 @@ The page uses two static indexes:
 - Full hit-position indexes for output counts greater than `10`. These are exact and are filtered in the browser.
 - A compact preview index for output counts `0` through `10`, where the full hit sets are too large to be useful on a static page.
 
+Large exact searches run in a Web Worker. The page can show the first visible matches while the worker continues counting the full filtered result set.
+
 The original lossless count streams are archived separately and are not included in this Pages build.
 
 ## Dataset
