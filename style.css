@@ -320,6 +320,23 @@ input[type="text"]:focus {
     transition: var(--transition-fast);
 }
 
+.spell-icon-fallback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.08);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1;
+    image-rendering: auto;
+    filter: none;
+}
+
 .spell-filter-item:hover .spell-icon-sm {
     transform: scale(1.1) rotate(5deg);
 }
@@ -377,6 +394,24 @@ input[type="text"]:focus {
     font-weight: 700;
     font-family: var(--font-mono);
     color: var(--text-primary);
+}
+
+.count-input {
+    width: 26px;
+    height: 20px;
+    min-width: 26px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+.count-input:focus {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.18);
 }
 
 .count-val.infinity {
@@ -762,6 +797,11 @@ td:last-child {
     transition: var(--transition-smooth);
 }
 
+.spell-icon-res.spell-icon-fallback {
+    image-rendering: auto;
+    filter: none;
+}
+
 tr:hover .spell-icon-res {
     transform: translateY(-2px);
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.8));
@@ -786,6 +826,13 @@ tr:hover .spell-icon-res {
     min-width: 0;
 }
 
+.twwe-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
 .twwe-link {
     flex: 0 0 auto;
     color: #fff;
@@ -799,10 +846,21 @@ tr:hover .spell-icon-res {
     transition: var(--transition-fast);
 }
 
+.phasing-link {
+    background: rgba(255, 0, 123, 0.1);
+    border-color: rgba(255, 0, 123, 0.28);
+}
+
 .twwe-link:hover {
     background: var(--accent-primary);
     color: #001014;
     box-shadow: 0 0 14px rgba(0, 240, 255, 0.3);
+}
+
+.phasing-link:hover {
+    background: var(--accent-tertiary);
+    color: #fff;
+    box-shadow: 0 0 14px rgba(255, 0, 123, 0.3);
 }
 
 tr:hover .wand-text-id {

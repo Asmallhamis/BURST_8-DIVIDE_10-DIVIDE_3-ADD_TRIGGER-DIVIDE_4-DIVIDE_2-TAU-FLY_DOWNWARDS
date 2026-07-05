@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
             table_seq: "最简魔杖序列",
             table_slots: "槽位",
             twwe_btn: "打开 TWWE",
-            status_ready: "已准备就绪",
-            status_fetching: (count) => `⏳ 正在从云端拉取产出量为 ${count} 的全量数据...`,
-            status_fetching_range: (total) => `⏳ 正在查询 ${total} 个目标产出量...`,
-            status_no_results: (count) => `❌ 未找到产出量为 ${count} 的法术组合。请更换数值尝试。`,
-            status_no_matches: (total) => `📭 在 ${total} 组数据中未找到匹配当前筛选条件的组合。`,
-            status_complete: (matches, limit) => `✅ 筛选完成：匹配 ${matches} 组。展示前 ${limit} 组。`,
-            status_complete_range: (matches, limit, total) => `✅ 查询完成：${total} 个目标共匹配 ${matches} 组。展示前 ${limit} 组。`,
+            status_ready: "已准备就绪：13 法术 / 9 槽静态索引",
+            status_fetching: (count) => `正在读取产出量为 ${count} 的本地索引...`,
+            status_fetching_range: (total) => `正在查询 ${total} 个目标产出量的本地索引...`,
+            status_no_results: (count) => `索引中未找到产出量为 ${count} 的法术组合。`,
+            status_no_matches: (indexed, total) => `样本索引 ${formatNumber(indexed)} 组中没有匹配当前筛选条件的组合；全量命中 ${formatNumber(total)} 组。`,
+            status_complete: (matches, limit, indexed, total) => `筛选完成：索引样本 ${formatNumber(indexed)} / 全量 ${formatNumber(total)} 组，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`,
+            status_complete_range: (matches, limit, totalTargets, indexed, total) => `查询完成：${totalTargets} 个目标，索引样本 ${formatNumber(indexed)} / 全量 ${formatNumber(total)} 组，筛选后 ${formatNumber(matches)} 组，展示 ${formatNumber(limit)} 组。`,
             status_range_empty: "请输入有效的范围或数字列表。",
             status_error: "⚠️ 查询出错，请确认网络连接或数据是否存在。",
             min_lbl: "Min",
@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
             table_seq: "Wand Sequence",
             table_slots: "Slots",
             twwe_btn: "Open TWWE",
-            status_ready: "Ready",
-            status_fetching: (count) => `⏳ Fetching dataset for target count ${count}...`,
-            status_fetching_range: (total) => `⏳ Fetching datasets for ${total} target counts...`,
-            status_no_results: (count) => `❌ No combinations found for count ${count}.`,
-            status_no_matches: (total) => `📭 No matching combinations found among ${total} results.`,
-            status_complete: (matches, limit) => `✅ Filtering complete: ${matches} matches. Showing top ${limit}.`,
-            status_complete_range: (matches, limit, total) => `✅ Search complete: ${matches} matches across ${total} targets. Showing top ${limit}.`,
+            status_ready: "Ready: 13-spell / 9-slot static index",
+            status_fetching: (count) => `Reading local index for target count ${count}...`,
+            status_fetching_range: (total) => `Reading local indexes for ${total} target counts...`,
+            status_no_results: (count) => `No indexed combinations found for count ${count}.`,
+            status_no_matches: (indexed, total) => `No matching combinations among ${formatNumber(indexed)} indexed samples; full run has ${formatNumber(total)} hits.`,
+            status_complete: (matches, limit, indexed, total) => `Filtering complete: ${formatNumber(indexed)} indexed / ${formatNumber(total)} full hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`,
+            status_complete_range: (matches, limit, totalTargets, indexed, total) => `Search complete: ${totalTargets} targets, ${formatNumber(indexed)} indexed / ${formatNumber(total)} full hits, ${formatNumber(matches)} after filters. Showing ${formatNumber(limit)}.`,
             status_range_empty: "Enter a valid range or number list.",
             status_error: "⚠️ Search error. Check network or data existence.",
             min_lbl: "Min",
@@ -73,18 +73,44 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- Configuration & Data ---
+    const DATA_DIR = './data13';
+    const MAX_SLOTS = 9;
+    let datasetManifest = null;
+
+    const formatNumber = (value) => {
+        if (value === undefined || value === null || Number.isNaN(Number(value))) return '?';
+        return Number(value).toLocaleString(currentLang === 'zh' ? 'zh-CN' : 'en-US');
+    };
+
     const SPELL_DATA = {
-        "BURST_8": { icon: "burst_8.png", zh: "八重", en: "Octagonal Bolt Bundle" },
-        "DIVIDE_10": { icon: "divide_10.png", zh: "十分裂", en: "Divide By 10" },
-        "DIVIDE_4": { icon: "divide_4.png", zh: "四分裂", en: "Divide By 4" },
-        "DIVIDE_3": { icon: "divide_3.png", zh: "三分裂", en: "Divide By 3" },
-        "DIVIDE_2": { icon: "divide_2.png", zh: "二分裂", en: "Divide By 2" },
-        "TAU": { icon: "tau.png", zh: "希腊字母 Tau", en: "Tau" },
-        "ADD_TRIGGER": { icon: "add_trigger.png", zh: "增加触发", en: "Add Trigger" },
-        "FLY_DOWNWARDS": { icon: "fly_downwards.png", zh: "向下飞行", en: "Fly Downwards" }
+        "BURST_8": { icon: "burst_8.png", label: "B", zh: "八重", en: "Octagonal Bolt Bundle" },
+        "DIVIDE_10": { icon: "divide_10.png", label: "/10", zh: "十分裂", en: "Divide By 10" },
+        "DIVIDE_3": { icon: "divide_3.png", label: "/3", zh: "三分裂", en: "Divide By 3" },
+        "ADD_TRIGGER": { icon: "add_trigger.png", label: "+", zh: "增加触发", en: "Add Trigger" },
+        "DIVIDE_4": { icon: "divide_4.png", label: "/4", zh: "四分裂", en: "Divide By 4" },
+        "DIVIDE_2": { icon: "divide_2.png", label: "/2", zh: "二分裂", en: "Divide By 2" },
+        "TAU": { icon: "tau.png", label: "T", zh: "希腊字母 Tau", en: "Tau" },
+        "FLY_DOWNWARDS": { icon: "fly_downwards.png", label: "F", zh: "向下飞行", en: "Fly Downwards" },
+        "IF_ELSE": { icon: "if_else.png", label: "EL", zh: "如果否则", en: "If Else" },
+        "RESET": { icon: "reset.png", label: "R", zh: "重置", en: "Reset" },
+        "IF_HP": { icon: "if_hp.png", label: "HP", zh: "要求：生命值", en: "Requirement: HP" },
+        "IF_END": { icon: "if_end.png", label: "END", zh: "条件结束", en: "If End" },
+        "BLACK_HOLE#0": { icon: "black_hole.png", label: "BH0", zh: "黑洞（0 次）", en: "Black Hole (0 charges)" }
     };
     const SIMULATOR_BASE_URL = 'https://asmallhamis.github.io/TheWebWandEngine/';
     const TWWE_WAND_PREFIX = 'NOLLA,HORIZONTAL_ARC,DELAYED_SPELL,BURST_8,TENTACLE_TIMER,CASTER_CAST,TELEPORT_PROJECTILE_CLOSER,,,';
+    const TWWE_PHASING_PREFIX = ',BURST_3,,LINE_ARC,EXPLOSION_REMOVE,SLOW_BULLET_TIMER,BURST_2,BLOODLUST,SWAPPER_PROJECTILE,FISH,,,,,,,';
+    const TWWE_PHASING_SUFFIX = ',,,,';
+    const formatTwweSpellToken = (spellId) => {
+        const charged = spellId.match(/^(.+)#(-?\d+)$/);
+        return charged ? `${charged[1]}{${charged[2]}}` : spellId;
+    };
+    const formatTwweSpellSequence = (wand) => wand.split(',').map(formatTwweSpellToken).join(',');
+    const formatPhasingSpellSequence = (wand) => wand
+        .split(',')
+        .map(spell => spell === 'FLY_DOWNWARDS' ? 'PHASING_ARC' : spell)
+        .map(formatTwweSpellToken)
+        .join(',');
     const getTwweWandText = (wand) => `{{Wand2
 | wandCard     = Yes
 | castDelay    = 0.13
@@ -94,7 +120,18 @@ document.addEventListener('DOMContentLoaded', () => {
 | capacity     = 26
 | spread       = 0
 | speed        = 1.00
-| spells       = ${TWWE_WAND_PREFIX + wand}
+| spells       = ${TWWE_WAND_PREFIX + formatTwweSpellSequence(wand)}
+}}`;
+    const getPhasingWandText = (wand) => `{{Wand2
+| wandCard     = Yes
+| castDelay    = 0.13
+| rechargeTime = 0.22
+| manaMax      = 5000.00
+| manaCharge   = 5000.00
+| capacity     = 26
+| spread       = 0
+| speed        = 1.00
+| spells       = ${TWWE_PHASING_PREFIX + formatPhasingSpellSequence(wand) + TWWE_PHASING_SUFFIX}
 }}`;
 
     // Filter State
@@ -137,14 +174,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const maxDisplay = state.max === Infinity ? '∞' : state.max;
             const maxClass = state.max === Infinity ? 'infinity' : '';
             const name = currentLang === 'zh' ? data.zh : data.en;
+            const iconHtml = data.icon
+                ? `<img src="assets/spells/${data.icon}" class="spell-icon-sm" title="${name} (${id})">`
+                : `<span class="spell-icon-sm spell-icon-fallback" title="${name} (${id})">${data.label}</span>`;
             return `
             <div class="spell-filter-item" data-id="${id}">
-                <img src="assets/spells/${data.icon}" class="spell-icon-sm" title="${name} (${id})">
+                ${iconHtml}
                 <div class="limit-box" title="Minimum required count">
                     <span class="limit-lbl">${t('min_lbl')}</span>
                     <div class="counter">
                         <button class="count-btn" onclick="updateMin('${id}', -1)">-</button>
-                        <span class="count-val" id="min-${id}">${state.min}</span>
+                        <input class="count-val count-input" id="min-${id}" value="${state.min}" inputmode="numeric" onclick="this.select()" onkeydown="handleLimitKey(event)" onchange="setLimitValue('${id}', 'min', this.value)" onblur="setLimitValue('${id}', 'min', this.value)">
                         <button class="count-btn" onclick="updateMin('${id}', 1)">+</button>
                     </div>
                 </div>
@@ -152,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="limit-lbl">${t('max_lbl')}</span>
                     <div class="counter">
                         <button class="count-btn" onclick="updateMax('${id}', -1)">-</button>
-                        <span class="count-val ${maxClass}" id="max-${id}">${maxDisplay}</span>
+                        <input class="count-val count-input ${maxClass}" id="max-${id}" value="${maxDisplay}" inputmode="numeric" onclick="this.select()" onkeydown="handleLimitKey(event)" onchange="setLimitValue('${id}', 'max', this.value)" onblur="setLimitValue('${id}', 'max', this.value)">
                         <button class="count-btn" onclick="updateMax('${id}', 1)">+</button>
                     </div>
                 </div>
@@ -160,11 +200,26 @@ document.addEventListener('DOMContentLoaded', () => {
         `}).join('');
     };
 
+    const clampLimit = (value) => Math.max(0, Math.min(MAX_SLOTS, value));
+    const parseLimitValue = (value, allowInfinity) => {
+        const text = String(value).trim().toLowerCase();
+        if (allowInfinity && (text === '' || text === '∞' || text === 'inf' || text === 'infinity')) {
+            return Infinity;
+        }
+        const parsed = parseInt(text, 10);
+        return Number.isFinite(parsed) ? clampLimit(parsed) : 0;
+    };
+
+    const setLimitInputValue = (id, kind, value) => {
+        const el = document.getElementById(`${kind}-${id}`);
+        if (!el) return;
+        el.value = value === Infinity ? '∞' : value;
+        el.classList.toggle('infinity', value === Infinity);
+    };
+
     window.updateMin = (id, delta) => {
         const item = filterState.spells[id];
-        let val = item.min + delta;
-        if (val < 0) val = 0;
-        if (val > 8) val = 8;
+        const val = clampLimit(item.min + delta);
         item.min = val;
 
         if (item.min > item.max) {
@@ -172,19 +227,23 @@ document.addEventListener('DOMContentLoaded', () => {
             updateMaxUI(id);
         }
 
-        document.getElementById(`min-${id}`).textContent = item.min;
+        setLimitInputValue(id, 'min', item.min);
     };
 
     window.updateMax = (id, delta) => {
         const item = filterState.spells[id];
 
         let val;
-        if (item.max === Infinity) {
-            if (delta < 0) val = 8;
+        if (item.max === Infinity && delta > 0) {
+            val = item.min;
+        } else if (item.max === item.min && delta < 0) {
+            val = Infinity;
+        } else if (item.max === Infinity) {
+            if (delta < 0) val = MAX_SLOTS;
             else val = Infinity;
         } else {
             val = item.max + delta;
-            if (val > 8) val = Infinity;
+            if (val > MAX_SLOTS) val = Infinity;
             if (val < 0) val = 0;
         }
 
@@ -192,22 +251,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (item.max < item.min) {
             item.min = item.max;
-            document.getElementById(`min-${id}`).textContent = item.min;
+            setLimitInputValue(id, 'min', item.min);
         }
 
         updateMaxUI(id);
     };
 
+    window.setLimitValue = (id, kind, value) => {
+        const item = filterState.spells[id];
+        if (!item) return;
+
+        if (kind === 'min') {
+            item.min = parseLimitValue(value, false);
+            if (item.min > item.max) {
+                item.max = item.min;
+            }
+        } else {
+            item.max = parseLimitValue(value, true);
+            if (item.max < item.min) {
+                item.min = item.max;
+            }
+        }
+
+        setLimitInputValue(id, 'min', item.min);
+        updateMaxUI(id);
+    };
+
+    window.handleLimitKey = (event) => {
+        if (event.key === 'Enter') event.target.blur();
+        if (event.key === 'Escape') {
+            const wrapper = event.target.closest('.spell-filter-item');
+            const id = wrapper?.dataset.id;
+            const kind = event.target.id.startsWith('min-') ? 'min' : 'max';
+            if (id && filterState.spells[id]) {
+                setLimitInputValue(id, kind, filterState.spells[id][kind]);
+            }
+            event.target.blur();
+        }
+    };
+
     const updateMaxUI = (id) => {
         const item = filterState.spells[id];
-        const el = document.getElementById(`max-${id}`);
-        if (item.max === Infinity) {
-            el.textContent = '∞';
-            el.classList.add('infinity');
-        } else {
-            el.textContent = item.max;
-            el.classList.remove('infinity');
-        }
+        setLimitInputValue(id, 'max', item.max);
     };
 
     const iconMenu = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
@@ -223,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const parseCounts = (value) => {
         const counts = [];
         const seen = new Set();
-        const tokens = value.match(/\d+\s*-\s*\d+|\d+/g) || [];
+        const countParts = value.match(/\d+\s*-\s*\d+|\d+/g) || [];
 
         const addCount = (count) => {
             if (seen.has(count)) return;
@@ -231,16 +316,16 @@ document.addEventListener('DOMContentLoaded', () => {
             counts.push(String(count));
         };
 
-        tokens.forEach(token => {
-            if (token.includes('-')) {
-                const [a, b] = token.split('-').map(part => parseInt(part.trim(), 10));
+        countParts.forEach(partText => {
+            if (partText.includes('-')) {
+                const [a, b] = partText.split('-').map(part => parseInt(part.trim(), 10));
                 const start = Math.min(a, b);
                 const end = Math.max(a, b);
                 for (let count = start; count <= end; count++) {
                     addCount(count);
                 }
             } else {
-                addCount(parseInt(token, 10));
+                addCount(parseInt(partText, 10));
             }
         });
 
@@ -253,13 +338,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const loadCountResults = async (count, filters) => {
-        const response = await fetch(`./data/${count}.txt`);
+        const meta = datasetManifest?.counts?.[String(count)] || { total: 0, indexed: 0 };
+        const response = await fetch(`${DATA_DIR}/${count}.txt`);
         if (!response.ok) {
-            return { count, rawTotal: 0, results: [], missing: true };
+            return {
+                count,
+                rawTotal: 0,
+                indexedTotal: meta.indexed || 0,
+                fullTotal: meta.total || 0,
+                results: [],
+                missing: true
+            };
         }
 
         const text = await response.text();
         const rawWands = text.trim().split('\n').filter(Boolean);
+        const indexedTotal = meta.indexed || rawWands.length;
+        const fullTotal = meta.total || rawWands.length;
 
         const results = rawWands.map(w => {
             const parts = w.trim().split(',');
@@ -285,16 +380,20 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         }).sort((a, b) => a.length - b.length);
 
-        return { count, rawTotal: rawWands.length, results, missing: false };
+        return { count, rawTotal: rawWands.length, indexedTotal, fullTotal, results, missing: false };
     };
 
     const utf8ToBase64 = (value) => window.btoa(unescape(encodeURIComponent(value)));
     const getTwweUrl = (wand) => `${SIMULATOR_BASE_URL}?wand=${encodeURIComponent(utf8ToBase64(getTwweWandText(wand)))}`;
+    const getPhasingUrl = (wand) => `${SIMULATOR_BASE_URL}?wand=${encodeURIComponent(utf8ToBase64(getPhasingWandText(wand)))}`;
 
     const getIconsHtml = (parts) => parts.map(p => {
         const data = SPELL_DATA[p];
         if (data) {
             const name = currentLang === 'zh' ? data.zh : data.en;
+            if (!data.icon) {
+                return `<span class="spell-icon-res spell-icon-fallback" title="${name}">${data.label}</span>`;
+            }
             return `<img src="assets/spells/${data.icon}" class="spell-icon-res" title="${name}">`;
         }
         return `<span class="count-badge">${p}</span>`;
@@ -305,7 +404,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="spell-icons-row">${getIconsHtml(item.parts)}</div>
             <div class="wand-result-main">
                 <div class="wand-text-id">${item.wand}</div>
-                <a class="twwe-link" href="${getTwweUrl(item.wand)}" target="_blank" rel="noopener">${t('twwe_btn')}</a>
+                <div class="twwe-actions">
+                    <a class="twwe-link" href="${getTwweUrl(item.wand)}" target="_blank" rel="noopener">${t('twwe_btn')}</a>
+                    <a class="twwe-link phasing-link" href="${getPhasingUrl(item.wand)}" target="_blank" rel="noopener">PHASING_ARC</a>
+                </div>
             </div>
         </div>
     `;
@@ -347,7 +449,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="count-badge">${item.length} ${t('table_slots')}</span>
                     </div>
                 `).join('')
-                : `<div class="range-empty">${group.missing ? t('status_no_results', group.count) : t('status_no_matches', group.rawTotal)}</div>`;
+                : `<div class="range-empty">${group.missing ? t('status_no_results', group.count) : t('status_no_matches', group.indexedTotal, group.fullTotal)}</div>`;
 
             return `
                 <section class="range-column">
@@ -382,7 +484,8 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const filters = getActiveFilters();
             const loaded = await Promise.all(counts.map(count => loadCountResults(count, filters)));
-            const rawTotal = loaded.reduce((total, item) => total + item.rawTotal, 0);
+            const indexedTotal = loaded.reduce((total, item) => total + item.indexedTotal, 0);
+            const fullTotal = loaded.reduce((total, item) => total + item.fullTotal, 0);
             const results = loaded.flatMap(item => item.results);
             const limit = 500;
             const displayed = counts.length === 1
@@ -390,7 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 : loaded.flatMap(item => item.results.slice(0, Math.max(1, Math.floor(limit / counts.length)))).slice(0, limit);
 
             if (displayed.length === 0) {
-                elements.status.textContent = rawTotal === 0 ? t('status_no_results', counts.join(', ')) : t('status_no_matches', rawTotal);
+                elements.status.textContent = indexedTotal === 0 ? t('status_no_results', counts.join(', ')) : t('status_no_matches', indexedTotal, fullTotal);
                 return;
             }
 
@@ -400,8 +503,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderRangeResults(loaded, Math.max(1, Math.floor(limit / counts.length)), limit);
             }
             elements.status.textContent = counts.length === 1
-                ? t('status_complete', results.length, displayed.length)
-                : t('status_complete_range', results.length, displayed.length, counts.length);
+                ? t('status_complete', results.length, displayed.length, indexedTotal, fullTotal)
+                : t('status_complete_range', results.length, displayed.length, counts.length, indexedTotal, fullTotal);
             elements.resultsContainer.classList.add('visible');
             closeSidebarOnMobile();
         } catch (error) {
@@ -421,11 +524,24 @@ document.addEventListener('DOMContentLoaded', () => {
         updateUIStrings();
     };
 
+    const loadManifest = async () => {
+        try {
+            const response = await fetch(`${DATA_DIR}/_manifest.json`);
+            if (response.ok) {
+                datasetManifest = await response.json();
+            }
+        } catch (error) {
+            console.warn('Dataset manifest unavailable.', error);
+        }
+    };
+
     // --- Initialization ---
     elements.searchBtn.addEventListener('click', handleSearch);
     elements.targetCount.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') handleSearch();
     });
 
-    updateUIStrings();
+    elements.minSlots.max = String(MAX_SLOTS);
+    elements.maxSlots.max = String(MAX_SLOTS);
+    loadManifest().finally(updateUIStrings);
 });
