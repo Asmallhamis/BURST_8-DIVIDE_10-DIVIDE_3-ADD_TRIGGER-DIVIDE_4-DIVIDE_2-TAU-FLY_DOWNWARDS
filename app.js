@@ -27,22 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
             dataset_label: "数据来源 / 初始抽取数",
             dataset_all: "全部来源（分别标注条件）",
             dataset_legacy: "旧数据 · 抽取 26 · 最多 9 槽",
-            dataset_contribution: "KoObEy · 抽取 1 · 最多 11 槽",
+            dataset_contribution: "Ko0bEy · 抽取 1 · 最多 11 槽",
             half_label: "IF_HALF 初始状态（仅贡献数据）",
             half_all: "全部状态",
             notes_title: "数据来源、计算条件与验证说明",
             notes_intro: "相同法术排列在不同初始抽取数或 IF_HALF 状态下，产出可能不同。抽取数不是施放次数，也不是最终执行的法术数。请按结果旁的条件使用配方。",
-            notes_legacy: "旧数据：13 种法术、最多 9 槽；初始抽取 26、施放 1 次，统计 FLY_DOWNWARDS（向下飞行）的执行次数。页面使用每个产出最多 1,000 条的样本索引；未命中筛选条件不代表不存在配方。",
-            notes_contribution: "贡献数据：KoObEy 于 2026-09-26 提供；12 种法术、最多 11 槽，初始抽取 1。原表共 171,084 条、2,978 种产出值。网站将原表的 ELECTRIC_CHARGE（电荷）统一映射为 FLY_DOWNWARDS（向下飞行），按相同产出和相同排列合并重复配方，保留所有来源、抽取数和 half 条件；原始 CSV 保持不变。",
-            notes_validation: "验证：全表已检查字段、法术编码、长度、条件及重复项；另用 wand_eval_tree 抽样复算 310 条，抽取 1 时全部吻合，改成 26 时有 8 条产出变化。未对全部结果复算。样本使用施放 1 次、法力 10,000、无限法术、无模组；贡献者未提供完整模拟器配置。",
+            notes_legacy: "旧数据：13 种法术、最多 9 槽；初始抽取 26、施放 1 次，统计 FLY_DOWNWARDS（向下飞行）的执行次数。其中黑洞固定为 0 次数（BLACK_HOLE#0），不受“无限法术”天赋影响。页面使用每个产出最多 1,000 条的样本索引；未命中筛选条件不代表不存在配方。",
+            notes_contribution: "贡献数据：Ko0bEy 于 2026-09-26 提供；12 种法术、最多 11 槽，初始抽取 1。这批法术池包含血魔法，不包含黑洞。原表共 171,084 条、2,978 种产出值。网站将原表的 ELECTRIC_CHARGE（电荷）统一映射为 FLY_DOWNWARDS（向下飞行），按相同产出和相同排列合并重复配方，保留所有来源、抽取数和 half 条件；原始 CSV 保持不变。",
+            notes_validation: "验证：全表已检查字段、法术编码、长度、条件及重复项；另用 wand_eval_tree 抽样复算 310 条，抽取 1 时全部吻合，改成 26 时有 8 条产出变化。未对全部结果复算。我们复算时使用施放 1 次、法力 10,000、无模组。以上是我们的复算设置，贡献者的原始完整配置未提供。",
             notes_half: "half=0/1 表示 IF_HALF 的初始状态。界面只对 half=1 添加醒目标记，常规的 half=0 不显示；合并结果还支持其他条件时，标记为“IF_HALF=1 可用”。完整条件仍保留在悬停说明和复制内容中。来源和 half 筛选只保留匹配的条件。TWWE 链接打开统一装配模板，复现时请按配方条件设置抽取数及 half。",
             source_csv: "原始 CSV",
             validation_csv: "抽样复算记录",
             dataset_docs: "详细说明 / 导入方法",
             legacy_condition: "旧数据 · 初始抽取 26 · 向下飞行计数",
-            contribution_condition: (draws, half) => `KoObEy · 初始抽取 ${draws} · IF_HALF 初始状态 ${half} · 向下飞行计数`,
+            contribution_condition: (draws, half) => `Ko0bEy · 初始抽取 ${draws} · IF_HALF 初始状态 ${half} · 向下飞行计数`,
             legacy_condition_short: "旧 · 抽26",
-            contribution_condition_short: (draws) => `KoObEy · 抽${draws}`,
+            contribution_condition_short: (draws) => `Ko0bEy · 抽${draws}`,
             half_one_label: "IF_HALF=1",
             half_one_supported: "IF_HALF=1 可用",
             template_hint: "打开统一装配模板；复现时按配方条件设置抽取数及 half",
@@ -81,22 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
             dataset_label: "Dataset / initial draw count",
             dataset_all: "All sources (conditions shown separately)",
             dataset_legacy: "Legacy · draw 26 · up to 9 slots",
-            dataset_contribution: "KoObEy · draw 1 · up to 11 slots",
+            dataset_contribution: "Ko0bEy · draw 1 · up to 11 slots",
             half_label: "Initial IF_HALF state (contribution only)",
             half_all: "Both states",
             notes_title: "Sources, evaluation conditions and validation",
             notes_intro: "The same spell sequence can produce different counts with different initial draws or IF_HALF states. Initial draws are not the number of casts or the final number of spell executions. Use the conditions shown beside each recipe.",
-            notes_legacy: "Legacy data: 13 spells, up to 9 slots; initial draw 26, one cast, counting FLY_DOWNWARDS executions. This page uses a sample index of up to 1,000 recipes per output. No filtered match does not prove that no recipe exists.",
-            notes_contribution: "Contribution: supplied by KoObEy on 2026-09-26; 12 spells, up to 11 slots, initial draw 1. The original export contains 171,084 rows and 2,978 output counts. The website maps ELECTRIC_CHARGE to FLY_DOWNWARDS and merges recipes with the same output and normalized sequence, retaining all sources, draws and half states. The original CSV is unchanged.",
-            notes_validation: "Validation: all rows were checked for fields, spell codes, lengths, conditions and duplicates. A 310-row sample was reevaluated with wand_eval_tree: all matched at draw 1; 8 changed at draw 26. The entire dataset has not been reevaluated. Sample settings: one cast, 10,000 mana, unlimited spells, no mods. The contributor's complete simulator configuration was not supplied.",
+            notes_legacy: "Legacy data: 13 spells, up to 9 slots; initial draw 26, one cast, counting FLY_DOWNWARDS executions. Black Hole is explicitly set to zero charges (BLACK_HOLE#0) and is exempt from the Unlimited Spells perk. This page uses a sample index of up to 1,000 recipes per output. No filtered match does not prove that no recipe exists.",
+            notes_contribution: "Contribution: supplied by Ko0bEy on 2026-09-26; 12 spells, up to 11 slots, initial draw 1. This pool includes Blood Magic and does not include Black Hole. The original export contains 171,084 rows and 2,978 output counts. The website maps ELECTRIC_CHARGE to FLY_DOWNWARDS and merges recipes with the same output and normalized sequence, retaining all sources, draws and half states. The original CSV is unchanged.",
+            notes_validation: "Validation: all rows were checked for fields, spell codes, lengths, conditions and duplicates. A 310-row sample was reevaluated with wand_eval_tree: all matched at draw 1; 8 changed at draw 26. The entire dataset has not been reevaluated. Our sample check used one cast, 10,000 mana and no mods. These are our reevaluation settings. The contributor's complete original configuration was not supplied.",
             notes_half: "half=0/1 records the initial IF_HALF state. Only half=1 receives a highlighted badge; the usual half=0 is not displayed. If a merged recipe also has other matching conditions, the badge says “IF_HALF=1 supported”. Full conditions remain in the tooltip and copied text. Source and half filters retain only matching conditions. TWWE links open the shared assembly templates; use the recipe's initial draws and half when reproducing it.",
             source_csv: "Original CSV",
             validation_csv: "Validation sample",
             dataset_docs: "Details / import instructions",
             legacy_condition: "Legacy · initial draw 26 · FLY_DOWNWARDS count",
-            contribution_condition: (draws, half) => `KoObEy · initial draw ${draws} · initial IF_HALF state ${half} · FLY_DOWNWARDS count`,
+            contribution_condition: (draws, half) => `Ko0bEy · initial draw ${draws} · initial IF_HALF state ${half} · FLY_DOWNWARDS count`,
             legacy_condition_short: "Legacy · D26",
-            contribution_condition_short: (draws) => `KoObEy · D${draws}`,
+            contribution_condition_short: (draws) => `Ko0bEy · D${draws}`,
             half_one_label: "IF_HALF=1",
             half_one_supported: "IF_HALF=1 supported",
             template_hint: "Open the shared assembly template; set initial draws and half to the recipe conditions",
@@ -690,7 +690,7 @@ document.addEventListener('DOMContentLoaded', () => {
             [CONTRIBUTION_DIR, manifest => { contributionManifest = manifest; }]
         ].map(async ([directory, save]) => {
             try {
-                const response = await fetch(`${directory}/_manifest.json?v=20261003-contribution-2`);
+                const response = await fetch(`${directory}/_manifest.json?v=20261004-text`);
                 if (!response.ok) throw new Error('Manifest unavailable');
                 save(await response.json());
             } catch (error) {
@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const conditions = JSON.parse(decodeURIComponent(button.dataset.conditions));
         const conditionText = conditions.map(condition => condition.source === 'legacy'
             ? 'Legacy: initial draws 26'
-            : `KoObEy (2026-09-26): initial draws ${condition.draws}, initial IF_HALF state ${condition.half}`
+            : `Ko0bEy (2026-09-26): initial draws ${condition.draws}, initial IF_HALF state ${condition.half}`
         ).join('\n');
         const text = `Sequence: ${wand || '(empty)'}\nCounted spell: FLY_DOWNWARDS\nExpected output: ${target}\nConditions:\n${conditionText}`;
         try {

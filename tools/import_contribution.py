@@ -1,4 +1,4 @@
-"""Import KoObEy's format-v4 CSV without changing its spells or conditions."""
+"""Import Ko0bEy's format-v4 CSV without changing its spells or conditions."""
 
 import argparse
 import csv
@@ -101,7 +101,7 @@ def build_index(source, output_dir):
         (output_dir / f"{bucket}.json").write_text(json.dumps(values, separators=(",", ":")) + "\n", encoding="utf-8")
     manifest = {
         "dataset": "koobey-20260926",
-        "contributor": "KoObEy",
+        "contributor": "Ko0bEy",
         "contributed_on": "2026-09-26",
         "index_type": "contributed_shortest",
         "target_spell": "ELECTRIC_CHARGE",

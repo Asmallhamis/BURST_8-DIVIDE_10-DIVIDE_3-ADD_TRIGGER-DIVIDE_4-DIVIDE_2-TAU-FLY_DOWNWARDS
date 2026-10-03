@@ -2,9 +2,9 @@
 
 ## Current datasets / 当前数据
 
-The page combines the existing 13-spell / 9-slot index (initial draw 26) and KoObEy's 2026-09-26 contribution (12 spells / 11 slots, initial draw 1). Contributed `ELECTRIC_CHARGE` spells are normalized to `FLY_DOWNWARDS` before filtering, display, copying and simulator links. Recipes with the same output and normalized sequence appear once, retaining all matching sources, draws and `half` states. See [DATASETS.md](DATASETS.md) for provenance, validation limits and import instructions. The original 8-spell project description is retained below.
+The page combines the existing 13-spell / 9-slot index (initial draw 26) and Ko0bEy's 2026-09-26 contribution (12 spells / 11 slots, initial draw 1). Contributed `ELECTRIC_CHARGE` spells are normalized to `FLY_DOWNWARDS` before filtering, display, copying and simulator links. Recipes with the same output and normalized sequence appear once, retaining all matching sources, draws and `half` states. See [DATASETS.md](DATASETS.md) for provenance, validation limits and import instructions. The original 8-spell project description is retained below.
 
-已接入 KoObEy 提供的 171,084 条原始记录，电荷统一转换为向下飞行后参与筛选和显示；相同产出、相同排列只显示一条，合并保留来源、初始抽取数和 `half` 条件。原附件保留以便追溯，旧数据仍可单独查询。详见 [数据集说明](DATASETS.md)。下方保留项目最初的 8 法术版本介绍。
+已接入 Ko0bEy 提供的 171,084 条原始记录，电荷统一转换为向下飞行后参与筛选和显示；相同产出、相同排列只显示一条，合并保留来源、初始抽取数和 `half` 条件。原附件保留以便追溯，旧数据仍可单独查询。详见 [数据集说明](DATASETS.md)。下方保留项目最初的 8 法术版本介绍。
 
 🔗 **[在线查询工具 (Live Tool)](https://asmallhamis.github.io/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/)**
 
