@@ -636,7 +636,7 @@ document.addEventListener('DOMContentLoaded', () => {
             [CONTRIBUTION_DIR, manifest => { contributionManifest = manifest; }]
         ].map(async ([directory, save]) => {
             try {
-                const response = await fetch(`${directory}/_manifest.json`);
+                const response = await fetch(`${directory}/_manifest.json?v=20261003-contribution-2`);
                 if (!response.ok) throw new Error('Manifest unavailable');
                 save(await response.json());
             } catch (error) {
