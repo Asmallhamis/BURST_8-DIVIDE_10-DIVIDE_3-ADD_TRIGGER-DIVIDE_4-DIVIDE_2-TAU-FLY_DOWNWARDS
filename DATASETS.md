@@ -1,13 +1,13 @@
 # Dataset conditions / 数据集说明
 
-The website keeps datasets separate and labels every recipe with its source, initial draw count and counted spell. A numeric output from one dataset is not a claim that the same sequence produces that output under another dataset's conditions.
+The website normalizes contributed `ELECTRIC_CHARGE` spells to `FLY_DOWNWARDS` before filtering and presentation. Within each output count, identical normalized spell sequences are merged into one recipe. Every matching source, initial draw count and half state is retained on that recipe. Different output counts are never merged.
 
-网站分别保存两批数据，每条配方标明来源、初始抽取数和计数法术。初始抽取数不是施放次数，也不是最终执行的法术数。相同配方换一个条件可能产生不同结果。
+网站将贡献数据中的电荷统一转换为向下飞行后筛选、显示、复制并生成模拟器链接。同一产出下，相同排列只显示一条，合并保留来源、初始抽取数和 `half` 条件；不同产出不合并。初始抽取数不是施放次数。原始文件仍分别保存，便于追溯。
 
 | Dataset / 数据集 | Initial draws / 初始抽取 | Counted spell / 计数法术 | Search scope / 搜索范围 |
 | --- | --- | --- | --- |
 | Legacy / 旧数据 | 26 | `FLY_DOWNWARDS` | 13-spell pool, up to 9 slots |
-| KoObEy, 2026-09-26 | 1 | `ELECTRIC_CHARGE` | 12-spell pool, up to 11 slots, `half=0/1` |
+| KoObEy, 2026-09-26 | 1 | `FLY_DOWNWARDS` (original: `ELECTRIC_CHARGE`) | 12-spell pool, up to 11 slots, `half=0/1` |
 
 ## Legacy index
 
@@ -27,12 +27,15 @@ The contributor supplied `429fc2ee33a66c94.csv` in the 2026-09-26 conversation a
 - `max_count=50000` is the search setting, not the maximum output present in this file.
 - `keep=shortest` describes the contributor's search. These rows are not all enumerated candidates, and do not establish optimality under other pools, draw counts or simulator assumptions.
 - The contributor noted that the run used only draw 1 because `max-draws` was omitted. This is a supported condition, not grounds for discarding the results.
-- `half` is retained per row as the initial `IF_HALF` state. Rows with identical sequences and different states remain distinct. Selecting a half state filters contributed rows only.
-- The original target spell is preserved as `ELECTRIC_CHARGE`. It is not silently replaced with `FLY_DOWNWARDS`.
+- `half` is retained as the initial `IF_HALF` state. Records with the same output and sequence but different states share one displayed recipe with all conditions listed. Selecting a half state filters contributed records before merging; excluded conditions are not shown on the merged result.
+- The compact recipe view highlights `IF_HALF=1` and omits the ordinary `half=0` label. If a merged result also has another matching condition, the badge reads `IF_HALF=1 supported`, not a requirement for every variant. Tooltips and copied recipes retain the complete conditions, including zero states.
+- The source CSV and compact buckets preserve the original symbols. The frontend maps `ELECTRIC_CHARGE` to `FLY_DOWNWARDS` before computing spell inventory counts and recipe keys. The inventory filter, icons, copied sequence and simulator links all use the normalized spell.
 - The contribution includes recipes with two `BURST_8` spells. The default inventory filter does not exclude them.
-- Copying a contributed recipe includes the source, spell sequence, initial draws, initial half state and expected electric-charge count. The old TWWE wrapper is not applied to contributed rows, because it would change the evaluation context.
+- Every recipe has the same Copy, TWWE and PHASING_ARC actions. Copy includes the normalized sequence, expected output and every matching source/draw/half condition. Simulator links use the existing shared assembly templates; users must match initial draws and half to the listed recipe conditions when reproducing an output.
 
-贡献数据保留全部原始记录及其条件，包括空序列和不同 `half` 状态。最多 11 槽、初始抽取 1；查询结果不宣称是任意条件下的全局最优解。复制配方时会附带计算条件。
+贡献数据保留全部原始记录及其条件，包括空序列和不同 `half` 状态。网站先归一化、筛选，再按“产出 + 排列”合并重复配方。复制会带上合并后的完整条件。最多 11 槽、初始抽取 1；查询结果不宣称是任意条件下的全局最优解。
+
+For example, `TAU,DIVIDE_10,DIVIDE_10,FLY_DOWNWARDS,FLY_DOWNWARDS,RESET` and the same sequence with `ELECTRIC_CHARGE` become a single recipe when their output counts match. If one record requires draw 26 and another draw 1, both conditions remain attached to that recipe.
 
 ### Symbol mapping
 
@@ -63,7 +66,7 @@ Evaluation used one cast, 10,000 starting/max mana, unlimited spells, no mods an
 
 - `ELECTRIC_CHARGE`, initial draw 1: **310/310 matched** the supplied output.
 - `ELECTRIC_CHARGE`, initial draw 26: **8/310 differed** from the supplied output.
-- As an additional sample comparison, replacing only `m` with `FLY_DOWNWARDS` gave the same respective counts. This is not used to change the published recipes.
+- Replacing only `m` with `FLY_DOWNWARDS` gave the same respective counts in all 310 sampled rows. The website uses this normalization for the count model as requested by the project author. This does not claim that the spells have identical in-game effects or mana costs.
 - Example: `0+m` (`DIVIDE_10,ADD_TRIGGER,ELECTRIC_CHARGE`) produced 10 at draw 1 and 11 at draw 26.
 
 The complete sample results are in [`validation-sample.csv`](data-contrib/koobey-20260926/validation-sample.csv). Only these sampled rows have been simulated again; the website does not label the entire contribution as simulation-verified.
@@ -79,4 +82,4 @@ python -B -m unittest discover -s tools -p test_import_contribution.py -v
 python -B tools/import_contribution.py /path/to/429fc2ee33a66c94.csv /path/to/empty-output-directory
 ```
 
-The importer writes `_manifest.json`, the original CSV and JSON buckets of 100 output values. A bucket maps each output value to `[sequence, draws, half]` rows. The manifest defines the symbol mapping and exact row counts. No shortest-result pruning or spell substitution is performed during import. The validation sample is a separately retained audit record and is not regenerated by the importer.
+The importer writes `_manifest.json`, the original CSV and JSON buckets of 100 output values. A bucket maps each output value to `[sequence, draws, half]` rows. The manifest defines the original symbol mapping and exact source-record counts. The import archive remains lossless; spell normalization and recipe deduplication happen in the frontend before display. The validation sample is a separately retained audit record and is not regenerated by the importer.

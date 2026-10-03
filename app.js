@@ -33,20 +33,26 @@ document.addEventListener('DOMContentLoaded', () => {
             notes_title: "数据来源、计算条件与验证说明",
             notes_intro: "相同法术排列在不同初始抽取数或 IF_HALF 状态下，产出可能不同。抽取数不是施放次数，也不是最终执行的法术数。请按结果旁的条件使用配方。",
             notes_legacy: "旧数据：13 种法术、最多 9 槽；初始抽取 26、施放 1 次，统计 FLY_DOWNWARDS（向下飞行）的执行次数。页面使用每个产出最多 1,000 条的样本索引；未命中筛选条件不代表不存在配方。",
-            notes_contribution: "贡献数据：KoObEy 于 2026-09-26 提供；12 种法术、最多 11 槽，初始抽取 1。原表保留本次搜索中的最短解，共 171,084 条、2,978 种产出值。统计 ELECTRIC_CHARGE（电荷），保留原法术及 half=0/1，不替换为向下飞行，不保证其他条件下也最优。",
+            notes_contribution: "贡献数据：KoObEy 于 2026-09-26 提供；12 种法术、最多 11 槽，初始抽取 1。原表共 171,084 条、2,978 种产出值。网站将原表的 ELECTRIC_CHARGE（电荷）统一映射为 FLY_DOWNWARDS（向下飞行），按相同产出和相同排列合并重复配方，保留所有来源、抽取数和 half 条件；原始 CSV 保持不变。",
             notes_validation: "验证：全表已检查字段、法术编码、长度、条件及重复项；另用 wand_eval_tree 抽样复算 310 条，抽取 1 时全部吻合，改成 26 时有 8 条产出变化。未对全部结果复算。样本使用施放 1 次、法力 10,000、无限法术、无模组；贡献者未提供完整模拟器配置。",
-            notes_half: "half=0/1 表示 IF_HALF 的初始状态。它不是法术数量，也不表示配方在两种状态下都有相同产出。复制贡献配方时会一并复制抽取数、half 和计数目标。",
+            notes_half: "half=0/1 表示 IF_HALF 的初始状态。界面只对 half=1 添加醒目标记，常规的 half=0 不显示；合并结果还支持其他条件时，标记为“IF_HALF=1 可用”。完整条件仍保留在悬停说明和复制内容中。来源和 half 筛选只保留匹配的条件。TWWE 链接打开统一装配模板，复现时请按配方条件设置抽取数及 half。",
             source_csv: "原始 CSV",
             validation_csv: "抽样复算记录",
             dataset_docs: "详细说明 / 导入方法",
             legacy_condition: "旧数据 · 初始抽取 26 · 向下飞行计数",
-            contribution_condition: (draws, half) => `KoObEy · 初始抽取 ${draws} · IF_HALF 初始状态 ${half} · 电荷计数`,
+            contribution_condition: (draws, half) => `KoObEy · 初始抽取 ${draws} · IF_HALF 初始状态 ${half} · 向下飞行计数`,
+            legacy_condition_short: "旧 · 抽26",
+            contribution_condition_short: (draws) => `KoObEy · 抽${draws}`,
+            half_one_label: "IF_HALF=1",
+            half_one_supported: "IF_HALF=1 可用",
+            template_hint: "打开统一装配模板；复现时按配方条件设置抽取数及 half",
             copy_recipe: "复制配方和条件",
+            copy_recipe_short: "复制",
             copied: "已复制",
             copy_failed: "复制失败，请手动选取配方和条件",
             empty_wand: "空序列",
-            status_combined: (matches, shown, legacyIndexed, legacyTotal, contributed) => `匹配 ${formatNumber(matches)} 条，展示 ${formatNumber(shown)} 条；旧数据索引 ${formatNumber(legacyIndexed)} / 全量命中 ${formatNumber(legacyTotal)} 条，贡献数据读取 ${formatNumber(contributed)} 条。`,
-            status_contributed: (matches, shown, total) => `贡献数据：读取 ${formatNumber(total)} 条，按条件匹配 ${formatNumber(matches)} 条，展示 ${formatNumber(shown)} 条。`,
+            status_combined: (matches, shown, legacyIndexed, legacyTotal, contributed) => `去重后匹配 ${formatNumber(matches)} 条配方，展示 ${formatNumber(shown)} 条；旧数据索引 ${formatNumber(legacyIndexed)} / 全量命中 ${formatNumber(legacyTotal)} 条，贡献数据读取 ${formatNumber(contributed)} 条记录。`,
+            status_contributed: (matches, shown, total) => `贡献数据：读取 ${formatNumber(total)} 条记录，去重后匹配 ${formatNumber(matches)} 条配方，展示 ${formatNumber(shown)} 条。`,
             no_filtered_results: "当前来源和筛选条件下无匹配结果。"
         },
         en: {
@@ -81,20 +87,26 @@ document.addEventListener('DOMContentLoaded', () => {
             notes_title: "Sources, evaluation conditions and validation",
             notes_intro: "The same spell sequence can produce different counts with different initial draws or IF_HALF states. Initial draws are not the number of casts or the final number of spell executions. Use the conditions shown beside each recipe.",
             notes_legacy: "Legacy data: 13 spells, up to 9 slots; initial draw 26, one cast, counting FLY_DOWNWARDS executions. This page uses a sample index of up to 1,000 recipes per output. No filtered match does not prove that no recipe exists.",
-            notes_contribution: "Contribution: supplied by KoObEy on 2026-09-26; 12 spells, up to 11 slots, initial draw 1. The export retains shortest solutions within that search: 171,084 rows and 2,978 output counts. It counts ELECTRIC_CHARGE and preserves the original spells and half=0/1, without substituting FLY_DOWNWARDS or claiming optimality under other conditions.",
+            notes_contribution: "Contribution: supplied by KoObEy on 2026-09-26; 12 spells, up to 11 slots, initial draw 1. The original export contains 171,084 rows and 2,978 output counts. The website maps ELECTRIC_CHARGE to FLY_DOWNWARDS and merges recipes with the same output and normalized sequence, retaining all sources, draws and half states. The original CSV is unchanged.",
             notes_validation: "Validation: all rows were checked for fields, spell codes, lengths, conditions and duplicates. A 310-row sample was reevaluated with wand_eval_tree: all matched at draw 1; 8 changed at draw 26. The entire dataset has not been reevaluated. Sample settings: one cast, 10,000 mana, unlimited spells, no mods. The contributor's complete simulator configuration was not supplied.",
-            notes_half: "half=0/1 records the initial IF_HALF state. It is not a spell count and does not mean the recipe has the same output in both states. Copying a contributed recipe includes its initial draws, half and counted spell.",
+            notes_half: "half=0/1 records the initial IF_HALF state. Only half=1 receives a highlighted badge; the usual half=0 is not displayed. If a merged recipe also has other matching conditions, the badge says “IF_HALF=1 supported”. Full conditions remain in the tooltip and copied text. Source and half filters retain only matching conditions. TWWE links open the shared assembly templates; use the recipe's initial draws and half when reproducing it.",
             source_csv: "Original CSV",
             validation_csv: "Validation sample",
             dataset_docs: "Details / import instructions",
             legacy_condition: "Legacy · initial draw 26 · FLY_DOWNWARDS count",
-            contribution_condition: (draws, half) => `KoObEy · initial draw ${draws} · initial IF_HALF state ${half} · ELECTRIC_CHARGE count`,
+            contribution_condition: (draws, half) => `KoObEy · initial draw ${draws} · initial IF_HALF state ${half} · FLY_DOWNWARDS count`,
+            legacy_condition_short: "Legacy · D26",
+            contribution_condition_short: (draws) => `KoObEy · D${draws}`,
+            half_one_label: "IF_HALF=1",
+            half_one_supported: "IF_HALF=1 supported",
+            template_hint: "Open the shared assembly template; set initial draws and half to the recipe conditions",
             copy_recipe: "Copy recipe and conditions",
+            copy_recipe_short: "Copy",
             copied: "Copied",
             copy_failed: "Copy failed; select the recipe and conditions manually",
             empty_wand: "Empty sequence",
-            status_combined: (matches, shown, legacyIndexed, legacyTotal, contributed) => `${formatNumber(matches)} matches, showing ${formatNumber(shown)}; legacy ${formatNumber(legacyIndexed)} indexed / ${formatNumber(legacyTotal)} full hits, ${formatNumber(contributed)} contributed rows read.`,
-            status_contributed: (matches, shown, total) => `Contribution: ${formatNumber(total)} rows read, ${formatNumber(matches)} matching the filters, showing ${formatNumber(shown)}.`,
+            status_combined: (matches, shown, legacyIndexed, legacyTotal, contributed) => `${formatNumber(matches)} unique matching recipes, showing ${formatNumber(shown)}; legacy ${formatNumber(legacyIndexed)} indexed / ${formatNumber(legacyTotal)} full hits, ${formatNumber(contributed)} contributed records read.`,
+            status_contributed: (matches, shown, total) => `Contribution: ${formatNumber(total)} records read, ${formatNumber(matches)} unique matching recipes, showing ${formatNumber(shown)}.`,
             no_filtered_results: "No matches for the selected source and filters."
         }
     };
@@ -149,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "IF_HP": { icon: "if_hp.png", label: "HP", zh: "要求：生命值", en: "Requirement: HP" },
         "IF_END": { icon: "if_end.png", label: "END", zh: "条件结束", en: "If End" },
         "BLACK_HOLE#0": { icon: "black_hole.png", label: "BH0", zh: "黑洞（0 次）", en: "Black Hole (0 charges)" },
-        "ELECTRIC_CHARGE": { icon: "electric_charge.png", label: "EC", zh: "电荷", en: "Electric Charge" },
         "IF_HALF": { icon: "if_half.png", label: "HALF", zh: "要求：每隔一次", en: "Requirement: Every Other" },
         "BLOOD_MAGIC": { icon: "blood_magic.png", label: "BM", zh: "血魔法", en: "Blood Magic" }
     };
@@ -399,9 +410,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const makeResult = (count, parts, source, draws, half) => {
+        parts = parts.map(spell => spell === 'ELECTRIC_CHARGE' ? 'FLY_DOWNWARDS' : spell);
         const spellCounts = {};
         parts.forEach(spell => spellCounts[spell] = (spellCounts[spell] || 0) + 1);
-        return { target: count, wand: parts.join(','), parts, length: parts.length, counts: spellCounts, source, draws, half };
+        return {
+            target: count, wand: parts.join(','), parts, length: parts.length,
+            counts: spellCounts, source, draws, half, conditions: [{ source, draws, half }]
+        };
     };
 
     const loadLegacyCount = async (count) => {
@@ -439,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return rows.map(([sequence, draws, half]) => {
             const parts = [...sequence].map(code => {
                 const spell = contributionManifest.spell_codes[code];
-                if (!SPELL_DATA[spell]) throw new Error('Unknown contributed spell');
+                if (!SPELL_DATA[spell] && spell !== 'ELECTRIC_CHARGE') throw new Error('Unknown contributed spell');
                 return spell;
             });
             return makeResult(count, parts, 'contribution', draws, half);
@@ -451,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
             filters.dataset === 'contribution' ? { indexedTotal: 0, fullTotal: 0, results: [] } : loadLegacyCount(count),
             filters.dataset === 'legacy' ? [] : loadContributionCount(count)
         ]);
-        const results = [...legacy.results, ...contributed].filter(item => {
+        const filtered = [...legacy.results, ...contributed].filter(item => {
             if (item.length < filters.minS || item.length > filters.maxS) return false;
             if (item.source === 'contribution' && filters.half !== 'all' && item.half !== Number(filters.half)) return false;
             for (const [sid, config] of Object.entries(filters.spells)) {
@@ -459,7 +474,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (actualCount < config.min || actualCount > config.max) return false;
             }
             return true;
-        }).sort((a, b) => a.length - b.length);
+        });
+        // This loader handles one output count. Merge normalized sequences,
+        // keeping every condition that passed the selected filters.
+        const byWand = new Map();
+        for (const item of filtered) {
+            const existing = byWand.get(item.wand);
+            if (!existing) {
+                byWand.set(item.wand, item);
+                continue;
+            }
+            for (const condition of item.conditions) {
+                if (!existing.conditions.some(value => value.source === condition.source && value.draws === condition.draws && value.half === condition.half)) {
+                    existing.conditions.push(condition);
+                }
+            }
+        }
+        const results = [...byWand.values()].sort((a, b) => a.length - b.length);
         return {
             count, results,
             indexedTotal: legacy.indexedTotal + contributed.length,
@@ -486,18 +517,40 @@ document.addEventListener('DOMContentLoaded', () => {
         return `<span class="count-badge">${p}</span>`;
     }).join('');
 
+    const getConditionsLabel = (item, compact = false) => {
+        const groups = new Map();
+        for (const condition of item.conditions) {
+            const key = `${condition.source}:${condition.draws}`;
+            if (!groups.has(key)) groups.set(key, { ...condition, halves: [] });
+            const group = groups.get(key);
+            if (condition.half !== null && !group.halves.includes(condition.half)) group.halves.push(condition.half);
+        }
+        return [...groups.values()].map(condition => {
+            if (condition.source === 'legacy') return t(compact ? 'legacy_condition_short' : 'legacy_condition');
+            return t(compact ? 'contribution_condition_short' : 'contribution_condition', condition.draws, condition.halves.sort().join('/'));
+        }).join(' / ');
+    };
+
+    const getHalfBadgeHtml = (item) => {
+        if (!item.conditions.some(condition => condition.half === 1)) return '';
+        const hasOtherCondition = item.conditions.some(condition => condition.half !== 1);
+        return `<span class="half-one-badge" title="${getConditionsLabel(item)}">${t(hasOtherCondition ? 'half_one_supported' : 'half_one_label')}</span>`;
+    };
+
     const getWandResultHtml = (item) => `
         <div class="wand-sequence">
-            <div class="spell-icons-row">${getIconsHtml(item.parts)}</div>
-            <div class="result-conditions ${item.source}">${item.source === 'legacy' ? t('legacy_condition') : t('contribution_condition', item.draws, item.half)}</div>
             <div class="wand-result-main">
-                <div class="wand-text-id">${item.wand || t('empty_wand')}</div>
+                <div class="spell-icons-row">${getIconsHtml(item.parts)}</div>
                 <div class="twwe-actions">
-                    ${item.source === 'legacy' ? `
-                    <a class="twwe-link" href="${getTwweUrl(item.wand)}" target="_blank" rel="noopener">${t('twwe_btn')}</a>
-                    <a class="twwe-link phasing-link" href="${getPhasingUrl(item.wand)}" target="_blank" rel="noopener">PHASING_ARC</a>
-                    ` : `<button type="button" class="twwe-link copy-recipe" data-wand="${item.wand}" data-draws="${item.draws}" data-half="${item.half}" data-target="${item.target}">${t('copy_recipe')}</button>`}
+                    <a class="twwe-link" href="${getTwweUrl(item.wand)}" target="_blank" rel="noopener" title="${t('template_hint')}">TWWE</a>
+                    <a class="twwe-link phasing-link" href="${getPhasingUrl(item.wand)}" target="_blank" rel="noopener" title="${t('template_hint')}">PHASING_ARC</a>
+                    <button type="button" class="twwe-link copy-recipe" title="${t('copy_recipe')}" aria-label="${t('copy_recipe')}" data-wand="${item.wand}" data-conditions="${encodeURIComponent(JSON.stringify(item.conditions))}" data-target="${item.target}">${t('copy_recipe_short')}</button>
                 </div>
+            </div>
+            <div class="recipe-caption">
+                ${getHalfBadgeHtml(item)}
+                <span class="result-conditions" title="${getConditionsLabel(item)}">${getConditionsLabel(item, true)}</span>
+                <span class="wand-text-id" title="${item.wand || t('empty_wand')}">${item.wand || t('empty_wand')}</span>
             </div>
         </div>
     `;
@@ -513,7 +566,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tr.innerHTML = `
                 <td><span class="count-badge">${item.target}</span></td>
                 <td>${getWandResultHtml(item)}</td>
-                <td><span class="count-badge">${item.length} ${t('table_slots')}</span></td>
+                <td><span class="count-badge">${item.length}</span></td>
             `;
             elements.resultsBody.appendChild(tr);
         });
@@ -573,6 +626,7 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.resultsContainer.classList.remove('visible');
 
         try {
+            if (!manifestsReady) manifestsReady = loadManifest();
             await manifestsReady;
             const filters = getActiveFilters();
             const loaded = await Promise.all(counts.map(count => loadCountResults(count, filters)));
@@ -659,8 +713,13 @@ document.addEventListener('DOMContentLoaded', () => {
     elements.resultsContainer.addEventListener('click', async (event) => {
         const button = event.target.closest('.copy-recipe');
         if (!button) return;
-        const { wand, draws, half, target } = button.dataset;
-        const text = `Source: KoObEy (2026-09-26)\nSequence: ${wand || '(empty)'}\nInitial draws: ${draws}\nInitial IF_HALF state: ${half}\nCounted spell: ELECTRIC_CHARGE\nExpected output: ${target}\nValidation: 310 sampled rows matched; not every row reevaluated.`;
+        const { wand, target } = button.dataset;
+        const conditions = JSON.parse(decodeURIComponent(button.dataset.conditions));
+        const conditionText = conditions.map(condition => condition.source === 'legacy'
+            ? 'Legacy: initial draws 26'
+            : `KoObEy (2026-09-26): initial draws ${condition.draws}, initial IF_HALF state ${condition.half}`
+        ).join('\n');
+        const text = `Sequence: ${wand || '(empty)'}\nCounted spell: FLY_DOWNWARDS\nExpected output: ${target}\nConditions:\n${conditionText}`;
         try {
             await navigator.clipboard.writeText(text);
             button.textContent = t('copied');
@@ -671,7 +730,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elements.minSlots.max = String(MAX_SLOTS);
     elements.maxSlots.max = String(MAX_SLOTS);
-    const manifestsReady = loadManifest();
+    let manifestsReady = null;
     updateUIStrings();
     elements.status.textContent = t('status_ready');
 });
