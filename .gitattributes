@@ -1,0 +1,3 @@
+data-contrib/**/*.csv -text
+data-contrib/**/validation-sample.csv text eol=lf
+data-contrib/**/*.json text eol=lf

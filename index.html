@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noita 13 法术 9 槽穷举查询器</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Noita Wand Codex</title>
+    <link rel="stylesheet" href="style.css?v=20261003-contribution">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -29,11 +29,11 @@
                     <span class="filter-label"><span class="label-dot"></span><span data-i18n="slots_label">Wand Slots</span></span>
                     <div class="slots-inputs">
                         <div class="input-wrapper">
-                            <input type="number" id="minSlots" placeholder="Min" min="1" max="9">
+                            <input type="number" id="minSlots" placeholder="Min" min="0" max="11">
                         </div>
                         <span class="separator">-</span>
                         <div class="input-wrapper">
-                            <input type="number" id="maxSlots" placeholder="Max" min="1" max="9">
+                            <input type="number" id="maxSlots" placeholder="Max" min="0" max="11">
                         </div>
                     </div>
                 </div>
@@ -60,6 +60,24 @@
                 </header>
 
                 <div class="search-panel glass-panel glass-border">
+                    <div class="dataset-controls">
+                        <label class="dataset-control" for="datasetSelect">
+                            <span data-i18n="dataset_label">Dataset / initial draw count</span>
+                            <select id="datasetSelect">
+                                <option value="all" data-i18n="dataset_all">All sources (conditions shown separately)</option>
+                                <option value="legacy" data-i18n="dataset_legacy">Legacy · draw 26 · up to 9 slots</option>
+                                <option value="contribution" data-i18n="dataset_contribution">KoObEy · draw 1 · up to 11 slots</option>
+                            </select>
+                        </label>
+                        <label class="dataset-control" id="halfFilter" for="halfSelect">
+                            <span data-i18n="half_label">Initial IF_HALF state (contribution only)</span>
+                            <select id="halfSelect">
+                                <option value="all" data-i18n="half_all">Both states</option>
+                                <option value="0">half = 0</option>
+                                <option value="1">half = 1</option>
+                            </select>
+                        </label>
+                    </div>
                     <div class="search-box">
                         <div class="input-wrapper main-search">
                             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -72,7 +90,21 @@
                     </div>
                 </div>
 
-                <div id="status" class="status-msg" data-i18n="status_ready">Ready</div>
+                <details class="dataset-notes">
+                    <summary data-i18n="notes_title">Sources, evaluation conditions and validation</summary>
+                    <p data-i18n="notes_intro"></p>
+                    <p data-i18n="notes_legacy"></p>
+                    <p data-i18n="notes_contribution"></p>
+                    <p data-i18n="notes_validation"></p>
+                    <p data-i18n="notes_half"></p>
+                    <div class="dataset-links">
+                        <a href="data-contrib/koobey-20260926/429fc2ee33a66c94.csv" download data-i18n="source_csv">Original CSV</a>
+                        <a href="data-contrib/koobey-20260926/validation-sample.csv" download data-i18n="validation_csv">Validation sample</a>
+                        <a href="https://github.com/Asmallhamis/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/blob/main/DATASETS.md" target="_blank" rel="noopener" data-i18n="dataset_docs">Details / import instructions</a>
+                    </div>
+                </details>
+
+                <div id="status" class="status-msg" role="status" aria-live="polite">Ready</div>
 
                 <div class="results-container" id="resultsContainer">
                     <div class="table-wrapper">
@@ -105,6 +137,6 @@
         <svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20261003-contribution"></script>
 </body>
 </html>

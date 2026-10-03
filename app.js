@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             table_seq: "最简魔杖序列",
             table_slots: "槽位",
             twwe_btn: "打开 TWWE",
-            status_ready: "已准备就绪：13 法术 / 9 槽静态索引",
+            status_ready: "已准备就绪：旧数据抽取 26 / 贡献数据抽取 1，最多 11 槽",
             status_fetching: (count) => `正在读取产出量为 ${count} 的本地索引...`,
             status_fetching_range: (total) => `正在查询 ${total} 个目标产出量的本地索引...`,
             status_no_results: (count) => `索引中未找到产出量为 ${count} 的法术组合。`,
@@ -23,7 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
             status_range_empty: "请输入有效的范围或数字列表。",
             status_error: "⚠️ 查询出错，请确认网络连接或数据是否存在。",
             min_lbl: "Min",
-            max_lbl: "Max"
+            max_lbl: "Max",
+            dataset_label: "数据来源 / 初始抽取数",
+            dataset_all: "全部来源（分别标注条件）",
+            dataset_legacy: "旧数据 · 抽取 26 · 最多 9 槽",
+            dataset_contribution: "KoObEy · 抽取 1 · 最多 11 槽",
+            half_label: "IF_HALF 初始状态（仅贡献数据）",
+            half_all: "全部状态",
+            notes_title: "数据来源、计算条件与验证说明",
+            notes_intro: "相同法术排列在不同初始抽取数或 IF_HALF 状态下，产出可能不同。抽取数不是施放次数，也不是最终执行的法术数。请按结果旁的条件使用配方。",
+            notes_legacy: "旧数据：13 种法术、最多 9 槽；初始抽取 26、施放 1 次，统计 FLY_DOWNWARDS（向下飞行）的执行次数。页面使用每个产出最多 1,000 条的样本索引；未命中筛选条件不代表不存在配方。",
+            notes_contribution: "贡献数据：KoObEy 于 2026-09-26 提供；12 种法术、最多 11 槽，初始抽取 1。原表保留本次搜索中的最短解，共 171,084 条、2,978 种产出值。统计 ELECTRIC_CHARGE（电荷），保留原法术及 half=0/1，不替换为向下飞行，不保证其他条件下也最优。",
+            notes_validation: "验证：全表已检查字段、法术编码、长度、条件及重复项；另用 wand_eval_tree 抽样复算 310 条，抽取 1 时全部吻合，改成 26 时有 8 条产出变化。未对全部结果复算。样本使用施放 1 次、法力 10,000、无限法术、无模组；贡献者未提供完整模拟器配置。",
+            notes_half: "half=0/1 表示 IF_HALF 的初始状态。它不是法术数量，也不表示配方在两种状态下都有相同产出。复制贡献配方时会一并复制抽取数、half 和计数目标。",
+            source_csv: "原始 CSV",
+            validation_csv: "抽样复算记录",
+            dataset_docs: "详细说明 / 导入方法",
+            legacy_condition: "旧数据 · 初始抽取 26 · 向下飞行计数",
+            contribution_condition: (draws, half) => `KoObEy · 初始抽取 ${draws} · IF_HALF 初始状态 ${half} · 电荷计数`,
+            copy_recipe: "复制配方和条件",
+            copied: "已复制",
+            copy_failed: "复制失败，请手动选取配方和条件",
+            empty_wand: "空序列",
+            status_combined: (matches, shown, legacyIndexed, legacyTotal, contributed) => `匹配 ${formatNumber(matches)} 条，展示 ${formatNumber(shown)} 条；旧数据索引 ${formatNumber(legacyIndexed)} / 全量命中 ${formatNumber(legacyTotal)} 条，贡献数据读取 ${formatNumber(contributed)} 条。`,
+            status_contributed: (matches, shown, total) => `贡献数据：读取 ${formatNumber(total)} 条，按条件匹配 ${formatNumber(matches)} 条，展示 ${formatNumber(shown)} 条。`,
+            no_filtered_results: "当前来源和筛选条件下无匹配结果。"
         },
         en: {
             nav_title: "Noita Wand Codex",
@@ -37,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             table_seq: "Wand Sequence",
             table_slots: "Slots",
             twwe_btn: "Open TWWE",
-            status_ready: "Ready: 13-spell / 9-slot static index",
+            status_ready: "Ready: legacy draw 26 / contributed draw 1, up to 11 slots",
             status_fetching: (count) => `Reading local index for target count ${count}...`,
             status_fetching_range: (total) => `Reading local indexes for ${total} target counts...`,
             status_no_results: (count) => `No indexed combinations found for count ${count}.`,
@@ -47,7 +71,31 @@ document.addEventListener('DOMContentLoaded', () => {
             status_range_empty: "Enter a valid range or number list.",
             status_error: "⚠️ Search error. Check network or data existence.",
             min_lbl: "Min",
-            max_lbl: "Max"
+            max_lbl: "Max",
+            dataset_label: "Dataset / initial draw count",
+            dataset_all: "All sources (conditions shown separately)",
+            dataset_legacy: "Legacy · draw 26 · up to 9 slots",
+            dataset_contribution: "KoObEy · draw 1 · up to 11 slots",
+            half_label: "Initial IF_HALF state (contribution only)",
+            half_all: "Both states",
+            notes_title: "Sources, evaluation conditions and validation",
+            notes_intro: "The same spell sequence can produce different counts with different initial draws or IF_HALF states. Initial draws are not the number of casts or the final number of spell executions. Use the conditions shown beside each recipe.",
+            notes_legacy: "Legacy data: 13 spells, up to 9 slots; initial draw 26, one cast, counting FLY_DOWNWARDS executions. This page uses a sample index of up to 1,000 recipes per output. No filtered match does not prove that no recipe exists.",
+            notes_contribution: "Contribution: supplied by KoObEy on 2026-09-26; 12 spells, up to 11 slots, initial draw 1. The export retains shortest solutions within that search: 171,084 rows and 2,978 output counts. It counts ELECTRIC_CHARGE and preserves the original spells and half=0/1, without substituting FLY_DOWNWARDS or claiming optimality under other conditions.",
+            notes_validation: "Validation: all rows were checked for fields, spell codes, lengths, conditions and duplicates. A 310-row sample was reevaluated with wand_eval_tree: all matched at draw 1; 8 changed at draw 26. The entire dataset has not been reevaluated. Sample settings: one cast, 10,000 mana, unlimited spells, no mods. The contributor's complete simulator configuration was not supplied.",
+            notes_half: "half=0/1 records the initial IF_HALF state. It is not a spell count and does not mean the recipe has the same output in both states. Copying a contributed recipe includes its initial draws, half and counted spell.",
+            source_csv: "Original CSV",
+            validation_csv: "Validation sample",
+            dataset_docs: "Details / import instructions",
+            legacy_condition: "Legacy · initial draw 26 · FLY_DOWNWARDS count",
+            contribution_condition: (draws, half) => `KoObEy · initial draw ${draws} · initial IF_HALF state ${half} · ELECTRIC_CHARGE count`,
+            copy_recipe: "Copy recipe and conditions",
+            copied: "Copied",
+            copy_failed: "Copy failed; select the recipe and conditions manually",
+            empty_wand: "Empty sequence",
+            status_combined: (matches, shown, legacyIndexed, legacyTotal, contributed) => `${formatNumber(matches)} matches, showing ${formatNumber(shown)}; legacy ${formatNumber(legacyIndexed)} indexed / ${formatNumber(legacyTotal)} full hits, ${formatNumber(contributed)} contributed rows read.`,
+            status_contributed: (matches, shown, total) => `Contribution: ${formatNumber(total)} rows read, ${formatNumber(matches)} matching the filters, showing ${formatNumber(shown)}.`,
+            no_filtered_results: "No matches for the selected source and filters."
         }
     };
 
@@ -69,13 +117,18 @@ document.addEventListener('DOMContentLoaded', () => {
             el.placeholder = t(key);
         });
         document.title = t('nav_title');
+        document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
         renderFilters();
     };
 
     // --- Configuration & Data ---
     const DATA_DIR = './data13';
-    const MAX_SLOTS = 9;
+    const CONTRIBUTION_DIR = './data-contrib/koobey-20260926';
+    const MAX_SLOTS = 11;
     let datasetManifest = null;
+    let contributionManifest = null;
+    let searchGeneration = 0;
+    const contributionBuckets = new Map();
 
     const formatNumber = (value) => {
         if (value === undefined || value === null || Number.isNaN(Number(value))) return '?';
@@ -95,7 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "RESET": { icon: "reset.png", label: "R", zh: "重置", en: "Reset" },
         "IF_HP": { icon: "if_hp.png", label: "HP", zh: "要求：生命值", en: "Requirement: HP" },
         "IF_END": { icon: "if_end.png", label: "END", zh: "条件结束", en: "If End" },
-        "BLACK_HOLE#0": { icon: "black_hole.png", label: "BH0", zh: "黑洞（0 次）", en: "Black Hole (0 charges)" }
+        "BLACK_HOLE#0": { icon: "black_hole.png", label: "BH0", zh: "黑洞（0 次）", en: "Black Hole (0 charges)" },
+        "ELECTRIC_CHARGE": { icon: "electric_charge.png", label: "EC", zh: "电荷", en: "Electric Charge" },
+        "IF_HALF": { icon: "if_half.png", label: "HALF", zh: "要求：每隔一次", en: "Requirement: Every Other" },
+        "BLOOD_MAGIC": { icon: "blood_magic.png", label: "BM", zh: "血魔法", en: "Blood Magic" }
     };
     const SIMULATOR_BASE_URL = 'https://asmallhamis.github.io/TheWebWandEngine/';
     const TWWE_WAND_PREFIX = 'NOLLA,HORIZONTAL_ARC,DELAYED_SPELL,BURST_8,TENTACLE_TIMER,CASTER_CAST,TELEPORT_PROJECTILE_CLOSER,,,';
@@ -143,9 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Filter State
     Object.keys(SPELL_DATA).forEach(id => {
-        // BURST_8 always appears at most once in the dataset
-        const maxVal = id === 'BURST_8' ? 1 : Infinity;
-        filterState.spells[id] = { min: 0, max: maxVal };
+        // The contribution includes recipes with more than one BURST_8.
+        filterState.spells[id] = { min: 0, max: Infinity };
     });
 
     // --- DOM Elements ---
@@ -163,7 +218,10 @@ document.addEventListener('DOMContentLoaded', () => {
         maxSlots: document.getElementById('maxSlots'),
         sidebar: document.getElementById('sidebar'),
         mobileToggle: document.getElementById('mobileToggle'),
-        langToggle: document.getElementById('langToggle')
+        langToggle: document.getElementById('langToggle'),
+        datasetSelect: document.getElementById('datasetSelect'),
+        halfSelect: document.getElementById('halfSelect'),
+        halfFilter: document.getElementById('halfFilter')
     };
 
     // --- UI Rendering ---
@@ -334,53 +392,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getActiveFilters = () => ({
         minS: parseInt(elements.minSlots.value) || 0,
-        maxS: parseInt(elements.maxSlots.value) || 99
+        maxS: elements.maxSlots.value === '' ? MAX_SLOTS : Number(elements.maxSlots.value),
+        dataset: elements.datasetSelect.value,
+        half: elements.halfSelect.value,
+        spells: Object.fromEntries(Object.entries(filterState.spells).map(([id, config]) => [id, { ...config }]))
     });
 
-    const loadCountResults = async (count, filters) => {
-        const meta = datasetManifest?.counts?.[String(count)] || { total: 0, indexed: 0 };
-        const response = await fetch(`${DATA_DIR}/${count}.txt`);
-        if (!response.ok) {
-            return {
-                count,
-                rawTotal: 0,
-                indexedTotal: meta.indexed || 0,
-                fullTotal: meta.total || 0,
-                results: [],
-                missing: true
-            };
-        }
+    const makeResult = (count, parts, source, draws, half) => {
+        const spellCounts = {};
+        parts.forEach(spell => spellCounts[spell] = (spellCounts[spell] || 0) + 1);
+        return { target: count, wand: parts.join(','), parts, length: parts.length, counts: spellCounts, source, draws, half };
+    };
 
+    const loadLegacyCount = async (count) => {
+        if (!datasetManifest) throw new Error('Legacy manifest unavailable');
+        const meta = datasetManifest.counts[String(count)];
+        if (!meta) return { indexedTotal: 0, fullTotal: 0, results: [] };
+        const response = await fetch(`${DATA_DIR}/${count}.txt`);
+        if (!response.ok) throw new Error(`Legacy index ${count} unavailable`);
         const text = await response.text();
         const rawWands = text.trim().split('\n').filter(Boolean);
-        const indexedTotal = meta.indexed || rawWands.length;
-        const fullTotal = meta.total || rawWands.length;
+        return {
+            indexedTotal: rawWands.length,
+            fullTotal: meta.total,
+            results: rawWands.map(wand => makeResult(count, wand.trim().split(','), 'legacy', 26, null))
+        };
+    };
 
-        const results = rawWands.map(w => {
-            const parts = w.trim().split(',');
-            const spellCounts = {};
-            parts.forEach(p => spellCounts[p] = (spellCounts[p] || 0) + 1);
+    const loadContributionCount = async (count) => {
+        if (!contributionManifest) throw new Error('Contribution manifest unavailable');
+        if (!contributionManifest.counts[String(count)]) return [];
+        const bucket = Math.floor(Number(count) / contributionManifest.bucket_size) * contributionManifest.bucket_size;
+        if (!contributionBuckets.has(bucket)) {
+            const request = fetch(`${CONTRIBUTION_DIR}/${bucket}.json`).then(response => {
+                if (!response.ok) throw new Error(`Contribution index ${bucket} unavailable`);
+                return response.json();
+            }).catch(error => {
+                contributionBuckets.delete(bucket);
+                throw error;
+            });
+            contributionBuckets.set(bucket, request);
+        }
+        const data = await contributionBuckets.get(bucket);
+        const rows = data[String(count)];
+        if (!rows || rows.length !== contributionManifest.counts[String(count)]) throw new Error('Incomplete contribution index');
+        return rows.map(([sequence, draws, half]) => {
+            const parts = [...sequence].map(code => {
+                const spell = contributionManifest.spell_codes[code];
+                if (!SPELL_DATA[spell]) throw new Error('Unknown contributed spell');
+                return spell;
+            });
+            return makeResult(count, parts, 'contribution', draws, half);
+        });
+    };
 
-            return {
-                target: count,
-                wand: w.trim(),
-                parts: parts,
-                length: parts.length,
-                counts: spellCounts
-            };
-        }).filter(item => {
+    const loadCountResults = async (count, filters) => {
+        const [legacy, contributed] = await Promise.all([
+            filters.dataset === 'contribution' ? { indexedTotal: 0, fullTotal: 0, results: [] } : loadLegacyCount(count),
+            filters.dataset === 'legacy' ? [] : loadContributionCount(count)
+        ]);
+        const results = [...legacy.results, ...contributed].filter(item => {
             if (item.length < filters.minS || item.length > filters.maxS) return false;
-
-            for (const [sid, config] of Object.entries(filterState.spells)) {
+            if (item.source === 'contribution' && filters.half !== 'all' && item.half !== Number(filters.half)) return false;
+            for (const [sid, config] of Object.entries(filters.spells)) {
                 const actualCount = item.counts[sid] || 0;
-                if (actualCount < config.min || actualCount > config.max) {
-                    return false;
-                }
+                if (actualCount < config.min || actualCount > config.max) return false;
             }
             return true;
         }).sort((a, b) => a.length - b.length);
-
-        return { count, rawTotal: rawWands.length, indexedTotal, fullTotal, results, missing: false };
+        return {
+            count, results,
+            indexedTotal: legacy.indexedTotal + contributed.length,
+            legacyIndexed: legacy.indexedTotal,
+            fullTotal: legacy.fullTotal,
+            contributedTotal: contributed.length,
+            missing: legacy.indexedTotal + contributed.length === 0
+        };
     };
 
     const utf8ToBase64 = (value) => window.btoa(unescape(encodeURIComponent(value)));
@@ -402,11 +489,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const getWandResultHtml = (item) => `
         <div class="wand-sequence">
             <div class="spell-icons-row">${getIconsHtml(item.parts)}</div>
+            <div class="result-conditions ${item.source}">${item.source === 'legacy' ? t('legacy_condition') : t('contribution_condition', item.draws, item.half)}</div>
             <div class="wand-result-main">
-                <div class="wand-text-id">${item.wand}</div>
+                <div class="wand-text-id">${item.wand || t('empty_wand')}</div>
                 <div class="twwe-actions">
+                    ${item.source === 'legacy' ? `
                     <a class="twwe-link" href="${getTwweUrl(item.wand)}" target="_blank" rel="noopener">${t('twwe_btn')}</a>
                     <a class="twwe-link phasing-link" href="${getPhasingUrl(item.wand)}" target="_blank" rel="noopener">PHASING_ARC</a>
+                    ` : `<button type="button" class="twwe-link copy-recipe" data-wand="${item.wand}" data-draws="${item.draws}" data-half="${item.half}" data-target="${item.target}">${t('copy_recipe')}</button>`}
                 </div>
             </div>
         </div>
@@ -449,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="count-badge">${item.length} ${t('table_slots')}</span>
                     </div>
                 `).join('')
-                : `<div class="range-empty">${group.missing ? t('status_no_results', group.count) : t('status_no_matches', group.indexedTotal, group.fullTotal)}</div>`;
+                : `<div class="range-empty">${t('no_filtered_results')}</div>`;
 
             return `
                 <section class="range-column">
@@ -471,6 +561,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const runSearch = async (counts) => {
+        const generation = ++searchGeneration;
         if (counts.length === 0) {
             elements.status.textContent = t('status_range_empty');
             return;
@@ -482,10 +573,14 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.resultsContainer.classList.remove('visible');
 
         try {
+            await manifestsReady;
             const filters = getActiveFilters();
             const loaded = await Promise.all(counts.map(count => loadCountResults(count, filters)));
+            if (generation !== searchGeneration) return;
             const indexedTotal = loaded.reduce((total, item) => total + item.indexedTotal, 0);
             const fullTotal = loaded.reduce((total, item) => total + item.fullTotal, 0);
+            const legacyIndexed = loaded.reduce((total, item) => total + item.legacyIndexed, 0);
+            const contributedTotal = loaded.reduce((total, item) => total + item.contributedTotal, 0);
             const results = loaded.flatMap(item => item.results);
             const limit = 500;
             const displayed = counts.length === 1
@@ -493,7 +588,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 : loaded.flatMap(item => item.results.slice(0, Math.max(1, Math.floor(limit / counts.length)))).slice(0, limit);
 
             if (displayed.length === 0) {
-                elements.status.textContent = indexedTotal === 0 ? t('status_no_results', counts.join(', ')) : t('status_no_matches', indexedTotal, fullTotal);
+                elements.status.textContent = filters.dataset === 'legacy'
+                    ? (indexedTotal === 0 ? t('status_no_results', counts.join(', ')) : t('status_no_matches', indexedTotal, fullTotal))
+                    : t('no_filtered_results');
                 return;
             }
 
@@ -502,12 +599,19 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 renderRangeResults(loaded, Math.max(1, Math.floor(limit / counts.length)), limit);
             }
-            elements.status.textContent = counts.length === 1
-                ? t('status_complete', results.length, displayed.length, indexedTotal, fullTotal)
-                : t('status_complete_range', results.length, displayed.length, counts.length, indexedTotal, fullTotal);
+            if (filters.dataset === 'contribution') {
+                elements.status.textContent = t('status_contributed', results.length, displayed.length, contributedTotal);
+            } else if (filters.dataset === 'all') {
+                elements.status.textContent = t('status_combined', results.length, displayed.length, legacyIndexed, fullTotal, contributedTotal);
+            } else {
+                elements.status.textContent = counts.length === 1
+                    ? t('status_complete', results.length, displayed.length, indexedTotal, fullTotal)
+                    : t('status_complete_range', results.length, displayed.length, counts.length, indexedTotal, fullTotal);
+            }
             elements.resultsContainer.classList.add('visible');
             closeSidebarOnMobile();
         } catch (error) {
+            if (generation !== searchGeneration) return;
             console.error(error);
             elements.status.textContent = t('status_error');
         }
@@ -522,17 +626,23 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = currentLang === 'zh' ? 'en' : 'zh';
         localStorage.setItem('noita_lang', currentLang);
         updateUIStrings();
+        if (elements.targetCount.value.trim()) handleSearch();
+        else elements.status.textContent = t('status_ready');
     };
 
     const loadManifest = async () => {
-        try {
-            const response = await fetch(`${DATA_DIR}/_manifest.json`);
-            if (response.ok) {
-                datasetManifest = await response.json();
+        await Promise.all([
+            [DATA_DIR, manifest => { datasetManifest = manifest; }],
+            [CONTRIBUTION_DIR, manifest => { contributionManifest = manifest; }]
+        ].map(async ([directory, save]) => {
+            try {
+                const response = await fetch(`${directory}/_manifest.json`);
+                if (!response.ok) throw new Error('Manifest unavailable');
+                save(await response.json());
+            } catch (error) {
+                console.warn('Dataset manifest unavailable.', error);
             }
-        } catch (error) {
-            console.warn('Dataset manifest unavailable.', error);
-        }
+        }));
     };
 
     // --- Initialization ---
@@ -540,8 +650,28 @@ document.addEventListener('DOMContentLoaded', () => {
     elements.targetCount.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') handleSearch();
     });
+    const updateDatasetFilter = () => {
+        elements.halfFilter.hidden = elements.datasetSelect.value === 'legacy';
+        if (elements.targetCount.value.trim()) handleSearch();
+    };
+    elements.datasetSelect.addEventListener('change', updateDatasetFilter);
+    elements.halfSelect.addEventListener('change', updateDatasetFilter);
+    elements.resultsContainer.addEventListener('click', async (event) => {
+        const button = event.target.closest('.copy-recipe');
+        if (!button) return;
+        const { wand, draws, half, target } = button.dataset;
+        const text = `Source: KoObEy (2026-09-26)\nSequence: ${wand || '(empty)'}\nInitial draws: ${draws}\nInitial IF_HALF state: ${half}\nCounted spell: ELECTRIC_CHARGE\nExpected output: ${target}\nValidation: 310 sampled rows matched; not every row reevaluated.`;
+        try {
+            await navigator.clipboard.writeText(text);
+            button.textContent = t('copied');
+        } catch (error) {
+            button.textContent = t('copy_failed');
+        }
+    });
 
     elements.minSlots.max = String(MAX_SLOTS);
     elements.maxSlots.max = String(MAX_SLOTS);
-    loadManifest().finally(updateUIStrings);
+    const manifestsReady = loadManifest();
+    updateUIStrings();
+    elements.status.textContent = t('status_ready');
 });

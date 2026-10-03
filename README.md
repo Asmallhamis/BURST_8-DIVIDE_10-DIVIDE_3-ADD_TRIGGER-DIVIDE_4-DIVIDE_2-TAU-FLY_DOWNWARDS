@@ -1,4 +1,11 @@
 # Noita Wand Exhaustion Analytics
+
+## Current datasets / 当前数据
+
+The live page supports the existing 13-spell / 9-slot index (initial draw 26, counting `FLY_DOWNWARDS`) and KoObEy's 2026-09-26 contribution (12 spells / 11 slots, initial draw 1, counting `ELECTRIC_CHARGE`). Sources and conditions are shown per recipe; contributed `half` states are preserved and filterable. See [DATASETS.md](DATASETS.md) for provenance, validation limits and import instructions. The original 8-spell project description is retained below.
+
+现已接入 KoObEy 提供的 171,084 条结果，支持来源、初始抽取数及 `half` 条件区分；旧数据仍可单独查询。详见 [数据集说明](DATASETS.md)。下方保留项目最初的 8 法术版本介绍。
+
 🔗 **[在线查询工具 (Live Tool)](https://asmallhamis.github.io/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/)**
 
 本项目是一个针对游戏 *Noita*（女巫）中特定法术排列组合的全量穷举与查询工具。通过模拟引擎，我们计算了数百万种可能的魔杖配置与其产出的法术总量。
