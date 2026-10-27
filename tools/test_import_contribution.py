@@ -1,3 +1,4 @@
+import gzip
 import json
 import subprocess
 import sys
@@ -17,6 +18,19 @@ HEADER = """# format_version=4
 # keep=shortest
 # alphabet=(+0234:;?Tm{
 # search_depth=11
+# status=ok
+sequence,output,length,draws,half
+"""
+
+HEADER_12 = """# format_version=4
+# max_count=144000
+# max_draws=26
+# min_len=0
+# max_len=12
+# half=0
+# keep=shortest
+# alphabet=(+0234:?Tm
+# search_depth=12
 # status=ok
 sequence,output,length,draws,half
 """
@@ -94,6 +108,27 @@ class ImportContributionTests(unittest.TestCase):
         result = subprocess.run(command, capture_output=True, text=True)
         self.assertEqual(result.returncode, 1)
         self.assertIn("Output directory must be empty", result.stderr)
+
+    def test_supports_depth12_gzip_contribution(self):
+        gz_source = self.root / "384f1ff0dc1fa30d.csv.gz"
+        payload = (HEADER_12 + ",0,0,1,0\n+m,2,2,2,0\nmmmmmmmmmmmm,12,12,8,0\n").encode("utf-8")
+        gz_source.write_bytes(gzip.compress(payload))
+        target = self.root / "koobey-20261004"
+        manifest = build_index(gz_source, target)
+        self.assertEqual(manifest["dataset"], "koobey-20261004")
+        self.assertEqual(manifest["contributed_on"], "2026-10-04")
+        self.assertEqual(manifest["max_slots"], 12)
+        self.assertEqual(manifest["draws"], [1, 2, 8])
+        self.assertEqual(manifest["half"], [0])
+        self.assertEqual(manifest["indexed_rows"], 3)
+        self.assertNotIn("{", manifest["spell_codes"])
+        self.assertNotIn(";", manifest["spell_codes"])
+        self.assertEqual((target / manifest["source_file"]).read_bytes(), gz_source.read_bytes())
+
+        bad_gz = self.root / "bad.csv.gz"
+        bad_gz.write_bytes(gzip.compress((HEADER_12 + "m,1,1,1,1\n").encode("utf-8")))
+        with self.assertRaisesRegex(ValueError, "CSV line"):
+            read_contribution(bad_gz)
 
 
 if __name__ == "__main__":

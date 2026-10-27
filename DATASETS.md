@@ -8,6 +8,7 @@ The website normalizes contributed `ELECTRIC_CHARGE` spells to `FLY_DOWNWARDS` b
 | --- | --- | --- | --- |
 | Legacy / 旧数据 | 26 | `FLY_DOWNWARDS` | 13-spell pool, up to 9 slots |
 | Ko0bEy, 2026-09-26 | 1 | `FLY_DOWNWARDS` (original: `ELECTRIC_CHARGE`) | 12-spell pool, up to 11 slots, `half=0/1` |
+| Ko0bEy, 2026-10-04 | 1–8 (`max_draws=26`) | `FLY_DOWNWARDS` (original symbol: `m`) | 10-spell pool, up to 12 slots, `half=0` |
 
 ## Legacy index
 
@@ -21,7 +22,9 @@ The generation script also sets `unlimited_spells=true`, which models the **Unli
 
 旧数据的黑洞明确为 `BLACK_HOLE#0`（0 次数）。“无限法术”指同名天赋开关，黑洞不受该天赋影响；它的 0 次数不会被改成无限。
 
-## Ko0bEy contribution
+## Ko0bEy contributions
+
+### 2026-09-26 batch (`koobey-20260926`)
 
 The contributor supplied `429fc2ee33a66c94.csv` in the 2026-09-26 conversation and offered the results for inclusion on the website. The original file is preserved byte for byte at [`data-contrib/koobey-20260926/429fc2ee33a66c94.csv`](data-contrib/koobey-20260926/429fc2ee33a66c94.csv).
 
@@ -32,13 +35,25 @@ The contributor supplied `429fc2ee33a66c94.csv` in the 2026-09-26 conversation a
 - `keep=shortest` describes the contributor's search. These rows are not all enumerated candidates, and do not establish optimality under other pools, draw counts or simulator assumptions.
 - The contributor noted that the run used only draw 1 because `max-draws` was omitted. This is a supported condition, not grounds for discarding the results.
 - This export's alphabet contains `BLOOD_MAGIC` but no `BLACK_HOLE` or `BLACK_HOLE#0`. The accompanying message said zero-charge Black Hole had not yet been implemented. Therefore the contribution must not be described as another zero-charge Black Hole dataset.
+
+### 2026-10-04 batch (`koobey-20261004`)
+
+The contributor supplied `384f1ff0dc1fa30d.csv.gz` on 2026-10-04 with a 12-slot search over the 10-spell core pool (`ADD_TRIGGER`, `DIVIDE_2`, `DIVIDE_3`, `DIVIDE_4`, `DIVIDE_10`, `FLY_DOWNWARDS` / `m`, `IF_HP`, `RESET`, `TAU`, `BURST_8`). The original compressed file is preserved byte for byte at [`data-contrib/koobey-20261004/384f1ff0dc1fa30d.csv.gz`](data-contrib/koobey-20261004/384f1ff0dc1fa30d.csv.gz).
+
+- `.csv.gz` SHA-256: `ad5594a5be584d9d4cd0137890e6f1dcfdf8339b1e6171ff13bed0398326af84` (uncompressed CSV SHA-256: `e7bc3e2d640a0ac8167468e56c4ef242d080ca0954df9cc382d2740d0ff3323d`)
+- 237,401 rows, including one empty sequence; 4,373 distinct output values, from 0 to 9,620 (adding 1,395 output values not present in earlier indexes).
+- Source metadata: `format_version=4`, `status=ok`, `max_count=144000`, `max_draws=26`, `min_len=0`, `max_len=12`, `search_depth=12`, `half=0`, `keep=shortest`, `alphabet=(+0234:?Tm`.
+- Retained rows use initial draw counts `1` through `8` and `half=0` (`IF_HALF` and `BLOOD_MAGIC` are omitted from this 10-spell pool).
+
+### Shared normalization and display rules
+
 - `half` is retained as the initial `IF_HALF` state. Records with the same output and sequence but different states share one displayed recipe with all conditions listed. Selecting a half state filters contributed records before merging; excluded conditions are not shown on the merged result.
 - The compact recipe view highlights `IF_HALF=1` and omits the ordinary `half=0` label. If a merged result also has another matching condition, the badge reads `IF_HALF=1 supported`, not a requirement for every variant. Tooltips and copied recipes retain the complete conditions, including zero states.
-- The source CSV and compact buckets preserve the original symbols. The frontend maps `ELECTRIC_CHARGE` to `FLY_DOWNWARDS` before computing spell inventory counts and recipe keys. The inventory filter, icons, copied sequence and simulator links all use the normalized spell.
-- The contribution includes recipes with two `BURST_8` spells. The default inventory filter does not exclude them.
+- The source CSVs and compact buckets preserve the original symbols. The frontend maps `ELECTRIC_CHARGE` (`m`) to `FLY_DOWNWARDS` before computing spell inventory counts and recipe keys. The inventory filter, icons, copied sequence and simulator links all use the normalized spell.
+- The contributions include recipes with two `BURST_8` spells. The default inventory filter does not exclude them.
 - Every recipe has the same Copy, TWWE and PHASING_ARC actions. Copy includes the normalized sequence, expected output and every matching source/draw/half condition. Simulator links use the existing shared assembly templates; users must match initial draws and half to the listed recipe conditions when reproducing an output.
 
-贡献数据保留全部原始记录及其条件，包括空序列和不同 `half` 状态。网站先归一化、筛选，再按“产出 + 排列”合并重复配方。复制会带上合并后的完整条件。最多 11 槽、初始抽取 1；查询结果不宣称是任意条件下的全局最优解。
+贡献数据保留两批全部原始记录及其条件（2026-09-26 共 171,084 条、最多 11 槽、抽取 1；2026-10-04 共 237,401 条、最多 12 槽、抽取 1–8），包括空序列和不同 `half` 状态。网站先归一化、筛选，再按“产出 + 排列”合并重复配方。复制会带上合并后的完整条件；查询结果不宣称是任意条件下的全局最优解。
 
 For example, `TAU,DIVIDE_10,DIVIDE_10,FLY_DOWNWARDS,FLY_DOWNWARDS,RESET` and the same sequence with `ELECTRIC_CHARGE` become a single recipe when their output counts match. If one record requires draw 26 and another draw 1, both conditions remain attached to that recipe.
 
@@ -85,6 +100,7 @@ Run from the repository root with Python 3. The destination must be empty; exist
 ```sh
 python -B -m unittest discover -s tools -p test_import_contribution.py -v
 python -B tools/import_contribution.py /path/to/429fc2ee33a66c94.csv /path/to/empty-output-directory
+python -B tools/import_contribution.py /path/to/384f1ff0dc1fa30d.csv.gz /path/to/empty-output-directory
 ```
 
 The importer writes `_manifest.json`, the original CSV and JSON buckets of 100 output values. A bucket maps each output value to `[sequence, draws, half]` rows. The manifest defines the original symbol mapping and exact source-record counts. The import archive remains lossless; spell normalization and recipe deduplication happen in the frontend before display. The validation sample is a separately retained audit record and is not regenerated by the importer.

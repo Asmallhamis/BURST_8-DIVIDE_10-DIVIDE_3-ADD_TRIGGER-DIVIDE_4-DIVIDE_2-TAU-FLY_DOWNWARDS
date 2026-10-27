@@ -1,3 +1,4 @@
 data-contrib/**/*.csv -text
+data-contrib/**/*.csv.gz binary
 data-contrib/**/validation-sample.csv text eol=lf
 data-contrib/**/*.json text eol=lf

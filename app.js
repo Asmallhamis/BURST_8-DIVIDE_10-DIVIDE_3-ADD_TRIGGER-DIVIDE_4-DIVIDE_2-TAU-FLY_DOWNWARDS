@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             table_seq: "最简魔杖序列",
             table_slots: "槽位",
             twwe_btn: "打开 TWWE",
-            status_ready: "已准备就绪：旧数据抽取 26 / 贡献数据抽取 1，最多 11 槽",
+            status_ready: "已准备就绪：旧数据抽取 26 / 贡献数据抽取 1–8，最多 12 槽",
             status_fetching: (count) => `正在读取产出量为 ${count} 的本地索引...`,
             status_fetching_range: (total) => `正在查询 ${total} 个目标产出量的本地索引...`,
             status_no_results: (count) => `索引中未找到产出量为 ${count} 的法术组合。`,
@@ -27,16 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
             dataset_label: "数据来源 / 初始抽取数",
             dataset_all: "全部来源（分别标注条件）",
             dataset_legacy: "旧数据 · 抽取 26 · 最多 9 槽",
-            dataset_contribution: "Ko0bEy · 抽取 1 · 最多 11 槽",
+            dataset_contribution: "Ko0bEy 全部 · 抽取 1–8 · 最多 12 槽",
+            dataset_koobey_20261004: "Ko0bEy (10-04) · 抽取 1–8 · 最多 12 槽",
+            dataset_koobey_20260926: "Ko0bEy (09-26) · 抽取 1 · 最多 11 槽",
             half_label: "IF_HALF 初始状态（仅贡献数据）",
             half_all: "全部状态",
             notes_title: "数据来源、计算条件与验证说明",
             notes_intro: "相同法术排列在不同初始抽取数或 IF_HALF 状态下，产出可能不同。抽取数不是施放次数，也不是最终执行的法术数。请按结果旁的条件使用配方。",
             notes_legacy: "旧数据：13 种法术、最多 9 槽；初始抽取 26、施放 1 次，统计 FLY_DOWNWARDS（向下飞行）的执行次数。其中黑洞固定为 0 次数（BLACK_HOLE#0），不受“无限法术”天赋影响。页面使用每个产出最多 1,000 条的样本索引；未命中筛选条件不代表不存在配方。",
-            notes_contribution: "贡献数据：Ko0bEy 于 2026-09-26 提供；12 种法术、最多 11 槽，初始抽取 1。这批法术池包含血魔法，不包含黑洞。原表共 171,084 条、2,978 种产出值。网站将原表的 ELECTRIC_CHARGE（电荷）统一映射为 FLY_DOWNWARDS（向下飞行），按相同产出和相同排列合并重复配方，保留所有来源、抽取数和 half 条件；原始 CSV 保持不变。",
-            notes_validation: "验证：全表已检查字段、法术编码、长度、条件及重复项；另用 wand_eval_tree 抽样复算 310 条，抽取 1 时全部吻合，改成 26 时有 8 条产出变化。未对全部结果复算。我们复算时使用施放 1 次、法力 10,000、无模组。以上是我们的复算设置，贡献者的原始完整配置未提供。",
+            notes_contribution: "贡献数据：Ko0bEy 提供两批搜索结果——2026-09-26（12 种法术、最多 11 槽、初始抽取 1、含 half=0/1 与血魔法，共 171,084 条 / 2,978 种产出）与 2026-10-04（10 种核心法术、最多 12 槽、初始抽取 1–8、half=0，共 237,401 条 / 4,373 种产出）。网站将原表的 ELECTRIC_CHARGE（电荷）统一映射为 FLY_DOWNWARDS（向下飞行），按相同产出和相同排列合并重复配方，保留所有来源、抽取数和 half 条件；原始文件保持不变。",
+            notes_validation: "验证：两批贡献全表均已检查字段、法术编码、长度、条件及重复项；另对 2026-09-26 批次用 wand_eval_tree 抽样复算 310 条，抽取 1 时全部吻合，改成 26 时有 8 条产出变化。未对全部结果复算。我们复算时使用施放 1 次、法力 10,000、无模组。以上是我们的复算设置，贡献者的原始完整配置未提供。",
             notes_half: "half=0/1 表示 IF_HALF 的初始状态。界面只对 half=1 添加醒目标记，常规的 half=0 不显示；合并结果还支持其他条件时，标记为“IF_HALF=1 可用”。完整条件仍保留在悬停说明和复制内容中。来源和 half 筛选只保留匹配的条件。TWWE 链接打开统一装配模板，复现时请按配方条件设置抽取数及 half。",
-            source_csv: "原始 CSV",
+            source_csv: "原始 CSV (09-26)",
+            source_csv_20261004: "原始 CSV.GZ (10-04)",
             validation_csv: "抽样复算记录",
             dataset_docs: "详细说明 / 导入方法",
             legacy_condition: "旧数据 · 初始抽取 26 · 向下飞行计数",
@@ -67,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             table_seq: "Wand Sequence",
             table_slots: "Slots",
             twwe_btn: "Open TWWE",
-            status_ready: "Ready: legacy draw 26 / contributed draw 1, up to 11 slots",
+            status_ready: "Ready: legacy draw 26 / contributed draws 1–8, up to 12 slots",
             status_fetching: (count) => `Reading local index for target count ${count}...`,
             status_fetching_range: (total) => `Reading local indexes for ${total} target counts...`,
             status_no_results: (count) => `No indexed combinations found for count ${count}.`,
@@ -81,16 +84,19 @@ document.addEventListener('DOMContentLoaded', () => {
             dataset_label: "Dataset / initial draw count",
             dataset_all: "All sources (conditions shown separately)",
             dataset_legacy: "Legacy · draw 26 · up to 9 slots",
-            dataset_contribution: "Ko0bEy · draw 1 · up to 11 slots",
+            dataset_contribution: "Ko0bEy (all) · draws 1–8 · up to 12 slots",
+            dataset_koobey_20261004: "Ko0bEy (10-04) · draws 1–8 · up to 12 slots",
+            dataset_koobey_20260926: "Ko0bEy (09-26) · draw 1 · up to 11 slots",
             half_label: "Initial IF_HALF state (contribution only)",
             half_all: "Both states",
             notes_title: "Sources, evaluation conditions and validation",
             notes_intro: "The same spell sequence can produce different counts with different initial draws or IF_HALF states. Initial draws are not the number of casts or the final number of spell executions. Use the conditions shown beside each recipe.",
             notes_legacy: "Legacy data: 13 spells, up to 9 slots; initial draw 26, one cast, counting FLY_DOWNWARDS executions. Black Hole is explicitly set to zero charges (BLACK_HOLE#0) and is exempt from the Unlimited Spells perk. This page uses a sample index of up to 1,000 recipes per output. No filtered match does not prove that no recipe exists.",
-            notes_contribution: "Contribution: supplied by Ko0bEy on 2026-09-26; 12 spells, up to 11 slots, initial draw 1. This pool includes Blood Magic and does not include Black Hole. The original export contains 171,084 rows and 2,978 output counts. The website maps ELECTRIC_CHARGE to FLY_DOWNWARDS and merges recipes with the same output and normalized sequence, retaining all sources, draws and half states. The original CSV is unchanged.",
-            notes_validation: "Validation: all rows were checked for fields, spell codes, lengths, conditions and duplicates. A 310-row sample was reevaluated with wand_eval_tree: all matched at draw 1; 8 changed at draw 26. The entire dataset has not been reevaluated. Our sample check used one cast, 10,000 mana and no mods. These are our reevaluation settings. The contributor's complete original configuration was not supplied.",
+            notes_contribution: "Contributions: Ko0bEy supplied two batches — 2026-09-26 (12 spells, up to 11 slots, initial draw 1, half=0/1 with Blood Magic; 171,084 rows / 2,978 outputs) and 2026-10-04 (10 core spells, up to 12 slots, initial draws 1–8, half=0; 237,401 rows / 4,373 outputs). The website maps ELECTRIC_CHARGE to FLY_DOWNWARDS and merges recipes with the same output and normalized sequence, retaining all sources, draws and half states. The original exports are unchanged.",
+            notes_validation: "Validation: both contributed tables were checked for fields, spell codes, lengths, conditions and duplicates. A 310-row sample from the 2026-09-26 export was reevaluated with wand_eval_tree: all matched at draw 1; 8 changed at draw 26. The entire datasets have not been reevaluated. Our sample check used one cast, 10,000 mana and no mods. These are our reevaluation settings. The contributor's complete original configuration was not supplied.",
             notes_half: "half=0/1 records the initial IF_HALF state. Only half=1 receives a highlighted badge; the usual half=0 is not displayed. If a merged recipe also has other matching conditions, the badge says “IF_HALF=1 supported”. Full conditions remain in the tooltip and copied text. Source and half filters retain only matching conditions. TWWE links open the shared assembly templates; use the recipe's initial draws and half when reproducing it.",
-            source_csv: "Original CSV",
+            source_csv: "Original CSV (09-26)",
+            source_csv_20261004: "Original CSV.GZ (10-04)",
             validation_csv: "Validation sample",
             dataset_docs: "Details / import instructions",
             legacy_condition: "Legacy · initial draw 26 · FLY_DOWNWARDS count",
@@ -135,12 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Configuration & Data ---
     const DATA_DIR = './data13';
-    const CONTRIBUTION_DIR = './data-contrib/koobey-20260926';
-    const MAX_SLOTS = 11;
+    const CONTRIBUTION_SOURCES = [
+        { id: 'koobey-20260926', dir: './data-contrib/koobey-20260926', date: '2026-09-26', manifest: null, buckets: new Map() },
+        { id: 'koobey-20261004', dir: './data-contrib/koobey-20261004', date: '2026-10-04', manifest: null, buckets: new Map() }
+    ];
+    const MAX_SLOTS = 12;
     let datasetManifest = null;
-    let contributionManifest = null;
     let searchGeneration = 0;
-    const contributionBuckets = new Map();
 
     const formatNumber = (value) => {
         if (value === undefined || value === null || Number.isNaN(Number(value))) return '?';
@@ -409,13 +416,14 @@ document.addEventListener('DOMContentLoaded', () => {
         spells: Object.fromEntries(Object.entries(filterState.spells).map(([id, config]) => [id, { ...config }]))
     });
 
-    const makeResult = (count, parts, source, draws, half) => {
+    const makeResult = (count, parts, source, draws, half, date = null) => {
         parts = parts.map(spell => spell === 'ELECTRIC_CHARGE' ? 'FLY_DOWNWARDS' : spell);
         const spellCounts = {};
         parts.forEach(spell => spellCounts[spell] = (spellCounts[spell] || 0) + 1);
         return {
             target: count, wand: parts.join(','), parts, length: parts.length,
-            counts: spellCounts, source, draws, half, conditions: [{ source, draws, half }]
+            counts: spellCounts, source, draws, half,
+            conditions: [{ source, draws, half, dates: date ? [date] : [] }]
         };
     };
 
@@ -434,37 +442,51 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     };
 
-    const loadContributionCount = async (count) => {
-        if (!contributionManifest) throw new Error('Contribution manifest unavailable');
-        if (!contributionManifest.counts[String(count)]) return [];
-        const bucket = Math.floor(Number(count) / contributionManifest.bucket_size) * contributionManifest.bucket_size;
-        if (!contributionBuckets.has(bucket)) {
-            const request = fetch(`${CONTRIBUTION_DIR}/${bucket}.json`).then(response => {
-                if (!response.ok) throw new Error(`Contribution index ${bucket} unavailable`);
+    const loadContributionSourceCount = async (sourceConfig, count) => {
+        const manifest = sourceConfig.manifest;
+        if (!manifest) throw new Error(`Contribution manifest ${sourceConfig.id} unavailable`);
+        if (!manifest.counts[String(count)]) return [];
+        const bucket = Math.floor(Number(count) / manifest.bucket_size) * manifest.bucket_size;
+        if (!sourceConfig.buckets.has(bucket)) {
+            const request = fetch(`${sourceConfig.dir}/${bucket}.json`).then(response => {
+                if (!response.ok) throw new Error(`Contribution index ${sourceConfig.id}/${bucket} unavailable`);
                 return response.json();
             }).catch(error => {
-                contributionBuckets.delete(bucket);
+                sourceConfig.buckets.delete(bucket);
                 throw error;
             });
-            contributionBuckets.set(bucket, request);
+            sourceConfig.buckets.set(bucket, request);
         }
-        const data = await contributionBuckets.get(bucket);
+        const data = await sourceConfig.buckets.get(bucket);
         const rows = data[String(count)];
-        if (!rows || rows.length !== contributionManifest.counts[String(count)]) throw new Error('Incomplete contribution index');
+        if (!rows || rows.length !== manifest.counts[String(count)]) throw new Error('Incomplete contribution index');
         return rows.map(([sequence, draws, half]) => {
             const parts = [...sequence].map(code => {
-                const spell = contributionManifest.spell_codes[code];
+                const spell = manifest.spell_codes[code];
                 if (!SPELL_DATA[spell] && spell !== 'ELECTRIC_CHARGE') throw new Error('Unknown contributed spell');
                 return spell;
             });
-            return makeResult(count, parts, 'contribution', draws, half);
+            return makeResult(count, parts, 'contribution', draws, half, sourceConfig.date);
         });
     };
 
+    const getActiveContributionSources = (datasetFilter) => {
+        if (datasetFilter === 'legacy') return [];
+        if (datasetFilter === 'all' || datasetFilter === 'contribution') return CONTRIBUTION_SOURCES;
+        return CONTRIBUTION_SOURCES.filter(source => source.id === datasetFilter);
+    };
+
+    const loadContributionCount = async (count, datasetFilter) => {
+        const sources = getActiveContributionSources(datasetFilter);
+        const batches = await Promise.all(sources.map(source => loadContributionSourceCount(source, count)));
+        return batches.flat();
+    };
+
     const loadCountResults = async (count, filters) => {
+        const includeLegacy = filters.dataset === 'all' || filters.dataset === 'legacy';
         const [legacy, contributed] = await Promise.all([
-            filters.dataset === 'contribution' ? { indexedTotal: 0, fullTotal: 0, results: [] } : loadLegacyCount(count),
-            filters.dataset === 'legacy' ? [] : loadContributionCount(count)
+            includeLegacy ? loadLegacyCount(count) : { indexedTotal: 0, fullTotal: 0, results: [] },
+            loadContributionCount(count, filters.dataset)
         ]);
         const filtered = [...legacy.results, ...contributed].filter(item => {
             if (item.length < filters.minS || item.length > filters.maxS) return false;
@@ -485,8 +507,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 continue;
             }
             for (const condition of item.conditions) {
-                if (!existing.conditions.some(value => value.source === condition.source && value.draws === condition.draws && value.half === condition.half)) {
-                    existing.conditions.push(condition);
+                const match = existing.conditions.find(value => value.source === condition.source && value.draws === condition.draws && value.half === condition.half);
+                if (!match) {
+                    existing.conditions.push({
+                        ...condition,
+                        dates: [...(condition.dates || [])]
+                    });
+                } else if (condition.dates) {
+                    for (const date of condition.dates) {
+                        if (!match.dates.includes(date)) match.dates.push(date);
+                    }
                 }
             }
         }
@@ -653,7 +683,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 renderRangeResults(loaded, Math.max(1, Math.floor(limit / counts.length)), limit);
             }
-            if (filters.dataset === 'contribution') {
+            if (filters.dataset !== 'all' && filters.dataset !== 'legacy') {
                 elements.status.textContent = t('status_contributed', results.length, displayed.length, contributedTotal);
             } else if (filters.dataset === 'all') {
                 elements.status.textContent = t('status_combined', results.length, displayed.length, legacyIndexed, fullTotal, contributedTotal);
@@ -687,10 +717,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadManifest = async () => {
         await Promise.all([
             [DATA_DIR, manifest => { datasetManifest = manifest; }],
-            [CONTRIBUTION_DIR, manifest => { contributionManifest = manifest; }]
+            ...CONTRIBUTION_SOURCES.map(source => [source.dir, manifest => { source.manifest = manifest; }])
         ].map(async ([directory, save]) => {
             try {
-                const response = await fetch(`${directory}/_manifest.json?v=20261004-text`);
+                const response = await fetch(`${directory}/_manifest.json?v=20261027-depth12`);
                 if (!response.ok) throw new Error('Manifest unavailable');
                 save(await response.json());
             } catch (error) {
@@ -715,10 +745,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!button) return;
         const { wand, target } = button.dataset;
         const conditions = JSON.parse(decodeURIComponent(button.dataset.conditions));
-        const conditionText = conditions.map(condition => condition.source === 'legacy'
-            ? 'Legacy: initial draws 26'
-            : `Ko0bEy (2026-09-26): initial draws ${condition.draws}, initial IF_HALF state ${condition.half}`
-        ).join('\n');
+        const conditionText = conditions.map(condition => {
+            if (condition.source === 'legacy') return 'Legacy: initial draws 26';
+            const dates = condition.dates && condition.dates.length ? condition.dates.join(', ') : '2026-09-26';
+            return `Ko0bEy (${dates}): initial draws ${condition.draws}, initial IF_HALF state ${condition.half}`;
+        }).join('\n');
         const text = `Sequence: ${wand || '(empty)'}\nCounted spell: FLY_DOWNWARDS\nExpected output: ${target}\nConditions:\n${conditionText}`;
         try {
             await navigator.clipboard.writeText(text);

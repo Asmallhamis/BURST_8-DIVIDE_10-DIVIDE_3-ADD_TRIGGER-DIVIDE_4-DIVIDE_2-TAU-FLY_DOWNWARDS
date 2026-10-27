@@ -23,11 +23,11 @@
                     <span class="filter-label"><span class="label-dot"></span><span data-i18n="slots_label">Wand Slots</span></span>
                     <div class="slots-inputs">
                         <div class="input-wrapper">
-                            <input type="number" id="minSlots" placeholder="Min" min="0" max="11">
+                            <input type="number" id="minSlots" placeholder="Min" min="0" max="12">
                         </div>
                         <span class="separator">-</span>
                         <div class="input-wrapper">
-                            <input type="number" id="maxSlots" placeholder="Max" min="0" max="11">
+                            <input type="number" id="maxSlots" placeholder="Max" min="0" max="12">
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,9 @@
                             <select id="datasetSelect">
                                 <option value="all" data-i18n="dataset_all">All sources (conditions shown separately)</option>
                                 <option value="legacy" data-i18n="dataset_legacy">Legacy · draw 26 · up to 9 slots</option>
-                                <option value="contribution" data-i18n="dataset_contribution">KoObEy · draw 1 · up to 11 slots</option>
+                                <option value="contribution" data-i18n="dataset_contribution">Ko0bEy (all) · draws 1–8 · up to 12 slots</option>
+                                <option value="koobey-20261004" data-i18n="dataset_koobey_20261004">Ko0bEy (10-04) · draws 1–8 · up to 12 slots</option>
+                                <option value="koobey-20260926" data-i18n="dataset_koobey_20260926">Ko0bEy (09-26) · draw 1 · up to 11 slots</option>
                             </select>
                         </label>
                         <label class="dataset-control" id="halfFilter" for="halfSelect">
@@ -92,7 +94,8 @@
                     <p data-i18n="notes_validation"></p>
                     <p data-i18n="notes_half"></p>
                     <div class="dataset-links">
-                        <a href="data-contrib/koobey-20260926/429fc2ee33a66c94.csv" download data-i18n="source_csv">Original CSV</a>
+                        <a href="data-contrib/koobey-20260926/429fc2ee33a66c94.csv" download data-i18n="source_csv">Original CSV (09-26)</a>
+                        <a href="data-contrib/koobey-20261004/384f1ff0dc1fa30d.csv.gz" download data-i18n="source_csv_20261004">Original CSV.GZ (10-04)</a>
                         <a href="data-contrib/koobey-20260926/validation-sample.csv" download data-i18n="validation_csv">Validation sample</a>
                         <a href="https://github.com/Asmallhamis/BURST_8-DIVIDE_10-DIVIDE_3-ADD_TRIGGER-DIVIDE_4-DIVIDE_2-TAU-FLY_DOWNWARDS/blob/main/DATASETS.md" target="_blank" rel="noopener" data-i18n="dataset_docs">Details / import instructions</a>
                     </div>
@@ -131,6 +134,6 @@
         <svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
 
-    <script src="app.js?v=20261004-text"></script>
+    <script src="app.js?v=20261027-depth12"></script>
 </body>
 </html>
